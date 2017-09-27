@@ -1,0 +1,18 @@
+<div class="chat-wrapper">
+  <div class="container">
+    <h1>掲示板！</h1>
+    <div class="chat-content">
+      <%=form_tag "/borad/create" do%>
+      <input type="text" name="name" value="">
+      <textarea name="content" rows="8" cols="80"></textarea>
+      <input type="hidden" name="<%=@user.id%>" value="">
+      <input type="submit" name="" value="送信">
+      <%end%>
+      <div class="outputs">
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

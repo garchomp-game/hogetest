@@ -1,0 +1,2 @@
+class Taguser < ApplicationRecord
+end
