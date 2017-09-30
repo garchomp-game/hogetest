@@ -1,0 +1,29 @@
+<div class="cleate-wrapper">
+  <div class="container">
+    <div class="new-content">
+      <%=form_for User.new, url: user_create_confirm_path do%>
+        <span class="span-box input-text"><span class="left">名前</span>：<input type="text" name="name" value=""></span>
+        <span class="span-box selects"><span class="left">性別</span>：<select name="sex">
+        <option value="0">男（♂）</option>
+        <option value="1">女（♀）</option>
+        </select></span>
+        <span class="span-box input-text"><span class="left">年齢</span>：<input type="text" name="age" value=""></span>
+        <span class="span-box input-text"><span class="left">誕生日</span>:<input type="date" name="birthday" value=""></span>
+        <span class="span-box input-text"><span class="left">身長</span>:<input type="text" name="height" value=""></span>
+        <span class="span-box input-text"><span class="left">体重</span>:<input type="text" name="width" value=""></span>
+        <span class="span-box input-text"><span class="left">原作</span>:<input type="text" name="original_work" value=""></span>
+        <span class="span-box input-text"><span class="left">種族</span>:<input type="text" name="race" value=""></span>
+        <span class="span-box description"><span class="left">自己紹介</span>:<textarea name="description" rows="8" cols="80"></textarea></span>
+        <span class="span-box input-text"><span class="left">メールアドレス</span>:<input type="text" name="email" value=""></span>
+        <span class="span-box input-text"><span class="left">パスワード</span>:<input type="text" name="password" value=""></span>
+        <span class="span-box input-text"><span class="left">ツイッターid</span>:<input type="text" name="twitter" value=""></span>
+        <span class="span-box input-text"><span class="left">フェイスブック</span>:<input type="text" name="facebook" value=""></span>
+        <span class="span-box input-text"><span class="left">ホームページ</span>:<input type="text" name="homepage" value=""></span>
+        <div class="clear">
+
+        </div>
+        <input type="submit" class="submit" name="" value="確認画面へ">
+      <%end%>
+    </div>
+  </div>
+</div>

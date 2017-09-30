@@ -1,0 +1,9 @@
+I"˜(function() {
+  $(function() {
+    return $("#profile-frend").click(function() {
+      return $(".modal-wrapper").show();
+    });
+  });
+
+}).call(this);
+:ET

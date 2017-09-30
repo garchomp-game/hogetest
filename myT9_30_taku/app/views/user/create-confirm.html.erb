@@ -1,0 +1,24 @@
+<div class="create-confirm-wrapper">
+  <div class="container">
+    <%=form_tag url: user_create_path do%>
+    <span class="left">名前</span>:<span class="right"><%=params[:name]%></span><br>
+    <span class="left">性別</span>:<span class="right"><%if params[:sex]=="0"%><%="男（♂）"%><%else%><%="女（♀）"%><%end%></span><br>
+    <span class="left">年齢</span>:<span class="right"><%=params[:age]%></span><br>
+    <span class="left">誕生日</span>:<span class="right"><%=params[:birthday]%></span><br>
+    <span class="left">身長</span>:<span class="right"><%=params[:height]%></span><br>
+    <span class="left">体重</span>:<span class="right"><%=params[:width]%></span><br>
+    <span class="left">原作</span>:<span class="right"><%=params[:original_work]%></span><br>
+    <span class="left">種族</span>:<span class="right"><%=params[:race]%></span><br>
+    <span class="left">自己紹介</span>:<span class="right"><%=params[:description]%></span><br>
+    <span class="left">メールアドレス</span>:<span class="right"><%=params[:email]%></span><br>
+    <span class="left">パスワード</span>:<span class="right"><%=params[:password]%></span><br>
+    <span class="left">ツイッターid</span>:<span class="right"><%=params[:twitter]%></span><br>
+    <span class="left">フェイスブック</span>:<span class="right"><%=params[:facebook]%></span><br>
+    <span class="left">ホームページ</span>:<span class="right"><%=params[:homepage]%></span><br>
+    <div class="clear">
+
+    </div>
+    <input class="submit_image" type="image" src="/touroku.png" value="">
+    <%end%>
+  </div>
+</div>
