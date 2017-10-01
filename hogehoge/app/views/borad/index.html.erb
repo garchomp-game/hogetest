@@ -1,0 +1,29 @@
+<div class="tops">
+  <div class="container">
+    <h1>なりきり掲示板マイティーベース入口</h1>
+    <a href="/borad/create">新規作成</a>
+  </div>
+</div>
+<div class="column-ber">
+  <div class="column col1 on">
+    <h1>総合集合所</h1>
+  </div>
+  <div class="column col2">
+    <h1>広場</h1>
+  </div>
+  <div class="column col3">
+    <h1>ステージ</h1>
+  </div>
+</div>
+<div class="borad-index">
+  <div class="container">
+    <div class="body-wrapper">
+      <ul>
+        <%@borad.each do|i|%>
+        <li><span class="li-box"></span><a href="/borad/<%=i.id%>/chat_index" id="li-link"><span class="span-name"><%=i.name%></span><span class="span-description"><%=i.description%></span><span class="span-active"><%=i.active%>/100    <%= i.updated_at.strftime("%Y-%m-%d") %></span><span class="span-icon"><%=i.icon%></span></a></li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--  name  description  active  icon  -->

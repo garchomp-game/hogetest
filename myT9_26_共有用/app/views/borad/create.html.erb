@@ -1,0 +1,16 @@
+<div class="form-wrapper">
+  <div class="container">
+    <h1>集合所登録</h1>
+    <%=form_tag "/borad/create" do%>
+    <input type="hidden" name="id" value="<%=@id%>">
+    <span class="left">掲示板名</span>：<span class="right"><input type="text" name="name" value="<%=@name%>"></span>
+    <span class="left">詳細説明</span>：<span class="right"><input type="text" name="description" value="<%=@description %>"></span>
+    <span class="left">アイコン</span>：<span class="right"><input type="file" name="icon" value=""></span>
+    <div class="clear">
+
+    </div>
+    <input class="submit" type="submit" name="" value="登録">
+    <%end%>
+  </div>
+</div>
+<!-- name  description  icon -->
