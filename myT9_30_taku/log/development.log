@@ -26706,3 +26706,281 @@ Processing by HomeController#top as HTML
 Completed 200 OK in 1179ms (Views: 1154.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-01 15:36:21 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 839ms (Views: 808.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at 2017-10-01 15:41:43 +0900
+  
+SyntaxError (C:/Users/cosmo/Desktop/hogera/myT9_30_taku/app/controllers/user_controller.rb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+      sex:params[:sex]
+         ^
+C:/Users/cosmo/Desktop/hogera/myT9_30_taku/app/controllers/user_controller.rb:36: syntax error, unexpected ')', expecting keyword_end
+    )
+     ^):
+  
+app/controllers/user_controller.rb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/user_controller.rb:36: syntax error, unexpected ')', expecting keyword_end
+Started GET "/user/index" for 127.0.0.1 at 2017-10-01 15:42:23 +0900
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered user/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 259ms (Views: 232.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-01 15:42:37 +0900
+Processing by UserController#login as HTML
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 223ms (Views: 200.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 15:42:39 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 205ms (Views: 170.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:42:48 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 186ms (Views: 166.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:43:16 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1299ms (Views: 1268.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:44:44 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 502ms (Views: 483.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:45:38 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 474ms (Views: 453.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:45:54 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 183ms (Views: 165.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:50:40 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 681ms (Views: 657.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:51:05 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 463ms (Views: 442.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:51:26 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 489ms (Views: 471.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:51:32 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 487ms (Views: 444.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:51:38 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 478ms (Views: 460.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:51:52 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 477ms (Views: 454.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:51:57 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 481ms (Views: 457.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:52:05 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 462ms (Views: 441.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:52:14 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 535ms (Views: 513.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:52:33 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 552ms (Views: 532.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:52:46 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 485ms (Views: 462.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:54:07 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 619ms (Views: 595.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:54:16 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...  margin-bottom": expected ";", was ":30px;"):
+    4:     <title>MyT</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <script
+    9:   src="https://code.jquery.com/jquery-2.2.4.js"
+   10:   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  
+app/assets/stylesheets/user.scss:448
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___463671141_110623780'
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:54:23 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 581ms (Views: 554.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:54:44 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 510ms (Views: 489.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:54:50 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 538ms (Views: 516.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:57:47 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 569ms (Views: 546.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:57:57 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 600ms (Views: 575.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:58:07 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 285ms (Views: 256.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 15:58:32 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 510ms (Views: 489.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 16:01:39 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 503ms (Views: 481.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 16:01:55 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 523ms (Views: 504.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=lkjdfgb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=hjidfg&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 16:02:05 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"lkjdfgb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hjidfg", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 538ms (Views: 513.9ms | ActiveRecord: 0.0ms)
+
+
