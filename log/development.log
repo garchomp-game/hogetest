@@ -26984,3 +26984,18 @@ Processing by UserController#create_confirm as HTML
 Completed 200 OK in 538ms (Views: 513.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/login" for 127.0.0.1 at 2017-10-01 21:18:59 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserController#login as HTML
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 2566ms (Views: 2529.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 21:19:30 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 80ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
