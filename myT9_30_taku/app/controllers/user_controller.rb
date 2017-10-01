@@ -18,10 +18,23 @@ image password user_id created_at updated_at
   def create_form
   end
   def create
-    @user=User.new(user_params)
+
   end
   def create_confirm
-    @user=User.new(user_params)
+    @name=params[:name]
+    @sex=params[:sex]
+    @age=params[:age]
+    @birthday=params[:birthday]
+    @height=params[:height]
+    @width=params[:width]
+    @original_work=params[:original_work]
+    @race=params[:race]
+    @description=params[:description]
+    @email=params[:email]
+    @password=params[:password]
+    @twitter=params[:twitter]
+    @facebook=params[:facebook]
+    @homepage=params[:homepage]
   end
   def update
   end

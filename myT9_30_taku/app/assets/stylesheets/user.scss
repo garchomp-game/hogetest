@@ -1,6 +1,17 @@
-// Place all the styles related to the user controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// user.scss 並び順
+//
+// login-form
+// index-wrapper
+// show-wrapper
+// modal-wrapper
+// create-wrapper
+// create-confirm-wrapper
+
+
+
+// login-wrapper
+
 .login-form{
   height:800px;
   background-image:url("/forest.png");
@@ -52,7 +63,8 @@
   clear:both;
 }
 
-// 背景の定義はここで
+// index-wrapper
+
 .index-wrapper{
   width:100%;
   background-image:url('/forest.png');
@@ -96,6 +108,9 @@
     }
   }
 }
+
+// show-wrapper
+
 .show-wrapper{
   color:brown;
   font-weight: bold;
@@ -118,12 +133,8 @@
       }
     }
     .show-middle{
-
       margin:10px;
       height:430px;
-
-
-
       .profile-image{
         border:5px solid brown;
         padding:5px;
@@ -144,8 +155,6 @@
         padding:5px;
         float:right;
         padding:5px;
-
-        //profile-border
         .profile-border{
           border-bottom:2px solid brown;
           padding:5px;
@@ -165,7 +174,6 @@
             margin-left:25px;
           }
         }
-
         .height-60{
           height:60px;
           .profile-link{
@@ -185,14 +193,9 @@
         }
         .height-40,.height-60{
           box-sizing: border-box;
-
         }
-
-        // profile-border
       }
     }
-
-
     .free-space{
       padding:10px 30px;
       height:600px;
@@ -274,6 +277,9 @@
 
   }
 }
+
+
+// modal-wrapper
 .off-modal{
   display:none;
 }
@@ -354,6 +360,8 @@
   }
 }
 
+// create-wrapper #スペルミスってる(汗)
+
 .cleate-wrapper{
   height:1200px;
   background-image:url("/forest.png");
@@ -365,7 +373,7 @@
     .new-content{
       .submit{
         padding:5px 10px;
-        font-size:18px; 
+        font-size:18px;
       }
       .span-box{
         display:inline-block;
@@ -399,6 +407,8 @@
     }
   }
 }
+
+// confirm-wrapper
 
 .create-confirm-wrapper{
   height:1000px;

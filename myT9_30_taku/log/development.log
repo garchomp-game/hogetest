@@ -26110,3 +26110,591 @@ Processing by UserController#create-confirm as HTML
 Completed 200 OK in 371ms (Views: 369.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-01 12:14:05 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 2756ms (Views: 2735.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at 2017-10-01 12:42:14 +0900
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered user/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 369ms (Views: 345.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at 2017-10-01 12:42:14 +0900
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered user/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 147ms (Views: 130.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-01 12:42:16 +0900
+Processing by UserController#login as HTML
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 159ms (Views: 129.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 12:42:19 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 155ms (Views: 133.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 12:52:14 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 269ms (Views: 240.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 12:52:21 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 143ms (Views: 128.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/create-confirm?url=%2Fuser%2Fcreate" for 127.0.0.1 at 2017-10-01 12:52:28 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g4duKaOKJPYiB0pwnG7Ef4do3+38fyKRpTn9Bpia6rtyxX+miARRTC8HmowZp/zS6z8K9DUekPaacC+p+moP2Q==", "x"=>"61", "y"=>"36", "url"=>"/user/create"}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 143ms (Views: 126.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create-confirm" for 127.0.0.1 at 2017-10-01 12:53:15 +0900
+Processing by UserController#create-confirm as HTML
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 154ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/create-confirm?url=%2Fuser%2Fcreate" for 127.0.0.1 at 2017-10-01 12:53:18 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k5elTLnsnpgK+MzvqlZ1CEMZit6B7L3YxWTOyrd39Epi1bTDkmLrIgf4HBMvn02lL05fx0iND7/6LRxl1YcRKA==", "x"=>"31", "y"=>"30", "url"=>"/user/create"}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 140ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create-confirm?url=%2Fuser%2Fcreate" for 127.0.0.1 at 2017-10-01 13:01:35 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"url"=>"/user/create"}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 174ms (Views: 159.0ms)
+
+
+Started POST "/user/create-confirm?url=%2Fuser%2Fcreate" for 127.0.0.1 at 2017-10-01 13:01:58 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pW6XTWrwnAM/SEGq0uH69kbtMaJWUHC9SRyZxUyn7dBULIbCQX7puTJIkVZXKMJbKrrku58xwtp2VUtqLlcIsg==", "x"=>"54", "y"=>"48", "url"=>"/user/create"}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 138ms (Views: 123.6ms)
+
+
+Started POST "/user/create-confirm?url=%2Fuser%2Fcreate" for 127.0.0.1 at 2017-10-01 13:02:00 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wMJoUfX89z+EJ2oBXPXinBhZjWTlfO15Uw/Uoh4KwPwxgHne3nKChYknuv3ZPNoxdA5YfSwdXx5sRgYNfPolng==", "x"=>"72", "y"=>"54", "url"=>"/user/create"}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 135ms (Views: 121.1ms)
+
+
+Started GET "/user/create-confirm?url=%2Fuser%2Fcreate" for 127.0.0.1 at 2017-10-01 13:02:08 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"url"=>"/user/create"}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 140ms (Views: 124.0ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:02:18 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 149ms (Views: 132.6ms)
+
+
+Started POST "/user/create-confirm?url=%2Fuser%2Fcreate" for 127.0.0.1 at 2017-10-01 13:02:21 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N3BU/D2xluYfFcq7jUdgY8fm3Ku8p2YPUo3zlI24osDGMkVzFj/jXBIVGkcIjljOq7EJsnXG1GhtxCE770hHog==", "x"=>"53", "y"=>"35", "url"=>"/user/create"}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 145ms (Views: 130.1ms)
+
+
+Started GET "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:02:26 +0900
+Processing by UserController#create-confirm as HTML
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 137ms (Views: 121.7ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:02:56 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 91ms
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for {:url=>"/user/create"}:Hash):
+    1: <div class="create-confirm-wrapper">
+    2:   <div class="container">
+    3:     <%=form_for url: user_create_path do%>
+    4:     <span class="left">名前</span>:<span class="right"><%=params[:name]%></span><br>
+    5:     <span class="left">性別</span>:<span class="right"><%if params[:sex]=="0"%><%="男（♂）"%><%else%><%="女（♀）"%><%end%></span><br>
+    6:     <span class="left">年齢</span>:<span class="right"><%=params[:age]%></span><br>
+  
+app/views/user/create-confirm.html.erb:3:in `_app_views_user_create_confirm_html_erb__985504372_111881080'
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:03:15 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 79ms
+
+
+  
+SyntaxError (C:/Users/cosmo/Desktop/myT9_30_taku/app/views/user/create-confirm.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...ffer.append= form_for @user url: user_create_path do@output_...
+...                               ^):
+  
+app/views/user/create-confirm.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:03:20 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 71ms
+
+
+  
+SyntaxError (C:/Users/cosmo/Desktop/myT9_30_taku/app/views/user/create-confirm.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...ffer.append= form_for @user url: user_create_path do@output_...
+...                               ^):
+  
+app/views/user/create-confirm.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:04:16 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 82ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="create-confirm-wrapper">
+    2:   <div class="container">
+    3:     <%=form_for @user, url: user_create_path do%>
+    4:     <span class="left">名前</span>:<span class="right"><%=params[:name]%></span><br>
+    5:     <span class="left">性別</span>:<span class="right"><%if params[:sex]=="0"%><%="男（♂）"%><%else%><%="女（♀）"%><%end%></span><br>
+    6:     <span class="left">年齢</span>:<span class="right"><%=params[:age]%></span><br>
+  
+app/views/user/create-confirm.html.erb:3:in `_app_views_user_create_confirm_html_erb__985504372_108911980'
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:04:36 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 81ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="create-confirm-wrapper">
+    2:   <div class="container">
+    3:     <%=form_for @user,   url: user_create_path do%>
+    4:     <span class="left">名前</span>:<span class="right"><%=params[:name]%></span><br>
+    5:     <span class="left">性別</span>:<span class="right"><%if params[:sex]=="0"%><%="男（♂）"%><%else%><%="女（♀）"%><%end%></span><br>
+    6:     <span class="left">年齢</span>:<span class="right"><%=params[:age]%></span><br>
+  
+app/views/user/create-confirm.html.erb:3:in `_app_views_user_create_confirm_html_erb__985504372_106630480'
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:04:39 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 654ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="create-confirm-wrapper">
+    2:   <div class="container">
+    3:     <%=form_for @user,   url: user_create_path do%>
+    4:     <span class="left">名前</span>:<span class="right"><%=params[:name]%></span><br>
+    5:     <span class="left">性別</span>:<span class="right"><%if params[:sex]=="0"%><%="男（♂）"%><%else%><%="女（♀）"%><%end%></span><br>
+    6:     <span class="left">年齢</span>:<span class="right"><%=params[:age]%></span><br>
+  
+app/views/user/create-confirm.html.erb:3:in `_app_views_user_create_confirm_html_erb__985504372_59460320'
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:09:25 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 175ms (Views: 157.5ms)
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-10-01 13:09:28 +0900
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wAQdjlE26RWuU/5CmHNfQg9relgfA3ypa/FhnypZHlIxRgwBericr6NTLr4dumfvYzyvQdZizs5UuLMwSKn7MA==", "x"=>"59", "y"=>"47"}
+Completed 500 Internal Server Error in 146ms
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UserController:0x0000000e634a08>
+Did you mean?  user_create_path):
+  
+app/controllers/user_controller.rb:21:in `create'
+Started GET "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:10:15 +0900
+Processing by UserController#create-confirm as HTML
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 242ms (Views: 222.9ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:10:19 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 190ms (Views: 166.8ms)
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-10-01 13:10:21 +0900
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ZP8EEbaiVwMRBYqBSk1NgN5Uagq9SOcnST9W2eqpM0Q0e2fbVT85gFExtaA4A2bby6EseOUkfuibS/0BVpBrw==", "x"=>"65", "y"=>"56"}
+Completed 500 Internal Server Error in 253ms
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UserController:0x0000000e5042f0>
+Did you mean?  user_create_path):
+  
+app/controllers/user_controller.rb:21:in `create'
+Started GET "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:10:43 +0900
+Processing by UserController#create-confirm as HTML
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 141ms (Views: 124.5ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:10:57 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 144ms (Views: 128.5ms)
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-10-01 13:10:59 +0900
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nBx0R43Hgm4SP48UU6GiReWtQZbSHnUrJUyUhd+hJPdtXmXIpkn31B8/X+jWaJroifqUjxt/x0waBUYqvVHBlQ==", "x"=>"50", "y"=>"28"}
+Completed 500 Internal Server Error in 128ms
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UserController:0x0000000c583570>
+Did you mean?  user_create_path):
+  
+app/controllers/user_controller.rb:21:in `create'
+Started GET "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:11:15 +0900
+Processing by UserController#create-confirm as HTML
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 356ms (Views: 339.5ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:49:57 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 170ms (Views: 152.9ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:50:03 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qa9mvcYeNGFdqbxILSvvtqAj9/GMLLU3TR1Up75B1Sqw7Xcy7ZBB21CpbLSo4tcbzHQi6EVNB1ByVIYI3LEwSA==", "x"=>"53", "y"=>"53"}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 166ms (Views: 148.6ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:50:06 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IDpZG1J7V5kosrCLXcs6TYhRHMBjmRRkjzClxkB1VILReEiUefUiIyWyYHfYAgLg5AbJ2ar4pgOweXdpIoWx4A==", "x"=>"53", "y"=>"52"}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 170ms (Views: 153.5ms)
+
+
+Started GET "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:50:28 +0900
+Processing by UserController#create-confirm as HTML
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 96ms
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for {:url=>"/user/create"}:Hash):
+    1: <div class="create-confirm-wrapper">
+    2:   <div class="container">
+    3:     <%=form_for url: user_create_path do%>
+    4:     <span class="left">名前</span>:<span class="right"><%=params[:name]%></span><br>
+    5:     <span class="left">性別</span>:<span class="right"><%if params[:sex]=="0"%><%="男（♂）"%><%else%><%="女（♀）"%><%end%></span><br>
+    6:     <span class="left">年齢</span>:<span class="right"><%=params[:age]%></span><br>
+  
+app/views/user/create-confirm.html.erb:3:in `_app_views_user_create_confirm_html_erb__985504372_106011060'
+Started GET "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:50:30 +0900
+Processing by UserController#create-confirm as HTML
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (292.4ms)
+Completed 500 Internal Server Error in 678ms
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for {:url=>"/user/create"}:Hash):
+    1: <div class="create-confirm-wrapper">
+    2:   <div class="container">
+    3:     <%=form_for url: user_create_path do%>
+    4:     <span class="left">名前</span>:<span class="right"><%=params[:name]%></span><br>
+    5:     <span class="left">性別</span>:<span class="right"><%if params[:sex]=="0"%><%="男（♂）"%><%else%><%="女（♀）"%><%end%></span><br>
+    6:     <span class="left">年齢</span>:<span class="right"><%=params[:age]%></span><br>
+  
+app/views/user/create-confirm.html.erb:3:in `_app_views_user_create_confirm_html_erb__985504372_107428920'
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 13:50:44 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMM8klUZ+C2FDm3zzUKbeHEDxukUW1q9qDDOItW8mZixgS0dfpeNl4gOvQ9Ii6PVHVQT8N066NqXeRyNt0x8+g==", "name"=>"", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 76ms
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for {:url=>"/user/create"}:Hash):
+    1: <div class="create-confirm-wrapper">
+    2:   <div class="container">
+    3:     <%=form_for url: user_create_path do%>
+    4:     <span class="left">名前</span>:<span class="right"><%=params[:name]%></span><br>
+    5:     <span class="left">性別</span>:<span class="right"><%if params[:sex]=="0"%><%="男（♂）"%><%else%><%="女（♀）"%><%end%></span><br>
+    6:     <span class="left">年齢</span>:<span class="right"><%=params[:age]%></span><br>
+  
+app/views/user/create-confirm.html.erb:3:in `_app_views_user_create_confirm_html_erb__985504372_110474360'
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 14:20:45 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (257.2ms)
+Completed 500 Internal Server Error in 320ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_create' for #<#<Class:0x0000000d092768>:0x0000000d8ca188>
+Did you mean?  user_create_url):
+    1: <div class="cleate-wrapper">
+    2:   <div class="container">
+    3:     <div class="new-content">
+    4:       <%=form_tag user_create-confirm_path do%>
+    5:         <span class="span-box input-text"><span class="left">名前</span>：<input type="text" name="name" value=""></span>
+    6:         <span class="span-box selects"><span class="left">性別</span>：<select name="sex">
+    7:         <option value="0">男（♂）</option>
+  
+app/views/user/new.html.erb:4:in `_app_views_user_new_html_erb__1378465321_113661340'
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 14:21:09 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 156ms (Views: 140.3ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 14:45:42 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 150ms (Views: 134.8ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 14:45:52 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PMs8JD+jX8VR+WaacE5Mcip36yMcHjALo3o/9wMclYjNiS2rFC0qf1z5tmb1h3TfRiA+OtV/gmycM+1YYexw6g==", "name"=>"polkijuh", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"３４５６", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (189.1ms)
+Completed 500 Internal Server Error in 253ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `age' for #<#<Class:0x0000000b1da4d8>:0x0000000cf80a00>):
+     5:     <input type="hidden" name="" value="<%=@name%>">
+     6:     <span class="left">性別</span>:<span class="right"><%if @sex=="0"%><%="男（♂）"%><%else%><%="女（♀）"%><%end%></span><br>
+     7:     <input type="hidden" name="" value="<%=@sex%>">
+     8:     <span class="left">年齢</span>:<span class="right"><%=age%></span><br>
+     9:     <input type="hidden" name="" value="<%=@age%>">
+    10:     <span class="left">誕生日</span>:<span class="right"><%=@birthday%></span><br>
+    11:     <input type="hidden" name="" value="<%=@birthday%>">
+  
+app/views/user/create-confirm.html.erb:8:in `block in _app_views_user_create_confirm_html_erb__985504372_108792400'
+app/views/user/create-confirm.html.erb:3:in `_app_views_user_create_confirm_html_erb__985504372_108792400'
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 14:46:06 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PMs8JD+jX8VR+WaacE5Mcip36yMcHjALo3o/9wMclYjNiS2rFC0qf1z5tmb1h3TfRiA+OtV/gmycM+1YYexw6g==", "name"=>"polkijuh", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"３４５６", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 143ms (Views: 124.4ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 14:46:20 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PMs8JD+jX8VR+WaacE5Mcip36yMcHjALo3o/9wMclYjNiS2rFC0qf1z5tmb1h3TfRiA+OtV/gmycM+1YYexw6g==", "name"=>"polkijuh", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"３４５６kjmn", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 141ms (Views: 124.4ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 14:46:29 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PMs8JD+jX8VR+WaacE5Mcip36yMcHjALo3o/9wMclYjNiS2rFC0qf1z5tmb1h3TfRiA+OtV/gmycM+1YYexw6g==", "name"=>"polkijuh", "sex"=>"0", "age"=>"hgfcd", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"３４５６kjmn;lkjhgf", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 139ms (Views: 122.7ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 14:46:32 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 140ms (Views: 126.2ms)
+
+
+Started POST "/user/create-confirm" for 127.0.0.1 at 2017-10-01 14:46:38 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t+DfXVabxPG+/IRc0MmLmFvU7F1JLYmEOu4+EWf6wutGos7SfRWxS7P8VKBVALM1N4M5RIBMO+MFp+y+BQoniQ==", "name"=>"nbv ", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"hgvfc", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 155ms (Views: 135.9ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 14:49:12 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 155ms (Views: 137.8ms)
+
+
+Started GET "/user/create-confirm?utf8=%E2%9C%93&name=kijkmh&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=%E3%81%84%EF%BD%8A%EF%BD%8B%EF%BD%8D%EF%BD%88%EF%BD%8E&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 14:49:21 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"kijkmh", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"いｊｋｍｈｎ", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 63ms
+
+
+  
+SyntaxError (C:/Users/cosmo/Desktop/myT9_30_taku/app/views/user/create-confirm.html.erb:3: syntax error, unexpected ')'
+...ser/crate" ,{:method=>"get"}do);@output_buffer.safe_append='
+...                               ^
+C:/Users/cosmo/Desktop/myT9_30_taku/app/views/user/create-confirm.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+C:/Users/cosmo/Desktop/myT9_30_taku/app/views/user/create-confirm.html.erb:43: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/user/create-confirm.html.erb:3: syntax error, unexpected ')'
+app/views/user/create-confirm.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/user/create-confirm.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 14:52:21 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 157ms (Views: 135.5ms)
+
+
+Started GET "/user/create-confirm?utf8=%E2%9C%93&name=tfgvc&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=ytbgfv&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 14:52:28 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"tfgvc", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"ytbgfv", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 141ms (Views: 125.2ms)
+
+
+Started GET "/user/create-confirm?utf8=%E2%9C%93&name=tfgvc&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=ytbgfv&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 14:53:06 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"tfgvc", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"ytbgfv", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 153ms (Views: 134.5ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 14:53:53 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 180ms (Views: 165.2ms)
+
+
+Started GET "/user/create-confirm?utf8=%E2%9C%93&name=yghvb&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=ytghbv&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 14:53:58 +0900
+Processing by UserController#create-confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"yghvb", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"ytghbv", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create-confirm.html.erb within layouts/application
+  Rendered user/create-confirm.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 141ms (Views: 124.7ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-10-01 14:56:01 +0900
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 158ms (Views: 138.8ms)
+
+
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=gbv&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=thgf&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 14:56:10 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/user/create_confirm"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/user/create_confirm?utf8=%E2%9C%93&name=gbv&sex=0&age=&birthday=&height=&width=&original_work=&race=&description=thgf&email=&password=&twitter=&facebook=&homepage=" for 127.0.0.1 at 2017-10-01 14:56:31 +0900
+Processing by UserController#create_confirm as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"gbv", "sex"=>"0", "age"=>"", "birthday"=>"", "height"=>"", "width"=>"", "original_work"=>"", "race"=>"", "description"=>"thgf", "email"=>"", "password"=>"", "twitter"=>"", "facebook"=>"", "homepage"=>""}
+  Rendering user/create_confirm.html.erb within layouts/application
+  Rendered user/create_confirm.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 143ms (Views: 125.5ms)
+
+

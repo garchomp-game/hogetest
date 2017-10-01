@@ -2,14 +2,13 @@ Rails.application.routes.draw do
   get 'user/index'=>"user#index"
 
   get 'user/:id/show'=>'user#show'
-
-  get 'user/create'=>"user#create"
-  get 'user/create-confirm'=>'user#create-confirm'
-  post 'user/create-confirm'=>'user#create-confirm'
+  get 'user/create_confirm'=>'user#create_confirm'
+  post 'user/create_confirm'=>'user#create_confirm'
 
   get 'user/update'=>"user#update"
 
   get 'user/new'=>"user#new"
+  post 'user/create'=>"user#create"
   get "login"=>"user#login"
   post "login"=>"user#login_form"
 

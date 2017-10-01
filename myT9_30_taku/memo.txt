@@ -47,16 +47,18 @@ RelationDetail
 
 
 
-  大丈夫、絶対にできる。
-
-  最初目を合わせて話すことすら出来なかった一期生も今では前に出て堂々と自分から話している姿を見て…勇気づけられた。
-
-  思考のブロックを外せば、人間買われるんだって…
 
 
 
 
+user.scss 並び順
 
+login-form
+index-wrapper
+show-wrapper
+modal-wrapper
+create-wrapper
+create-confirm-wrapper
 
 
 

@@ -1,0 +1,38 @@
+<div class="create-confirm-wrapper">
+  <div class="container">
+    <%=form_tag "/user/crate" ,method:"get" do%>
+    <span class="left">名前</span>:<span class="right"><%=@name%></span><br>
+    <input type="hidden" name="" value="<%=@name%>">
+    <span class="left">性別</span>:<span class="right"><%if @sex=="0"%><%="男（♂）"%><%else%><%="女（♀）"%><%end%></span><br>
+    <input type="hidden" name="" value="<%=@sex%>">
+    <span class="left">年齢</span>:<span class="right"><%=@age%></span><br>
+    <input type="hidden" name="" value="<%=@age%>">
+    <span class="left">誕生日</span>:<span class="right"><%=@birthday%></span><br>
+    <input type="hidden" name="" value="<%=@birthday%>">
+    <span class="left">身長</span>:<span class="right"><%=@height%></span><br>
+    <input type="hidden" name="" value="<%=@height%>">
+    <span class="left">体重</span>:<span class="right"><%=@width%></span><br>
+    <input type="hidden" name="" value="<%=@width%>">
+    <span class="left">原作</span>:<span class="right"><%=@original_work%></span><br>
+    <input type="hidden" name="" value="<%=@original_work%>">
+    <span class="left">種族</span>:<span class="right"><%=@race%></span><br>
+    <input type="hidden" name="" value="<%=@race%>">
+    <span class="left">自己紹介</span>:<span class="right"><%=@description%></span><br>
+    <input type="hidden" name="" value="<%=@description%>">
+    <span class="left">メールアドレス</span>:<span class="right"><%=@email%></span><br>
+    <input type="hidden" name="" value="<%=@email%>">
+    <span class="left">パスワード</span>:<span class="right"><%=@password%></span><br>
+    <input type="hidden" name="" value="<%=@password%>">
+    <span class="left">ツイッターid</span>:<span class="right"><%=@twitter%></span><br>
+    <input type="hidden" name="" value="<%=@twitter%>">
+    <span class="left">フェイスブック</span>:<span class="right"><%=@facebook%></span><br>
+    <input type="hidden" name="" value="<%=@facebook%>">
+    <span class="left">ホームページ</span>:<span class="right"><%=@homepage%></span><br>
+    <input type="hidden" name="" value="<%=@homepage%>">
+    <div class="clear">
+
+    </div>
+    <input class="submit_image" type="image" src="/touroku.png" value="">
+    <%end%>
+  </div>
+</div>
