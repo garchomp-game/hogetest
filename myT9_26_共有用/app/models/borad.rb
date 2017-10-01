@@ -1,2 +1,0 @@
-class Borad < ApplicationRecord
-end
