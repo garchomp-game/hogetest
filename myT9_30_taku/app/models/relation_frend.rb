@@ -1,2 +1,0 @@
-class RelationFrend < ApplicationRecord
-end

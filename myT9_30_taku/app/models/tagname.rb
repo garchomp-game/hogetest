@@ -1,2 +1,0 @@
-class Tagname < ApplicationRecord
-end
