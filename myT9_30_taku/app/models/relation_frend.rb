@@ -1,0 +1,2 @@
+class RelationFrend < ApplicationRecord
+end

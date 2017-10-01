@@ -1,0 +1,17 @@
+<div class="login-form">
+  <div class="container">
+    <h1>ログイン</h1>
+
+    <%=form_tag"/login" do%>
+    <span class="lefts">メールアドレス</span><input class="check rights" type="text" name="email" value="<%=@email%>">
+    <div class="clear">
+
+    </div>
+    <span class="lefts">パスワード</span><input class="check rights" type="password" name="password" value="<%=@password%>">
+    <div class="clear">
+
+    </div>
+    <input class="submit" type="submit" name="" value="ログイン">
+    <%end%>
+  </div>
+</div>

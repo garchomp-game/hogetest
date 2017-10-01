@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyT</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Slabo+13px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a id="top-link" href="/">myTbase</a>
+        <div class="links">
+          <a class="link" href="/user/index">キャラ一覧へ</a>
+          <a class="link" href="/borad/index">掲示板一覧へ</a>
+          <a class="link" href="/borad/index">製作者紹介ページへ</a>
+          <a class="link" href="/login">ログイン</a>
+        </div>
+      </div>
+    </header>
+    <div class="height-90">
+
+    </div>
+    <%= yield %>
+    <div style="clear:both;">
+
+    </div>
+    <footer id="help-footer-bottom">
+      <div class="container">
+
+      </div>
+    </footer>
+  </body>
+</html>

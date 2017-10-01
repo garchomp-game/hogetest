@@ -1,0 +1,2 @@
+class FrendRelation < ApplicationRecord
+end
