@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170925124755) do
+ActiveRecord::Schema.define(version: 20170929144220) do
 
-  create_table "borads", force: :cascade do |t|
+  create_table "borads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.text "description"
     t.string "active"
     t.string "icon"
+    t.integer "borad_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "borad_id"
   end
 
-  create_table "characters", force: :cascade do |t|
+  create_table "characters", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
     t.integer "character_id"
     t.integer "host_id"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20170925124755) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "chats", force: :cascade do |t|
+  create_table "chats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.text "content"
     t.string "user_id"
@@ -40,29 +40,80 @@ ActiveRecord::Schema.define(version: 20170925124755) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "frends", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "frend_user"
+  create_table "frend_relations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "header_image"
+    t.string "frend_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "comments"
   end
 
-  create_table "tagnames", force: :cascade do |t|
+  create_table "frends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.integer "frend_user"
+    t.text "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "relation_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "user_name"
+    t.string "frend_name"
+    t.string "frend_image"
+    t.string "frend_comment"
+    t.integer "frend_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "relation_frends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "header_image"
+    t.string "frend_date"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tagnames", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.integer "count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "tagusers", force: :cascade do |t|
+  create_table "tagusers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "tag"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-# Could not dump table "users" because of following StandardError
-#   Unknown type 'string　' for column 'race'
-
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "email"
+    t.text "description"
+    t.string "image"
+    t.string "password"
+    t.string "user_id"
+    t.string "integer"
+    t.integer "sex"
+    t.string "original_work"
+    t.string "race"
+    t.integer "height"
+    t.integer "width"
+    t.string "street_address"
+    t.string "twitter"
+    t.string "facebook"
+    t.string "link_icon"
+    t.string "tag"
+    t.integer "age"
+    t.date "birthday"
+    t.text "story"
+    t.string "homepage"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 end
