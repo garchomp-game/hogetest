@@ -57,24 +57,22 @@ ActiveRecord::Schema.define(version: 20170929144220) do
   end
 
   create_table "relation_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    # t.string "user_name"
-    # t.string "frend_name"
-    # t.string "frend_image"
-    t.string "frend_comment"
+    t.string "user_name"
+    t.string "frend_name"
     t.integer "frend_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-  #
-  # create_table "relation_frends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-  #   t.string "name"
-  #   # t.string "header_image"
-  #   # t.string "frend_date" #frend_dataですが入れなおし有りそうなんでうまく動いたら後で変えます。
-  #   t.integer "user_id"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  # end　需要がなくなったため削除予定、ただし一応残しておきます。
+
+  create_table "relation_frends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "header_image"
+    t.string "frend_date"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tagnames", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -116,4 +114,5 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
 end

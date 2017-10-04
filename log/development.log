@@ -14074,3 +14074,583 @@ Completed 500 Internal Server Error in 212ms (ActiveRecord: 4.2ms)
 NameError (uninitialized constant UserController::RelationFrend):
   
 app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 23:36:37 +0900
+  [1m[35m (109.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (77.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 77.9ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationDetail):
+  
+app/controllers/user_controller.rb:15:in `show'
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (24.8ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `active`, `icon`, `created_at`, `updated_at`) VALUES ('挨拶', '説明', '0', '', '2017-10-04 14:37:12', '2017-10-04 14:37:12')[0m
+  [1m[35m (96.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('a', 'b', '2017-10-04 14:37:12', '2017-10-04 14:37:12')[0m
+  [1m[35m (109.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('hoge', 'huga', '2017-10-04 14:37:13', '2017-10-04 14:37:13')[0m
+  [1m[35m (109.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('piyo', 'hogera', '2017-10-04 14:37:13', '2017-10-04 14:37:13')[0m
+  [1m[35m (54.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('マイティーベース', 'メイン基地です', '2017-10-04 14:37:13', '2017-10-04 14:37:13')[0m
+  [1m[35m (53.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `frends` (`user_id`, `frend_user`, `created_at`, `updated_at`) VALUES (1, 2, '2017-10-04 14:37:13', '2017-10-04 14:37:13')[0m
+  [1m[35m (48.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `frends` (`user_id`, `frend_user`, `created_at`, `updated_at`) VALUES (1, 3, '2017-10-04 14:37:13', '2017-10-04 14:37:13')[0m
+  [1m[35m (53.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ケモノ', '2017-10-04 14:37:13', '2017-10-04 14:37:13')[0m
+  [1m[35m (54.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ポケモン', '2017-10-04 14:37:13', '2017-10-04 14:37:13')[0m
+  [1m[35m (108.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('女の子', '2017-10-04 14:37:13', '2017-10-04 14:37:13')[0m
+  [1m[35m (141.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ドラゴン', '2017-10-04 14:37:13', '2017-10-04 14:37:13')[0m
+  [1m[35m (64.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (333.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (432.2ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (345.6ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (377.6ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (232.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (389.2ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (211.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (344.5ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (299.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (423.2ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `frend_comment` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (232.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (344.5ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (244.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (344.6ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (199.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (344.2ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (290.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (344.8ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (223.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (344.5ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (355.5ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (199.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (366.8ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (232.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (344.6ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (345.8ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `frend_comment` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (344.5ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (210.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (344.6ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (266.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (344.3ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (223.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (365.9ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (211.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (355.5ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (455.8ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (277.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (344.3ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (366.7ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (210.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (378.9ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `frend_comment` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (366.7ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (466.4ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (500.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (367.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (356.7ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (411.2ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (377.5ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (366.6ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (210.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (367.9ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (366.7ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `frend_comment` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (300.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (422.0ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (366.6ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (210.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (400.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (218.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (388.5ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (220.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (378.1ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (266.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (377.6ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (445.4ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (377.8ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (299.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (378.3ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `frend_comment` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (210.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (400.1ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (378.8ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (388.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (410.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (213.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (433.2ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (366.6ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (333.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (567.9ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (444.5ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (199.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (377.7ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (299.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (455.2ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `frend_comment` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (223.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (444.6ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (366.5ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (299.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (377.5ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (215.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (378.3ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (377.7ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (433.2ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (444.3ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (545.8ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (477.6ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `frend_comment` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (277.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (388.7ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (511.2ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (254.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (378.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (288.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (388.7ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (488.8ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (444.4ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (254.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (366.8ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (1795.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (456.2ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (610.7ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `frend_comment` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (366.6ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (177.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (412.2ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (321.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (377.5ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (236.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (377.7ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (287.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (366.8ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (344.4ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (345.5ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (288.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (355.9ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (477.7ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `frend_name` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (388.8ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (310.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (389.9ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (188.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (443.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (222.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (399.7ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (277.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (388.7ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (688.3ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (211.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (488.6ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (333.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (388.6ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (282.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (466.3ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `frend_name` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (488.7ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (221.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (400.8ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (310.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (410.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (16.7ms)[0m  [1m[34mSELECT GET_LOCK(7003693887825440820, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(7003693887825440820)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2851.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS `my_t_base_development`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2973.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS `my_t_base_test`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `my_t_base_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE DATABASE `my_t_base_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (359.5ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (377.0ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (354.7ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (355.0ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (343.0ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (343.9ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `frend_name` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_frends` CASCADE[0m
+  [1m[35m (343.9ms)[0m  [1m[35mCREATE TABLE `relation_frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_date` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (378.2ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (376.8ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (399.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (343.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (87.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20170929144220)[0m
+  [1m[35m (343.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-10-04 15:10:46', '2017-10-04 15:10:46')[0m
+  [1m[35m (49.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (339.9ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (356.1ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (343.9ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (309.3ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (366.0ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (354.3ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `frend_name` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_frends` CASCADE[0m
+  [1m[35m (376.9ms)[0m  [1m[35mCREATE TABLE `relation_frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_date` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (377.0ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (421.4ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (411.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (332.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (43.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20170929144220)[0m
+  [1m[35m (365.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (52.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `active`, `icon`, `created_at`, `updated_at`) VALUES ('挨拶', '説明', '0', '', '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (62.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('a', 'b', '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (109.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('hoge', 'huga', '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (198.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('piyo', 'hogera', '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (53.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('マイティーベース', 'メイン基地です', '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (52.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `frends` (`user_id`, `frend_user`, `created_at`, `updated_at`) VALUES (1, 2, '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (57.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `frends` (`user_id`, `frend_user`, `created_at`, `updated_at`) VALUES (1, 3, '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (53.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ケモノ', '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (47.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ポケモン', '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (109.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('女の子', '2017-10-04 15:10:51', '2017-10-04 15:10:51')[0m
+  [1m[35m (109.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ドラゴン', '2017-10-04 15:10:52', '2017-10-04 15:10:52')[0m
+  [1m[35m (53.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2972.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `my_t_base_development`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2860.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS `my_t_base_test`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `my_t_base_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `my_t_base_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (481.4ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (376.3ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (399.0ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (487.9ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (377.1ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (588.8ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `frend_name` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_frends` CASCADE[0m
+  [1m[35m (377.0ms)[0m  [1m[35mCREATE TABLE `relation_frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_date` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (443.8ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (364.7ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (543.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (419.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (54.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20170929144220)[0m
+  [1m[35m (353.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-10-04 15:11:26', '2017-10-04 15:11:26')[0m
+  [1m[35m (64.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (418.2ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (377.0ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (454.9ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (409.1ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (487.8ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (410.5ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `frend_name` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_frends` CASCADE[0m
+  [1m[35m (578.6ms)[0m  [1m[35mCREATE TABLE `relation_frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_date` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (454.5ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (487.9ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (376.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (410.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (97.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20170929144220)[0m
+  [1m[35m (409.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (52.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `active`, `icon`, `created_at`, `updated_at`) VALUES ('挨拶', '説明', '0', '', '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (49.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('a', 'b', '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (86.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('hoge', 'huga', '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (87.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('piyo', 'hogera', '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (42.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('マイティーベース', 'メイン基地です', '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (42.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `frends` (`user_id`, `frend_user`, `created_at`, `updated_at`) VALUES (1, 2, '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (36.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `frends` (`user_id`, `frend_user`, `created_at`, `updated_at`) VALUES (1, 3, '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (53.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ケモノ', '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (62.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ポケモン', '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (109.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('女の子', '2017-10-04 15:11:32', '2017-10-04 15:11:32')[0m
+  [1m[35m (109.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ドラゴン', '2017-10-04 15:11:33', '2017-10-04 15:11:33')[0m
+  [1m[35m (53.4ms)[0m  [1m[35mCOMMIT[0m
