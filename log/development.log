@@ -13532,3 +13532,460 @@ Processing by HomeController#top as HTML
 Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (384.7ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (356.1ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (443.1ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (353.1ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (343.4ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (443.1ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `frend_name` varchar(255), `frend_image` varchar(255), `frend_comment` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_frends` CASCADE[0m
+  [1m[35m (320.1ms)[0m  [1m[35mCREATE TABLE `relation_frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_date` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (409.8ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (399.7ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (375.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (332.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (71.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20170929144220)[0m
+  [1m[35m (429.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-10-04 12:40:53', '2017-10-04 12:40:53')[0m
+  [1m[35m (49.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `borads` CASCADE[0m
+  [1m[35m (413.1ms)[0m  [1m[35mCREATE TABLE `borads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `active` varchar(255), `icon` varchar(255), `borad_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `characters` CASCADE[0m
+  [1m[35m (386.6ms)[0m  [1m[35mCREATE TABLE `characters` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `character_id` int, `host_id` int, `active_count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `chats` CASCADE[0m
+  [1m[35m (367.2ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `user_id` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `frend_relations` CASCADE[0m
+  [1m[35m (587.0ms)[0m  [1m[35mCREATE TABLE `frend_relations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_data` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `frends` CASCADE[0m
+  [1m[35m (354.0ms)[0m  [1m[35mCREATE TABLE `frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `frend_user` int, `comments` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_details` CASCADE[0m
+  [1m[35m (375.3ms)[0m  [1m[35mCREATE TABLE `relation_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_name` varchar(255), `frend_name` varchar(255), `frend_image` varchar(255), `frend_comment` varchar(255), `frend_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `relation_frends` CASCADE[0m
+  [1m[35m (419.9ms)[0m  [1m[35mCREATE TABLE `relation_frends` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `header_image` varchar(255), `frend_date` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagnames` CASCADE[0m
+  [1m[35m (386.8ms)[0m  [1m[35mCREATE TABLE `tagnames` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `count` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `tagusers` CASCADE[0m
+  [1m[35m (388.1ms)[0m  [1m[35mCREATE TABLE `tagusers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tag` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (355.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `description` text, `image` varchar(255), `password` varchar(255), `user_id` varchar(255), `integer` varchar(255), `sex` int, `original_work` varchar(255), `race` varchar(255), `height` int, `width` int, `street_address` varchar(255), `twitter` varchar(255), `facebook` varchar(255), `link_icon` varchar(255), `tag` varchar(255), `age` int, `birthday` date, `story` text, `homepage` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (352.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (54.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20170929144220)[0m
+  [1m[35m (420.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-10-04 12:40:58', '2017-10-04 12:40:58')[0m
+  [1m[35m (52.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2017-10-04 21:45:18 +0900
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 771ms (Views: 642.6ms)
+
+
+Started GET "/borad/index" for 127.0.0.1 at 2017-10-04 21:45:23 +0900
+Processing by BoradController#index as HTML
+  Rendering borad/index.html.erb within layouts/application
+  Rendered borad/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 39ms
+
+
+  
+ActionView::Template::Error (Access denied for user 'root'@'localhost'):
+    19:   <div class="container">
+    20:     <div class="body-wrapper">
+    21:       <ul>
+    22:         <%@borad.each do|i|%>
+    23:         <li><span class="li-box"></span><a href="/borad/<%=i.id%>/chat_index" id="li-link"><span class="span-name"><%=i.name%></span><span class="span-description"><%=i.description%></span><span class="span-active"><%=i.active%>/100    <%= i.updated_at.strftime("%Y-%m-%d") %></span><span class="span-icon"><%=i.icon%></span></a></li>
+    24:         <%end%>
+    25:       </ul>
+  
+app/views/borad/index.html.erb:22:in `_app_views_borad_index_html_erb__2800058055786657917_69888636501700'
+Started GET "/" for 127.0.0.1 at 2017-10-04 21:45:31 +0900
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 19.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 21:45:47 +0900
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 265ms (Views: 136.3ms)
+
+
+Started GET "/borad/index" for 127.0.0.1 at 2017-10-04 21:45:49 +0900
+Processing by BoradController#index as HTML
+  Rendering borad/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBorad Load (0.2ms)[0m  [1m[34mSELECT `borads`.* FROM `borads`[0m
+  Rendered borad/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 106ms (Views: 45.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at 2017-10-04 21:50:30 +0900
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  [1m[35m (43.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered user/index.html.erb within layouts/application (80.7ms)
+Completed 200 OK in 111ms (Views: 64.6ms | ActiveRecord: 44.2ms)
+
+
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 21:50:32 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 1.4ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/" for 127.0.0.1 at 2017-10-04 22:11:34 +0900
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 231ms (Views: 168.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at 2017-10-04 22:11:38 +0900
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  [1m[35m (267.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mUser Load (96.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered user/index.html.erb within layouts/application (544.2ms)
+Completed 200 OK in 565ms (Views: 200.8ms | ActiveRecord: 363.4ms)
+
+
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:11:40 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (53.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 53.0ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:12:44 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 195.2ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:12:46 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:13:00 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.8ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:13:03 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:13:06 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 3.4ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:13:12 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.7ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:13:24 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 2.3ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:13:24 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:14:21 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.5ms)
+
+
+  
+NameError (uninitialized constant UserController::FrendRelations):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:14:23 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (uninitialized constant UserController::FrendRelations):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:14:31 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.7ms)
+
+
+  
+NameError (uninitialized constant UserController::FendRelations):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:14:35 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 3.3ms)
+
+
+  
+NameError (uninitialized constant UserController::FrendRelations):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:14:44 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.2ms)
+
+
+  
+NameError (uninitialized constant UserController::FrendRelation):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:15:09 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.1ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationDetail):
+  
+app/controllers/user_controller.rb:16:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:15:15 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `header_image' for nil:NilClass):
+    4:     <div class="frend-content">
+    5:       <span id="x-button"><i class="fa fa-times" aria-hidden="true"></i></span>
+    6:       <h1>キャラクター関係図（仮）</h1>
+    7:       <img class="frend-image" src="/<%=@rf.header_image%>" alt="">
+    8:       <%for i in 0..@rd.size-1 do%>
+    9:       <div class="frend-message">
+   10:         <span class="left">
+  
+app/views/user/show.html.erb:7:in `_app_views_user_show_html_erb__2166233801108676240_69939289625220'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:16:11 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.9ms)
+
+
+  
+NameError (uninitialized constant UserController::FrendRelation):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:17:22 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (31.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 558ms (ActiveRecord: 34.5ms)
+
+
+  
+NameError (uninitialized constant UserController::FrendRelation):
+  
+app/controllers/user_controller.rb:15:in `show'
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (46.6ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `active`, `icon`, `created_at`, `updated_at`) VALUES ('挨拶', '説明', '0', '', '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (65.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('a', 'b', '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (107.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('hoge', 'huga', '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (109.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('piyo', 'hogera', '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (54.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('マイティーベース', 'メイン基地です', '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (53.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `frends` (`user_id`, `frend_user`, `created_at`, `updated_at`) VALUES (1, 2, '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (48.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `frends` (`user_id`, `frend_user`, `created_at`, `updated_at`) VALUES (1, 3, '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (52.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ケモノ', '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (48.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ポケモン', '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (108.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('女の子', '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (109.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ドラゴン', '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (53.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('garchomp', 'ケモノ', 0, '2017-10-04 13:18:42', '2017-10-04 13:18:42')[0m
+  [1m[35m (58.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('garchomp', 'ポケモン', 0, '2017-10-04 13:18:43', '2017-10-04 13:18:43')[0m
+  [1m[35m (53.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('カキイカダ', 'ポケモン', 0, '2017-10-04 13:18:43', '2017-10-04 13:18:43')[0m
+  [1m[35m (52.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('カキイカダ', '女の子', 0, '2017-10-04 13:18:43', '2017-10-04 13:18:43')[0m
+  [1m[35m (49.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('カキイカダ', 'ケモノ', 0, '2017-10-04 13:18:43', '2017-10-04 13:18:43')[0m
+  [1m[35m (53.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('garchomp', 'ドラゴン', 0, '2017-10-04 13:18:43', '2017-10-04 13:18:43')[0m
+  [1m[35m (53.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `description`, `image`, `password`, `user_id`, `sex`, `original_work`, `race`, `height`, `width`, `street_address`, `twitter`, `facebook`, `link_icon`, `age`, `birthday`, `story`, `homepage`, `created_at`, `updated_at`) VALUES ('garchomp', 'otoka.japanesedrum@gmail.com', 'おっす！俺はガブリアスのおとかだ。現在妻のさやのん（@punichan_Denpa）と一緒に生活しているぞ！ アイコンはカキイカダさんからだ。 ＞ちなみに（たく（人間））もなり参加しているからよろしくねー♪＜', 'otoka.png', 'matutani9613', '1', 0, 'ポケモン', 'ガブリアス', 198, 94, 'ワイワイタウン', '@matutaqnitakumi', 'https://www.facebook.com/profile.php?id=100012109625554', '0', 19, '1997-10-17', 'おっす！俺はガブリアスのおとかだ。現在妻のさやのん（@punichan_Denpa）と一緒に生活しているぞ！ アイコンはカキイカダさんからだ。 ＞ちなみに（たく（人間））もなり参加しているからよろしくねー♪＜', 'garchomp.com', '2017-10-04 13:18:43', '2017-10-04 13:18:43')[0m
+  [1m[35m (50.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `description`, `image`, `password`, `user_id`, `sex`, `original_work`, `race`, `height`, `width`, `street_address`, `twitter`, `link_icon`, `age`, `birthday`, `story`, `homepage`, `created_at`, `updated_at`) VALUES ('sayanon', 'sayanon@gmail.com', 'aro-ra', 'gaburiza3.png', 'sayanons', '2', 1, 'ポケモン', 'リザードン', 177, 90, 'アローラ地方', '@sayanon', '2451', 21, '2000-01-01', 'さやのんの家系図など', 'sayanon.com', '2017-10-04 13:18:43', '2017-10-04 13:18:43')[0m
+  [1m[35m (108.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `description`, `image`, `password`, `user_id`, `sex`, `original_work`, `race`, `height`, `width`, `street_address`, `twitter`, `link_icon`, `age`, `homepage`, `created_at`, `updated_at`) VALUES ('yowamushi', 'yowamushi@gmail.com', 'ボクの自己紹介ページだよ。詳しくは後でね', 'sayanon.png', 'yowamushis', '3', 1, 'ポケモン', 'ルガルガン（真夜中の姿）', 110, 25, 'アローラ地方', '@yowamushi', '3524', 15, 'yowamushi.com', '2017-10-04 13:18:43', '2017-10-04 13:18:43')[0m
+  [1m[35m (109.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:18:56 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 3.2ms)
+
+
+  
+NameError (uninitialized constant UserController::FrendRelation):
+  
+app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:19:49 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 4.4ms)
+
+
+  
+NameError (uninitialized constant UserController::FrendRelation):
+  
+app/controllers/user_controller.rb:15:in `show'
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:32:42 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
