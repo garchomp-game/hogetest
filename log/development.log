@@ -13989,3 +13989,88 @@ Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
 NameError (uninitialized constant UserController::RelationFrend):
   
 app/controllers/user_controller.rb:15:in `show'
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:36:57 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.3ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `active`, `icon`, `created_at`, `updated_at`) VALUES ('挨拶', '説明', '0', '', '2017-10-04 13:38:28', '2017-10-04 13:38:28')[0m
+  [1m[35m (63.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('a', 'b', '2017-10-04 13:38:28', '2017-10-04 13:38:28')[0m
+  [1m[35m (53.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('hoge', 'huga', '2017-10-04 13:38:28', '2017-10-04 13:38:28')[0m
+  [1m[35m (107.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('piyo', 'hogera', '2017-10-04 13:38:28', '2017-10-04 13:38:28')[0m
+  [1m[35m (109.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `borads` (`name`, `description`, `created_at`, `updated_at`) VALUES ('マイティーベース', 'メイン基地です', '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (53.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `frends` (`user_id`, `frend_user`, `created_at`, `updated_at`) VALUES (1, 2, '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (57.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `frends` (`user_id`, `frend_user`, `created_at`, `updated_at`) VALUES (1, 3, '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (108.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ケモノ', '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (50.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ポケモン', '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (53.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('女の子', '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (108.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagnames` (`name`, `created_at`, `updated_at`) VALUES ('ドラゴン', '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (109.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('garchomp', 'ケモノ', 0, '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (47.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('garchomp', 'ポケモン', 0, '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (53.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('カキイカダ', 'ポケモン', 0, '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (109.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('カキイカダ', '女の子', 0, '2017-10-04 13:38:29', '2017-10-04 13:38:29')[0m
+  [1m[35m (131.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('カキイカダ', 'ケモノ', 0, '2017-10-04 13:38:30', '2017-10-04 13:38:30')[0m
+  [1m[35m (53.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tagusers` (`name`, `tag`, `user_id`, `created_at`, `updated_at`) VALUES ('garchomp', 'ドラゴン', 0, '2017-10-04 13:38:30', '2017-10-04 13:38:30')[0m
+  [1m[35m (53.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `description`, `image`, `password`, `user_id`, `sex`, `original_work`, `race`, `height`, `width`, `street_address`, `twitter`, `facebook`, `link_icon`, `age`, `birthday`, `story`, `homepage`, `created_at`, `updated_at`) VALUES ('garchomp', 'otoka.japanesedrum@gmail.com', 'おっす！俺はガブリアスのおとかだ。現在妻のさやのん（@punichan_Denpa）と一緒に生活しているぞ！ アイコンはカキイカダさんからだ。 ＞ちなみに（たく（人間））もなり参加しているからよろしくねー♪＜', 'otoka.png', 'matutani9613', '1', 0, 'ポケモン', 'ガブリアス', 198, 94, 'ワイワイタウン', '@matutaqnitakumi', 'https://www.facebook.com/profile.php?id=100012109625554', '0', 19, '1997-10-17', 'おっす！俺はガブリアスのおとかだ。現在妻のさやのん（@punichan_Denpa）と一緒に生活しているぞ！ アイコンはカキイカダさんからだ。 ＞ちなみに（たく（人間））もなり参加しているからよろしくねー♪＜', 'garchomp.com', '2017-10-04 13:38:30', '2017-10-04 13:38:30')[0m
+  [1m[35m (48.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `description`, `image`, `password`, `user_id`, `sex`, `original_work`, `race`, `height`, `width`, `street_address`, `twitter`, `link_icon`, `age`, `birthday`, `story`, `homepage`, `created_at`, `updated_at`) VALUES ('sayanon', 'sayanon@gmail.com', 'aro-ra', 'gaburiza3.png', 'sayanons', '2', 1, 'ポケモン', 'リザードン', 177, 90, 'アローラ地方', '@sayanon', '2451', 21, '2000-01-01', 'さやのんの家系図など', 'sayanon.com', '2017-10-04 13:38:30', '2017-10-04 13:38:30')[0m
+  [1m[35m (53.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `description`, `image`, `password`, `user_id`, `sex`, `original_work`, `race`, `height`, `width`, `street_address`, `twitter`, `link_icon`, `age`, `homepage`, `created_at`, `updated_at`) VALUES ('yowamushi', 'yowamushi@gmail.com', 'ボクの自己紹介ページだよ。詳しくは後でね', 'sayanon.png', 'yowamushis', '3', 1, 'ポケモン', 'ルガルガン（真夜中の姿）', 110, 25, 'アローラ地方', '@yowamushi', '3524', 15, 'yowamushi.com', '2017-10-04 13:38:30', '2017-10-04 13:38:30')[0m
+  [1m[35m (53.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/user/1/show" for 127.0.0.1 at 2017-10-04 22:38:45 +0900
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 4.2ms)
+
+
+  
+NameError (uninitialized constant UserController::RelationFrend):
+  
+app/controllers/user_controller.rb:15:in `show'

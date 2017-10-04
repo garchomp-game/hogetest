@@ -12,8 +12,8 @@ image password user_id created_at updated_at
     @user=User.find_by(id: params[:id])
     @tag=Taguser.where(name: @user.name)
     @frend=Frend.where(user_id: @user.id)
-    @rf=RelationFrend.find_by(id:@user.id) #ここで積んでいます。
-    @rd=RelationDetail.where(id:@user.id)
+    @rd=RelationDetail.where(user_id:@user.id)
+    @r_user=User.find_by(id:@rd[i].frend_id)
 
     # frend_relations
   end

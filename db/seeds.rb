@@ -15,6 +15,12 @@ Tagname.create!([
   {name: "女の子", count: nil},
   {name: "ドラゴン", count: nil}
 ])
+RelationDetail.create!([
+  {user_name: "garchomp", frend_name:"sayanon",frend_id:2, user_id:1,
+  comment:"garchomp=>sayanon_test"},
+  {user_name: "garchomp", frend_name:"yowamushi",frend_id:3, user_id:1,
+  comment:"garchomp=>yowamushi"},
+])
 Taguser.create!([
   {name: "garchomp", tag: "ケモノ", user_id: 0},
   {name: "garchomp", tag: "ポケモン", user_id: 0},
