@@ -66,43 +66,30 @@
 
 .index-wrapper{
   width:100%;
-  background-image:url('/forest.png');
-  background-size:cover;
+  background-image:url('/profile_back.jpg');
+  background-attachment: fixed;
+  height:1600px;
+  background-size:100vw;
   box-sizing:border-box;
+  text-align:center;
   .index-content
   {
-    height:1000px;
-    z-index:100;
-    text-align:center;
-    padding:30px 0 30px;
-    .form_test{
-      text-align:left;
+    padding-top:180px;
+    height:1400px;
+    margin-top:-20px;
+    background-image: url("/binder.png");
+    background-position: top;
+    background-size:800px;
+    background-repeat: no-repeat;
+    form{
       input{
-        vertical-align: middle;
+        background-color:transparent;
+        border:3px solid brown;
+        margin:0 -3.5px;
         padding:5px;
-        margin:0 5px;
-        &:nth-child(odd){
-
-        }
-        &:nth-child(even){
-          background-image: linear-gradient(silver,white);
-          &:active{
-            background-image: linear-gradient(white,silver);
-          }
-        }
       }
-    }
-    h1{
-      color:white;
-    }
-    ul{
-      background-color:rgba(255,255,255,.5);
-      height:800px;
-      &:nth-child(even){
-        margin-top:90px;
-      }
-      &:nth-child(odd){
-        margin-top:60px;
+      input[type="submit"]{
+        cursor: pointer;
       }
     }
   }

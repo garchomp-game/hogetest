@@ -57,8 +57,6 @@ ActiveRecord::Schema.define(version: 20170929144220) do
   end
 
   create_table "relation_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "user_name"
-    t.string "frend_name"
     t.integer "frend_id"
     t.integer "user_id"
     t.string "comment"

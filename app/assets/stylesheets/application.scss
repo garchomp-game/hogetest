@@ -27,12 +27,20 @@ position:relative;
   width:90%;
   margin:0 auto;
 }
+.height-90{
+  height:90px;
+}
 header{
   height:90px;
   background-image:url("/back2-dark.jpg");
   background-size:cover;
   background-position: center;
   line-height:90px;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+
   #top-link{
     font-weight:bold;
     font-size:36px;
