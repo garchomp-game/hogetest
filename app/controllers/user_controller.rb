@@ -12,11 +12,30 @@ image password user_id created_at updated_at
     @user=User.find_by(id: params[:id])
     @tag=Taguser.where(name: @user.name)
     @frend=Frend.where(user_id: @user.id)
-    @rd=RelationDetail.where(user_id:@user.id)
-    @r_user=User.find_by(id:@rd[i].frend_id)
+    # @rd=RelationDetail.where(user_id:@user.id)
+    # @r_user=User.find_by(id:@rd[i].frend_id)
 
     # frend_relations
   end
+  # <!-- モーダル用 -->
+  # <!-- <div class="modal-wrapper off-modal">
+  #   <div class="modal-content">
+  #     <div class="frend-content">
+  #       <span id="x-button"><i class="fa fa-times" aria-hidden="true"></i></span>
+  #       <h1>キャラクター関係図（仮）</h1>
+  #       <%for i in 0..@rd.size-1 do%>
+  #       <div class="frend-message">
+  #         <span class="left">
+  #           <img src="/<%=@r_user.image%>" alt="<%=@r_user.name%>">
+  #           <p><%=@r_user.name%></p>
+  #         </span>
+  #         <span class="right"><%=@rd[i].frend_comment%></span>
+  #       </div>
+  #       <% end %>
+  #     </div>
+  #   </div>
+  # </div> -->
+  # <!-- ここまで -->
   def create
     @user=User.new(
       name:params[:name],
