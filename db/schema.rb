@@ -40,13 +40,13 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "frend_relations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.string "header_image"
-    t.string "frend_data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  # create_table "frend_relations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  #   t.string "name"
+  #   t.string "header_image"
+  #   t.string "frend_data"
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+  # end
 
   create_table "frends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
@@ -61,18 +61,19 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.string "frend_name"
     t.integer "frend_id"
     t.integer "user_id"
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "relation_frends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.string "header_image"
-    t.string "frend_date"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  # create_table "relation_frends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  #   t.string "name"
+  #   t.string "header_image"
+  #   t.string "frend_date"
+  #   t.integer "user_id"
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+  # end
 
   create_table "tagnames", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
