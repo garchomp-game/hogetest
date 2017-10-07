@@ -5,6 +5,16 @@
         <input type="text" name="" value="">
         <input type="submit" name="" value="検索">
       <%end%>
+      <%=form_tag "/",class:"sort_form" do%>
+        <select name="sort_box" required>
+          <option value="update">更新日</option>
+          <option value="follow">フォロー人数</option>
+        </select>
+      <%end%>
+      <div class="clear">
+      </div>
+      <p class="search-number">X件見つかりました</p>
+      <p class="search-number">yで検索</p>
       <div class="clear"></div>
         <ul>
           <%for i in 0...@user.size do%>

@@ -32,3 +32,7 @@ User.create!([
   {name: "sayanon", email: "sayanon@gmail.com", description: "aro-ra", image: "gaburiza3.png", password: "sayanons", user_id: "2", integer: nil, sex: 1, original_work: "ポケモン", race: "リザードン", height: 177, width: 90, street_address: "アローラ地方", twitter: "@sayanon", facebook: nil, link_icon: "2451", tag: nil, age: 21, birthday: "2000-01-01", story: "さやのんの家系図など", homepage: "sayanon.com"},
   {name: "yowamushi", email: "yowamushi@gmail.com", description: "ボクの自己紹介ページだよ。詳しくは後でね", image: "sayanon.png", password: "yowamushis", user_id: "3", integer: nil, sex: 1, original_work: "ポケモン", race: "ルガルガン（真夜中の姿）", height: 110, width: 25, street_address: "アローラ地方", twitter: "@yowamushi", facebook: nil, link_icon: "3524", tag: nil, age: 15, birthday: nil, story: nil, homepage: "yowamushi.com"}
 ])
+UserCharacter.create!([
+  {name: "松谷拓海", email: "otoka.japanesedrum@gmail.com", password: "matutani9613", age:"19", sex: "0"},
+  {name: "さやのん（本名知っているが念の為非公開）",email: "sayanon@gmail.com", password: "sayanons", age: "20(ということにしてる)", sex: "1"}
+  ])
