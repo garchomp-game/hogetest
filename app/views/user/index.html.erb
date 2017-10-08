@@ -17,16 +17,15 @@
       <p class="search-number">yで検索</p>
       <div class="clear"></div>
         <ul>
-          <%for i in 0...@user.size-1 do%>
+          <%for i in 0...@user.size do%>
             <li>
               <div class="li-content">
                 <a href="/user/index">
                   <img src="/<%=@user[i].image%>" alt="">
                   <div class="li-box">
                     <h2>name</h2>
-                    <%birth=@user[i].birthday%>
+                    <%birth=@user[i].created_at%>
                     <span class="right">登録日 : <%=birth.year%>年<%=birth.mon%>月<%=birth.day%>日</span>
-
                     <div class="description">
                       <%=@user[i].description%>
                     </div>
@@ -38,8 +37,15 @@
           <%end%>
         </ul>
         <div class="switch">
-          <p>hoge</p>
+          <%x=@user.size.to_i%>
+          <%button_total=(x-1)/4+1%>
+          <%for i in 1..button_total do%>
+          <a href="/user/index"><%=i%></a>
+          <%end%>
         </div>
+        <!--
+        4＋１で１カウントとしていく。
+       -->
       </div>
     </div>
   </div>
