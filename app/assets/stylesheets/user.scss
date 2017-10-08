@@ -84,6 +84,7 @@
     background-position: top;
     background-size:800px;
     background-repeat: no-repeat;
+    position:relative;
     .form_test,.sort_form{
       input,select,option{
         color:brown;
@@ -117,13 +118,64 @@
     ul{
       margin-top:30px;
       li{
-        height:130px;
-        width:100%;
-        border:5px solid brown;
-        margin:15px auto;
+        text-align:left;
+        .li-content{
+          height:130px;
+          width:100%;
+          border:5px solid brown;
+          margin:20px auto 2px;
+          text-align:left;
+          position:relative;
+          a{
+            margin:15px 0;
+            display:block;
+            height:100%;
+            width:100%;
+            text-decoration: none;
+            color:brown;
+            img{
+              height:100px;
+              margin:0 10px;
+              float:left;
+              box-sizing: border-box;
+              width:100px;
+            }
+            .li-box{
+              h2{
+                float:left;
+              }
+              .right{
+                float:right;
+                margin-right:15px;
+              }
+              .description{
+                height:70px;
+                position:absolute;
+                bottom:3px;
+                right:3px;
+                width:430px;
+                background-color:#E0C69E;
+                padding:5px 3px;
+              }
+            }
+          }
+          // aがここまで
+        }
+        // liコンテンツここまで
+        .li-bottom{
+
+        }
       }
+      // liここまで
     }
-    // ここまで
+    // ulここまで
+    .switch{
+      position: absolute;
+      bottom:650px;
+      left:50%;
+      transform:translateY(50%);
+      color:black;
+    }
   }
 }
 

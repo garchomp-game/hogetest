@@ -17,23 +17,29 @@
       <p class="search-number">yで検索</p>
       <div class="clear"></div>
         <ul>
-          <%for i in 0...@user.size do%>
+          <%for i in 0...@user.size-1 do%>
             <li>
-              <%=link_to "#{@user[i].name}" , "/user/#{@user[i].id}/show" %>
+              <div class="li-content">
+                <a href="/user/index">
+                  <img src="/<%=@user[i].image%>" alt="">
+                  <div class="li-box">
+                    <h2>name</h2>
+                    <%birth=@user[i].birthday%>
+                    <span class="right">登録日 : <%=birth.year%>年<%=birth.mon%>月<%=birth.day%>日</span>
+
+                    <div class="description">
+                      <%=@user[i].description%>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <span class="li-bottom">フォロワー<%=%>人 最終ログイン歴　：　<%=%>日以内</span>
             </li>
           <%end%>
         </ul>
-        <!--
-@user[x].y
-x=0,1,2,3...
-y=name / email / description
-image / password / user_id / created_at updated_at
-
-name  email  description  image  password  user_id  sex  original_work
-race  height width  street_address  twitter  facebook  link_icon
-created_at  updated_at
-
-       -->
+        <div class="switch">
+          <p>hoge</p>
+        </div>
       </div>
     </div>
   </div>
