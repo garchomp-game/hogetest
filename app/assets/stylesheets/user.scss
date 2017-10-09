@@ -82,7 +82,7 @@
     margin-top:-20px;
     background-image: url("/binder.png");
     background-position: top;
-    background-size:800px;
+    background-size:850px;
     background-repeat: no-repeat;
     position:relative;
     .form_test,.sort_form{
@@ -116,14 +116,14 @@
       float:left;
     }
     ul{
-      margin-top:30px;
+      margin-top:20px;
       li{
         text-align:left;
         .li-content{
           height:130px;
           width:100%;
           border:5px solid brown;
-          margin:20px auto 2px;
+          margin:15px auto 2px;
           text-align:left;
           position:relative;
           a{
@@ -171,7 +171,7 @@
     // ulここまで
     .switch{
       position: absolute;
-      bottom:650px;
+      bottom:580px;
       left:50%;
       transform:translateY(50%);
       a{

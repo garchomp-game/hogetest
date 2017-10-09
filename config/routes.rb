@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'user/index'=>"user#index"
+  get 'user/:id/index'=>"user#index"
 
   get 'user/:id/show'=>'user#show'
   get 'user/create_confirm'=>'user#create_confirm'

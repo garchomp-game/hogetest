@@ -1,5 +1,6 @@
 class UserController < ApplicationController
   def index
+    @id=params[:id]
     @user=User.all
   end
 =begin
