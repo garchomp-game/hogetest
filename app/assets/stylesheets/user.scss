@@ -383,6 +383,8 @@
     margin:10vh auto;
     box-sizing: border-box;
     overflow: scroll;
+
+    // frend-content
     .frend-content{
       background-color:white;
       text-align:center;
@@ -428,6 +430,49 @@
         }
       }
     }
+    // story-content
+    .story-content{
+      background-color:white;
+      height:800px;
+      text-align:center;
+      padding-top:30px;
+      color:brown;
+      h1{
+        border-bottom:3px solid brown;
+        width:80%;
+        margin:0 auto;
+        padding:15px;
+      }
+      .arasuji{
+        letter-spacing: 2em;
+        font-size:24px;
+        text-align:center;
+        margin:15px;
+        font-weight: bold;
+      }
+      table{
+        width:90%;
+        margin:0 auto;
+        border-collapse: collapse;
+        tr{
+          th,td{
+            border:3px solid brown;
+          }
+          th:first-child{
+            width:30%;
+          }
+          th:last-child{
+            width:60%;
+          }
+          td{
+            padding:15px 0;
+          }
+        }
+        // trここまで
+      }
+      // テーブルここまで
+    }
+    // contentここまで
   }
 }
 
