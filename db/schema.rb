@@ -64,15 +64,6 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.datetime "updated_at", null: false
   end
 
-  # create_table "relation_frends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-  #   t.string "name"
-  #   t.string "header_image"
-  #   t.string "frend_date"
-  #   t.integer "user_id"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  # end
-
   create_table "tagnames", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.integer "count"

@@ -1,3 +1,21 @@
+<!-- スクリプトをここから -->
+<script type="text/javascript">
+$(function() {
+  $("#profile-frend").click(function(){
+    $(".modal-wrapper").fadeIn();
+  });
+  $("#x-button").click(function(){
+    $(".modal-wrapper").fadeOut();
+  });
+  $(document).click(function(event) {
+    if(!$(event.target).closest(".modal-content,.profile-link").length) {
+        $(".modal-wrapper").fadeOut();
+    }
+  });
+});
+</script>
+<!-- ここまで -->
+
 <!-- モーダル用 -->
 <div class="modal-wrapper off-modal">
   <div class="modal-content">
@@ -5,12 +23,13 @@
       <span id="x-button"><i class="fa fa-times" aria-hidden="true"></i></span>
       <h1>キャラクター関係図（仮）</h1>
       <%for i in 0..@rd.size-1 do%>
+      <%@r_user=User.find_by(id:@rd[i].frend_id)%>
       <div class="frend-message">
         <span class="left">
           <img src="/<%=@r_user.image%>" alt="<%=@r_user.name%>">
           <p><%=@r_user.name%></p>
         </span>
-        <span class="right"><%=@rd[i].frend_comment%></span>
+        <span class="right"><%=@rd[i].comment%></span>
       </div>
       <% end %>
     </div>

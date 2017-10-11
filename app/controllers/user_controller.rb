@@ -3,22 +3,13 @@ class UserController < ApplicationController
     @id=params[:id]
     @user=User.all
   end
-=begin
-@user[x].y
-x=0,1,2,3...
-y=name email description
-image password user_id created_at updated_at
-=end
   def show
     @user=User.find_by(id: params[:id])
     @tag=Taguser.where(name: @user.name)
     @frend=Frend.where(user_id: @user.id)
-    # @rd=RelationDetail.where(user_id:@user.id)
-    # @r_user=User.find_by(id:@rd[i].frend_id)
-
+    @rd=RelationDetail.where(user_id:@user.id)
     # frend_relations
   end
-
   def create
     @user=User.new(
       name:params[:name],

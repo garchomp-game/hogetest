@@ -21,7 +21,7 @@
           <%for i in 0...@user_list do%>
             <li>
               <div class="li-content">
-                <a href="/user/index">
+                <a href="/user/<%=@user[i].id%>/show">
                   <img src="/<%=@user[i].image%>" alt="">
                   <div class="li-box">
                     <h2>name</h2>

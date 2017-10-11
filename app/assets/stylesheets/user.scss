@@ -395,18 +395,11 @@
         margin:0 auto;
         margin-bottom:30px;
       }
-      .frend-image{
-        height:200px;
-        width:80%;
-        box-sizing: border-box;
-        border:3px solid #7fff00;
-        margin:0 auto;
-      }
       .frend-message{
         height:150px;
         width:80%;
         border:3px solid brown;
-        margin:5px auto;
+        margin:15px auto;
         text-align:left;
         padding:10px;
         .left{
@@ -430,6 +423,8 @@
           display:block;
           float:right;
           height:100%;
+          padding:15px;
+          box-sizing: border-box;
         }
       }
     }
