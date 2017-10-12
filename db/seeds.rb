@@ -36,6 +36,6 @@ UserCharacter.create!([
   {name: "松谷拓海", email: "otoka.japanesedrum@gmail.com", password: "matutani9613", age:"19", sex: "0"},
   {name: "さやのん（本名知っているが念の為非公開）",email: "sayanon@gmail.com", password: "sayanons", age: "20(ということにしてる)", sex: 1}
 ])
-Story.create!([
+Hoge.create!([
   {user_id: 1, thing: "2017-10-12", history: "hogehoge"}
 ])

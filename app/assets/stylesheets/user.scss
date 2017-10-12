@@ -359,7 +359,7 @@
 .off-modal{
   display:none;
 }
-#x-button{
+.x-button{
   position:absolute;
   right:10px;
   top:10px;
@@ -386,6 +386,7 @@
 
     // frend-content
     .frend-content{
+      height:800px;
       background-color:white;
       text-align:center;
       color:brown;

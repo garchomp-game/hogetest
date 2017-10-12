@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-  create_table "storys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "hoges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
     t.datetime "thing"
     t.text "history"
