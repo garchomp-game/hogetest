@@ -443,12 +443,14 @@
         margin:0 auto;
         padding:15px;
       }
-      .arasuji{
-        letter-spacing: 2em;
+      p{
         font-size:24px;
         text-align:center;
         margin:15px;
         font-weight: bold;
+        span{
+          letter-spacing: 2em;
+        }
       }
       table{
         width:90%;
@@ -458,11 +460,14 @@
           th,td{
             border:3px solid brown;
           }
-          th:first-child{
+          .first-th{
             width:30%;
           }
-          th:last-child{
+          .last-th{
             width:60%;
+            span{
+              letter-spacing: 10em;
+            }
           }
           td{
             padding:15px 0;

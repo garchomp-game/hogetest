@@ -8,6 +8,7 @@ class UserController < ApplicationController
     @tag=Taguser.where(name: @user.name)
     @frend=Frend.where(user_id: @user.id)
     @rd=RelationDetail.where(user_id:@user.id)
+    @story=nil
     # frend_relations
   end
   def create

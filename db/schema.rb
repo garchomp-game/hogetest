@@ -84,6 +84,8 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.string "password"
     t.integer "age"
     t.integer "sex"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -107,8 +109,12 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.date "birthday"
     t.text "story"
     t.string "homepage"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-
+  create_table "storys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.datetime "thing"
+    t.text "history"
+  end
 end
