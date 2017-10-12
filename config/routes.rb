@@ -4,13 +4,15 @@ Rails.application.routes.draw do
   get 'user/:id/show'=>'user#show'
   get 'user/create_confirm'=>'user#create_confirm'
   post 'user/create_confirm'=>'user#create_confirm'
-
+  get 'user/direct_mail'=>'user#direct_mail'
+  get 'user/mypage'=>'user#mypage'
   get 'user/update'=>"user#update"
 
   get 'user/new'=>"user#new"
   post 'user/create'=>"user#create"
   get "login"=>"user#login"
   post "login"=>"user#login_form"
+  get '/logout'=>'user#logout'
 
   get 'posts/index'=>"posts#index"
   post 'user/create'=>'user#create_form'

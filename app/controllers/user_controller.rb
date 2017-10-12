@@ -60,11 +60,17 @@ class UserController < ApplicationController
     @email=nil
     @password=nil
   end
+  def logout
+    session["login_check"]=nil
+    redirect_to "/"
+  end
   def login_form
     @user=User.find_by(email: params[:email],password: params[:password])
     @email=params[:email]
     @password=params[:password]
     if @user
+      login_check="#{@user.email}#{@user.password}"
+      session["login_check"]=login_check
       redirect_to "/"
     else
       render "user/login"

@@ -24,7 +24,7 @@ position:relative;
 
 }
 .container{
-  width:90%;
+  width:1000px;
   margin:0 auto;
 }
 .height-90{
@@ -47,8 +47,13 @@ header{
     float:left;
   }
   a{
-    color:black;
     text-decoration: none;
+  }
+  a:not(#top-link){
+    color:white;
+  }
+  #top-link{
+    color:black;
   }
   .links{
     float:right;
@@ -72,7 +77,35 @@ header{
         right:-3px;
       }
     }
+    .small-box{
+      float:right;
+      height:90px;
+      padding-top:10px;
+      .small-link{
+        display:block;
+        height:30px;
+        box-sizing: border-box;
+        background-color: red;
+        line-height:30px;
+        text-align:center;
+        margin:3px 10px;
+        padding:0px 5px;
+        border-radius:3px;
+        box-shadow:3px 3px 3px black;
+        &:hover{
+          background-color:rgba(195,0,0,1);
+          color:white;
+        }
+        &:active{
+          box-shadow:none;
+          position:relative;
+          bottom:-3px;
+          right:-3px;
+        }
+      }
+    }
   }
+  // links ラスト
 }
 footer{
   height:150px;
