@@ -1,26 +1,4 @@
 Rails.application.routes.draw do
-  get 'mypage/myroom'
-
-  get 'mypage/relation'
-
-  get 'mypage/history'
-
-  get 'mypage/message'
-
-  get 'mypage/favorite'
-
-  get 'mypage/career'
-
-  get 'mypage/hide_setting'
-
-  get 'mypage/create_new'
-
-  get 'mypage/other_changes'
-
-  get 'mypage/block_user'
-
-  get 'mypage/following_user'
-
   get 'user/:id/index'=>"user#index"
 
   get 'user/:id/show'=>'user#show'
