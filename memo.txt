@@ -42,8 +42,6 @@ idなどは自動追加
 
 
 
-  => #<ActiveRecord::Relation [#<RelationDetail id: 1, user_name: "otoka9613", frend_name: nil, frend_image: "gaburiza.png", frend_comment: "hogecomment", created_at: "2017-09-29 14:31:09", updated_at: "2017-09-29 15:17:46", frend_id: 2, user_id: 1>, #<RelationDetail id: 2, user_name: "otoka9613", frend_name: nil, frend_image: "sayanon.png", frend_comment: "yowamushi.comments", created_at: "2017-09-29 14:32:59", updated_at: "2017-09-29 15:18:02", frend_id: 3, user_id: 1>, #<RelationDetail id: 3, user_name: nil, frend_name: nil, frend_image: nil, frend_comment: nil, created_at: "2017-09-30 09:13:01", updated_at: "2017-09-30 09:13:01", frend_id: nil, user_id: 5>]>
-
 
 
 
@@ -84,6 +82,58 @@ mysql -uroot -D my_t_base_development < mysql.sql
 
 
 
+
+新規データベース作成前メモ
+
+
+Mypage
+
+users.all id
+chats.all user_id
+borad.all user_id
+characters.all user_id host_id
+
+# borads borad_id => users id
+
+Myroom
+
+room_title
+room_stage
+room_lock
+room_setting
+room_discription
+room_active
+room_report
+
+My_relation
+
+user_id
+frend_id
+frend_discription
+delete_flag
+
+Usage_history
+
+borad => borad_id
+user_id
+borad => borad_id
+
+Message
+
+characters character_id => character_id
+message_user_id
+ランダムな数字 => search_id
+
+Favorite_room
+
+
+
+
+
+
+
+
+〜〜ここまで
 
 
 

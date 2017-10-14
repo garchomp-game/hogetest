@@ -1,0 +1,14 @@
+新規データベース作成前メモ
+
+mypage
+myroom
+relation
+history
+message
+favorite
+career
+hide_setting
+create_new
+other_changes
+block_user
+following_user

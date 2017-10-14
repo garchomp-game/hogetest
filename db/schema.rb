@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20170929144220) do
 
   create_table "borads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
+    t.string "name" # 部屋の名前のこと 後でtitle荷変更
     t.text "description"
     t.string "active"
     t.string "icon"
@@ -34,19 +34,11 @@ ActiveRecord::Schema.define(version: 20170929144220) do
   create_table "chats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.text "content"
-    t.string "user_id"
+    t.integer "user_id"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  # create_table "frend_relations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-  #   t.string "name"
-  #   t.string "header_image"
-  #   t.string "frend_data"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  # end
 
   create_table "frends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
