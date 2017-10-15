@@ -8,7 +8,7 @@ message
 favorite
 career
 hide_setting
-create_new
+Mycharacter_create
 other_changes
 block_user
 following_user
