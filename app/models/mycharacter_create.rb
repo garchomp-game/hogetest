@@ -1,0 +1,2 @@
+class MycharacterCreate < ApplicationRecord
+end

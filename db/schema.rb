@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170929144220) do
+ActiveRecord::Schema.define(version: 20171015135252) do
+
+  create_table "block_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.integer "block_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "borads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -40,18 +47,92 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.datetime "updated_at", null: false
   end
 
-  # create_table "frend_relations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-  #   t.string "name"
-  #   t.string "header_image"
-  #   t.string "frend_data"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  # end
+  create_table "favorite_rooms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "borad_id"
+    t.integer "user_id"
+    t.integer "delete_flag"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "following_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.integer "follow_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "frends", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
     t.integer "frend_user"
     t.text "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hide_settings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "r_18_content"
+    t.integer "r_18g_content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hide_words", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.string "hide_word"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+ #              hoges = story
+  create_table "hoges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.datetime "thing"
+    t.text "history"
+  end
+  # hoges => storyではうまく通らなかったため
+
+  create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "character_id"
+    t.string "message_user_id"
+    t.string "search_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "my_relations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "user_id"
+    t.string "frend_id"
+    t.text "frend_description"
+    t.integer "delete_flag"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mycharacter_creates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "image"
+    t.string "name"
+    t.integer "sex"
+    t.date "birthday"
+    t.string "different_birthday"
+    t.string "height"
+    t.string "width"
+    t.integer "r_18_setting"
+    t.string "original_work"
+    t.string "race"
+    t.string "twitter"
+    t.string "homepage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "myrooms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "room_title"
+    t.string "room_stage"
+    t.integer "room_lock"
+    t.string "room_setting"
+    t.string "room_description"
+    t.integer "room_activ"
+    t.string "room_report"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -78,6 +159,7 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
   create_table "user_characters", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "email"
@@ -87,6 +169,14 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "user_histories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "borad_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "email"
@@ -112,9 +202,5 @@ ActiveRecord::Schema.define(version: 20170929144220) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-  create_table "hoges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
-    t.datetime "thing"
-    t.text "history"
-  end
+
 end

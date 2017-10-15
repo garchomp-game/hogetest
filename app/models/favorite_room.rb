@@ -1,0 +1,2 @@
+class FavoriteRoom < ApplicationRecord
+end

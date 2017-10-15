@@ -100,8 +100,8 @@ Myroom
 room_title
 room_stage
 room_lock
-room_setting
-room_discription
+room_setting => room_setting_tablle
+room_description
 room_active
 room_report
 
@@ -109,7 +109,7 @@ My_relation
 
 user_id
 frend_id
-frend_discription
+frend_description
 delete_flag
 
 Usage_history
@@ -149,7 +149,7 @@ image
 name
 sex
 birthday
-different_birithday
+different_birthday
 height
 width
 r_18_setting
