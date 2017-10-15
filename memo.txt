@@ -127,11 +127,56 @@ message_user_id
 
 Favorite_room
 
+borads borad_id => borad_id
+users id => user_id
+delete_flag
 
+Hide_setting
 
+r_18_content (0 or 1)
+r_18G_content (0 or 1)
 
+#hide_wordは別テーブルにて
 
+Hide_word
 
+users id => user_id
+hide_word
+
+Mycharacter_create
+
+image
+name
+sex
+birthday
+different_birithday
+height
+width
+r_18_setting
+original_work
+race
+description
+twitter
+homepage
+
+Other_changes
+
+users =>{
+name
+email
+password
+birthday
+sex
+}
+
+Block_user
+users id => user_id
+block(user_id) => block_user_id
+
+Following_user
+
+users id => user_id
+follow(users id) => follow_user_id
 
 
 〜〜ここまで
