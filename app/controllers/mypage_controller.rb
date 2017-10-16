@@ -6,11 +6,11 @@ class MypageController < ApplicationController
   end
 
   def history
-
   end
+  
   def character_name_history
-
   end
+
   def message
   end
 

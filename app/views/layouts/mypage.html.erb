@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyT</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    </head>
+  <body>
+    <header>
+      <div class="container">
+        <a id="top-link" href="/">myTbase</a>
+        <div class="links">
+          <a class="link" href="/borad/index">なりきり掲示板</a>
+          <a class="link" href="/user/0/index">キャラ一データ</a>
+          <%if session["login_check"]==nil%>
+          <div class="small-box">
+            <a class="small-link" href="/login">ログイン</a>
+            <a class="small-link" href="/logout">ヘルプ</a>
+          </div>
+          <%else%>
+          <a class="link" href="/mypage/myroom">マイページ</a>
+          <div class="small-box">
+            <a class="small-link" href="/logout">ログアウト</a>
+            <a class="small-link" href="/logout">ヘルプ</a>
+          </div>
+          <%end%>
+        </div>
+      </div>
+    </header>
+    <div class="height-90">
+    </div>
+    <!-- ここからmypageレイアウト -->
+    <script type="text/javascript">
+      $(function(){
+        $(".button-right").click(function(){
+          var sl=$(".sub-character").scrollLeft();
+          $(".sub-character").animate({scrollLeft:sl + 50},300,"swing");
+          setTimeout(function(){
+            $(".button-left").show();
+          },300);
+          setTimeout(function(){
+            function maxscroll(){
+              var windowW = $(".sub-character-content").width();
+              console.log(windowW + " " + sl);
+            };
+            maxscroll();
+            if($(".sub-character").scrollLeft()==850){
+              $(".button-right").hide();
+            }
+          },300);
+        });
+        $(".button-left").click(function(){
+          var sl=$(".sub-character").scrollLeft();
+          $(".sub-character").animate({scrollLeft:sl - 50},300,"swing");
+          setTimeout(function(){
+            $(".button-right").show();
+          },300);
+          setTimeout(function(){
+            if($(".sub-character").scrollLeft()==0){
+              $(".button-left").hide();
+            }
+          },300);
+
+        });
+        if($(".sub-character").scrollLeft()==0){
+          $(".button-left").hide();
+        }
+      });
+    </script>
+    <div class="mypage-wrapper">
+      <span class="mypage-icon"></span>
+
+      <div class="mypage-list">
+        <h1>マイページ</h1>
+        <div class="center-box">
+          <span class="image-box"></span>
+          <div class="sub-characters">
+            <span class="button-left"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
+            <span class="button-right"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+            <div class="sub-character">
+              <p>サブキャラクター</p>
+              <div class="sub-character-content">
+                <span class=character-list></span>
+                <span class=character-list></span>
+                <span class=character-list></span>
+                <span class=character-list></span>
+                <span class=character-list></span>
+                <span class=character-list></span>
+              </div>
+            </div>
+          </div>
+          <a class="change-character" href="#">メインキャラに変更</a>
+          <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mypage-content">
+        <%= yield %>
+      </div>
+    </div>
+    <!-- ここまで -->
+    <div style="clear:both;">
+
+    </div>
+    <footer id="help-footer-bottom">
+      <div class="container">
+
+      </div>
+    </footer>
+  </body>
+</html>

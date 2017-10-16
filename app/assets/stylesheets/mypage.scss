@@ -12,7 +12,112 @@ block_user
 following_user
 */
 
+.mypage-wrapper{
+  height:800px;
+  color:brown;
+  .mypage-icon{
+    position:fixed;
+    top:calc(90px - 50px);
+    left:5px;
+    height:100px;
+    width:100px;
+    z-index:15;
+    border-radius:50%;
+    background-color:orange;
+  }
+  .mypage-list,.mypage-content{
+    box-sizing:border-box;
+  }
 
+  .mypage-list{
+    height:calc(100vh - 90px);
+    position:fixed;
+    left:0;
+    top:90px;
+    width:300px;
+    text-align:center;
+    background-color:aqua;
+    float:left;
+    padding-top:50px;
+    .center-box{
+      width:250px;
+      margin:0 auto;
+      text-align:left;
+      .image-box{
+        height:250px;
+        width:250px;
+        background-color:gray;
+        display:block;
+        margin:10px auto;
+      }
+      .sub-character-content > *{
+        -webkit-transform: translateZ(0px);
+      }
+      .sub-character::-webkit-scrollbar {
+        display: none;
+        height: 0 !important;
+      }
+      .sub-characters{
+        position:relative;
+        width:250px;
+        margin:0 auto;
+        .button-left,.button-right{
+          position:absolute;
+          top:50px;
+          transform:translateY(-50%);
+          z-index:9;
+          font-size:90px;
+          cursor: pointer;
+        }
+        .button-left{
+          left:-25px;
+        }
+        .button-right{
+          right:-25px;
+        }
+      }
+      .sub-character{
+
+        box-sizing: border-box;
+        height:100px;
+        padding:10px 15px 0;
+        background-color:#D6C589;
+        text-align:left;
+        font-weight:bold;
+
+        overflow: hidden;
+        .sub-character-content{
+          width: 800px;
+          .character-list{
+            margin-top:10px;
+            margin-left:5px;
+            height:50px;
+            width:50px;
+            background-color:gray;
+            display:inline-block;
+          }
+        }
+      }
+
+      .change-character{
+        text-decoration: none;
+        color:white;
+        background-color:orange;
+        display:inline-block;
+        margin:15px 0;
+        padding:3px 3px;
+        border-radius:3px;
+      }
+    }
+  }
+  .mypage-content{
+    text-align:center;
+    height:800px;
+    width:calc(100% - 300px);
+    background-color:green;
+    float:right;
+  }
+}
 
 
 .myroom-wrapper{
