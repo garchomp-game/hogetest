@@ -30,10 +30,7 @@ following_user
   }
 
   .mypage-list{
-    height:calc(100vh - 90px);
-    position:fixed;
-    left:0;
-    top:90px;
+    height:800px;
     width:300px;
     text-align:center;
     background-color:aqua;
@@ -87,7 +84,7 @@ following_user
 
         overflow: hidden;
         .sub-character-content{
-          width: 800px;
+          width: 400px;
           .character-list{
             margin-top:10px;
             margin-left:5px;
