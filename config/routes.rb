@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'user/:id/index'=>"user#index"
-
   get 'user/:id/show'=>'user#show'
   get 'user/create_confirm'=>'user#create_confirm'
   post 'user/create_confirm'=>'user#create_confirm'
@@ -32,7 +31,18 @@ Rails.application.routes.draw do
   get 'borad/:id/update'=>"borad#update"
   post "borad/:id/update"=>"borad#update_result"
   #id
-
   get 'borad/:id/chat_index'=>"borad#chat_index"
+
+  get 'mypage/myroom'
+  get 'mypage/relation'
+  get 'mypage/history'
+  get 'mypage/message'
+  get 'mypage/favorite'
+  get 'mypage/career'
+  get 'mypage/hide_setting'
+  get 'mypage/create_new'
+  get 'mypage/other_changes'
+  get 'mypage/block_user'
+  get 'mypage/following_user'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

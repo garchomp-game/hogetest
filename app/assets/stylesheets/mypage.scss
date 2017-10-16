@@ -1,12 +1,13 @@
 /*
 myroom
-other_changes
+relation
 history
 direct_mail
 favorite
 character_name_history
 hide_setting
 create_new
+other_changes
 block_user
 following_user
 */
@@ -19,8 +20,8 @@ following_user
 
   }
 }
-.other_changes-wrapper{
-  .other_changes-content{
+.relation-wrapper{
+  .relation-content{
 
   }
 }
@@ -41,7 +42,7 @@ following_user
 }
 .character_name_history-wrapper{
   .character_name_history-container{
-    
+
   }
 }
 .hide_setting-wrapper{
@@ -55,7 +56,11 @@ following_user
 
   }
 }
+.other_changes-wrapper{
+  .other_changes-content{
 
+  }
+}
 .block_user-wrapper{
   .block_user-content{
 
