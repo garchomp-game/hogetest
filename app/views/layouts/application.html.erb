@@ -15,23 +15,24 @@
     <header>
       <div class="container">
         <a id="top-link" href="/">myTbase</a>
-        <div class="links">
-          <a class="link" href="/borad/index">なりきり掲示板</a>
-          <a class="link" href="/user/0/index">キャラ一データ</a>
-          <%if session["login_check"]==nil%>
-          <div class="small-box">
-            <a class="small-link" href="/login">ログイン</a>
-            <a class="small-link" href="/logout">ヘルプ</a>
-          </div>
-          <%else%>
-          <a class="link" href="/mypage/myroom">マイページ</a>
-          <div class="small-box">
-            <a class="small-link" href="/logout">ログアウト</a>
-            <a class="small-link" href="/logout">ヘルプ</a>
-          </div>
-          <%end%>
-        </div>
       </div>
+      <div class="links">
+        <a class="link" href="/borad/index">なりきり掲示板</a>
+        <a class="link" href="/user/0/index">キャラ一データ</a>
+        <%if session["login_check"]==nil%>
+        <div class="small-box">
+          <a class="small-link" href="/login">ログイン</a>
+          <a class="small-link" href="/logout">ヘルプ</a>
+        </div>
+        <%else%>
+        <a class="link" href="/mypage/myroom">マイページ</a>
+        <div class="small-box">
+          <a class="small-link" href="/logout">ログアウト</a>
+          <a class="small-link" href="/logout">ヘルプ</a>
+        </div>
+        <%end%>
+      </div>
+
     </header>
     <div class="height-90">
 

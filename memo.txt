@@ -184,7 +184,22 @@ follow(users id) => follow_user_id
 
 
 
+@mixinの使い方
 
+@mixin 関数名{
+関数内定義
+}
+@include 関数
+
+~~
+@mixin 関数名（引数）{
+関数内定義(引数はrubyの引数と同じ感じで使える)
+}
+@include 関数（引数）
+
+~~
+
+変数宣言＝$変数名
 
 
 

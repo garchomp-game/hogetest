@@ -12,9 +12,14 @@ block_user
 following_user
 */
 
+@import "functions";
+.mypage-list::-webkit-scrollbar{
+  display:none;
+}
 .mypage-wrapper{
   height:800px;
-  color:brown;
+  position:relative;
+  @include brown-link-button;
   .mypage-icon{
     position:fixed;
     top:calc(90px - 50px);
@@ -30,10 +35,14 @@ following_user
   }
 
   .mypage-list{
+    position:absolute;
+    overflow: scroll;
+    top:0;
+    left:0;
     height:800px;
     width:300px;
     text-align:center;
-    background-color:aqua;
+    @include mypage-list-wrapper;
     float:left;
     padding-top:50px;
     .center-box{
@@ -43,7 +52,7 @@ following_user
       .image-box{
         height:250px;
         width:250px;
-        background-color:gray;
+        @include real-world-black;
         display:block;
         margin:10px auto;
       }
@@ -78,40 +87,65 @@ following_user
         box-sizing: border-box;
         height:100px;
         padding:10px 15px 0;
-        background-color:#D6C589;
+        @include mypage-sub-character-background-color;
         text-align:left;
         font-weight:bold;
-
         overflow: hidden;
         .sub-character-content{
-          width: 400px;
           .character-list{
             margin-top:10px;
             margin-left:5px;
             height:50px;
             width:50px;
-            background-color:gray;
+            @include real-world-black;
             display:inline-block;
           }
         }
       }
-
       .change-character{
         text-decoration: none;
         color:white;
-        background-color:orange;
+        @include mypage-button-color;
         display:inline-block;
         margin:15px 0;
         padding:3px 3px;
         border-radius:3px;
       }
+      .profile-button{
+        display:block;
+        width:120px;
+        padding:5px 10px;
+        @include mypage-sub-character-background-color;
+        text-align:center;
+        a{
+          @include brown-link-button;
+        }
+      }
+      .follow-user{
+        @include brown-link-button;
+        margin:50px 0 30px;
+        display:inline-block;
+      }
+      ul{
+        li{
+          border-left:2px solid rgb(67,27,0);
+          a{
+            margin-left:10px;
+            @include brown-link-button;
+            vertical-align: middle;
+          }
+        }
+      }
     }
+    // center-box-end
+    padding-bottom:60px;
   }
+  // mypage-list-end
   .mypage-content{
     text-align:center;
     height:800px;
     width:calc(100% - 300px);
-    background-color:green;
+    background-image:radial-gradient(red,green,blue,yellow,brown,red,green,blue,yellow,brown,red,green,blue,yellow,brown,red,green,blue,yellow,brown,red,green,blue,yellow,brown);
     float:right;
   }
 }
