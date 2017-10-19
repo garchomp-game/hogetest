@@ -10,6 +10,9 @@
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
     crossorigin="anonymous"></script>
+    <style media="screen">
+
+    </style>
     </head>
   <body>
     <header>
@@ -85,18 +88,15 @@
               <span class="button-right"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
               <div class="sub-character">
                 <p>サブキャラクター</p>
-                <%count=0%>
+                <%$count=0%>
                 <div class="sub-character-content">
                   <%for i in 1..9 do%>
                   <span class="character-list"></span>
-                  <%count+=1%>
+                  <%$count+=1%>
                   <%end%>
+
                 </div>
-                <style media="screen">
-                  .sub-character-content{
-                    width:calc(60px * <%=count%> + 5px);
-                  }
-                </style>
+
               </div>
             </div>
             <a class="change-character" href="#">メインキャラに変更</a>
