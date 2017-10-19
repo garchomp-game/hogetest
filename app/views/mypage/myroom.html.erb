@@ -1,7 +1,34 @@
 <div class="myroom-wrapper">
   <div class="container">
     <div class="myroom-content">
+      <h1>自分で立てた部屋</h1>
+      <%for i in 1..4 do%>
+      <div class="build-room-wrapper">
+        <div class="build-room-content">
 
+          <div class="left-content">
+            <img src="" alt="">
+            <p>hogeステージ</p>
+          </div>
+
+          <div class="right-content">
+            <span class="title">部屋タイトル</span>
+            <div class="build-room-description">
+              <p class="build-room-setting">許可ルール</p>
+              <div class="room-description">
+                <span>description</span>
+                <a class="description-all" href="#">全文表示</a>
+                <span class="bottom-right">
+                  <span class="room-active-user">x/100人</span>
+                  <span class="room-date">yyyy年mm月dd日　開設</span>
+                  <a class="room-repote" href="#">通報</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%end%>
     </div>
   </div>
 </div>

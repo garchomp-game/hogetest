@@ -13,13 +13,11 @@ following_user
 */
 
 @import "functions";
-.mypage-list::-webkit-scrollbar{
-  display:none;
-}
+@include scroll-hidden("mypage-list");
 .mypage-wrapper{
   height:800px;
-  position:relative;
   @include brown-link-button;
+  position:relative;
   .mypage-icon{
     position:fixed;
     top:calc(90px - 50px);
@@ -35,10 +33,7 @@ following_user
   }
 
   .mypage-list{
-    position:absolute;
     overflow: scroll;
-    top:0;
-    left:0;
     height:800px;
     width:300px;
     text-align:center;
@@ -142,23 +137,143 @@ following_user
   }
   // mypage-list-end
   .mypage-content{
-    text-align:center;
+    height:calc(100% - 90px);
+    width:calc(100% - 300px);
+    float:right;
+    position:fixed;
+    top:90px;
+    right:0;
+    background-image:url("/paper_wide.jpg");
+    background-size:cover;
+  }
+
+  .mypage-contents{
+    position:absolute;
+    top:0;
+    right:0;
     height:800px;
     width:calc(100% - 300px);
-    background-image:radial-gradient(red,green,blue,yellow,brown,red,green,blue,yellow,brown,red,green,blue,yellow,brown,red,green,blue,yellow,brown,red,green,blue,yellow,brown);
-    float:right;
+    overflow: scroll;
   }
 }
+@include scroll-hidden("mypage-contents");
 
 
 .myroom-wrapper{
+  padding-bottom:30px;
   .myroom-content{
+    @include mypage-font-color;
+    h1{
+      margin-top:30px;
+      font-size:48px;
+      font-weight:normal;
+      margin:30px 55px 60px;
+      padding:0;
+    }
+    .build-room-wrapper{
+      @include mypage-list-wrapper;
+      height:200px;
+      margin:30px 60px;
+      width:80%;
+      border:3px solid rgb(67,27,0);
+      .build-room-content{
+        .left-content{
+          text-align: center;
+          box-sizing: border-box;
+          width:170px;
+          height:200px;
+          display:inline-block;
+          @include mypage-change-chracter-background;
+          img{
+            margin-top:10px;
+            height:150px;
+            width:150px;
+            border-radius:50%;
+            @include real-world-black;
+            display: inline-block;
+          }
+          p{
+            text-align:center;
+            margin:10px;
+          }
+        }
+        .right-content{
 
+          box-sizing: border-box;
+          margin:0 auto;
+          width:calc(100% - 180px);
+          display:inline-block;
+          vertical-align: top;
+          .title{
+            text-align:center;
+            box-sizing: border-box;
+            margin:5px auto;
+            height:40px;
+            line-height:40px;
+            font-size:24px;
+            font-weight:bold;
+            @include mypage-sub-character-background-color;
+            display:inline-block;
+            width:100%;
+          }
+          .build-room-description{
+            box-sizing: border-box;
+            height:140px;
+            margin-top:5px;
+            position:relative;
+            @include mypage-sub-character-background-color;
+            .build-room-setting{
+              border-bottom:3px solid rgb(67,27,0);
+              height:30px;
+              line-height:30px;
+              width:95%;
+              margin:0 auto;
+            }
+            .room-description{
+              width:95%;
+              margin:0 ;
+              box-sizing: border-box;
+              margin-top:5px;
+              span{
+
+              }
+              .description-all{
+                color:rgb(67,27,0);
+              }
+              .description-all{
+
+              }
+              .bottom-right{
+                position:absolute;
+                bottom:5px;
+                right:10px;
+                .room-active-user{
+
+                }
+                .room-date{
+
+                }
+                .room-repote{
+                  background-color:red;
+                  color:white;
+                  display:inline-block;
+                  padding:5px 10px;
+                  text-decoration: none;
+                  border-radius:50%;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
   }
 }
 .relation-wrapper{
   .relation-content{
-
+    
   }
 }
 .history-wrapper{

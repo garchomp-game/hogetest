@@ -1,9 +1,11 @@
+
+// color
 @mixin brown-link-button {
   color:rgb(67,27,0);
   text-decoration: none;
 }
-
 @mixin mypage-font-color{
+  color:rgb(67,27,0);
 
 }
 @mixin mypage-sub-character-background-color{
@@ -20,4 +22,9 @@
 }
 @mixin real-world-black{
   background-color:rgb(67,27,0);
+}
+@mixin scroll-hidden($set){
+  .#{$set}::-webkit-scrollbar{
+    display:none;
+  }
 }
