@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  borad_id: 1
+  user_id: 1
+  delete_flag: 1
+
+two:
+  borad_id: 1
+  user_id: 1
+  delete_flag: 1
