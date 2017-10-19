@@ -231,7 +231,7 @@ following_user
             }
             .room-description{
               width:95%;
-              margin:0 ;
+              margin:0 auto;
               box-sizing: border-box;
               margin-top:5px;
               span{
@@ -273,9 +273,32 @@ following_user
 }
 .relation-wrapper{
   .relation-content{
-    
+    .sub-character{
+
+      box-sizing: border-box;
+      height:100px;
+      padding:10px 15px 0;
+      @include mypage-sub-character-background-color;
+      text-align:left;
+      font-weight:bold;
+      overflow: hidden;
+      .sub-character-content{
+        .character-list{
+          margin-top:10px;
+          margin-left:5px;
+          height:50px;
+          width:50px;
+          @include real-world-black;
+          display:inline-block;
+        }
+        .character-list-big{
+
+        }
+      }
+    }
   }
 }
+
 .history-wrapper{
   .history-content{
 

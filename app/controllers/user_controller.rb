@@ -71,6 +71,7 @@ class UserController < ApplicationController
     if @user
       login_check="#{@user.email}#{@user.password}"
       session["login_check"]=login_check
+      session["login_user_id"]=@user.id
       redirect_to "/"
     else
       render "user/login"

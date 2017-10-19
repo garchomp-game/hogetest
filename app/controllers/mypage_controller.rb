@@ -7,7 +7,7 @@ class MypageController < ApplicationController
 
   def history
   end
-  
+
   def character_name_history
   end
 

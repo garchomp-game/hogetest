@@ -1,7 +1,26 @@
 <div class="relation-wrapper">
   <div class="container">
     <div class="relation-content">
-
+      <div class="character-bord">
+        <div class="sub-character">
+          <%count=0%>
+          <div class="sub-character-content">
+            <%for i in 1..7 do%>
+            <%if i == 1%>
+            <span class="character-list-big"></span>
+            <%else%>
+            <span class="character-list"></span>
+            <%end%>
+            <%count+=1%>
+            <%end%>
+            <style media="screen">
+              .sub-character-content{
+                width:calc(60px * <%=count%> + 5px)
+              }
+            </style>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

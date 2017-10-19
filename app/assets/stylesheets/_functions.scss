@@ -28,3 +28,11 @@
     display:none;
   }
 }
+@mixin character-lists($height,$width){
+  margin-top:10px;
+  margin-left:5px;
+  height:#{$height};
+  width:#{$width};
+  @include real-world-black;
+  display:inline-block;
+}
