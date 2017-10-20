@@ -28,11 +28,13 @@ following_user
     border-radius:50%;
     background-color:orange;
   }
+
   .mypage-list,.mypage-content{
     box-sizing:border-box;
   }
 
   .mypage-list{
+    border-right:10px solid rgb(67,27,0);;
     overflow: scroll;
     height:800px;
     width:300px;
@@ -283,41 +285,169 @@ following_user
       top:0;
       @include mypage-list-wrapper;
       box-sizing: border-box;
-      padding-top:20px;
-      padding-left:20px;
+      padding-top:10px;
+      padding-left:50px;
+      .sub-characters{
+        float:left;
+        position: relative;
+      }
       .sub-character{
+        overflow: hidden;
         display:inline-block;
         box-sizing: border-box;
-        height:140px;
+        width:310px;
+        height:160px;
         position:relative;
         @include mypage-sub-character-background-color;
         text-align:left;
         font-weight:bold;
-        overflow: hidden;
         text-align:center;
         padding-top:10px;
-        width:350px;
-        .button-left,.button-right{
-          position:absolute;
-          top:50px;
-          transform:translateY(-50%);
-          z-index:9;
-          font-size:90px;
-          cursor: pointer;
-        }
-        .button-left{
-          left:-25px;
-        }
-        .button-right{
-          right:-25px;
-        }
         .sub-character-content{
-          margin-left:-20px;
+          text-align:left;
+          margin-left:10px;
           .character-list{
             @include character-lists(50px,50px);
           }
           .character-list-big{
             @include character-lists(100px,100px);
+          }
+        }
+      }
+    }
+    .link-group{
+      float:left;
+      a{
+        display:block;
+        width:200px;
+        margin:0 10px 10px;
+        text-align:center;
+        box-sizing: border-box;
+      }
+      .profile-editing{
+        height:70px;
+        font-size:28px;
+        font-weight: bold;
+        box-sizing: border-box;
+        padding-top:5px;
+        @include brown-link-button;
+        @include mypage-sub-character-background-color;
+      }
+      .character-new-create{
+        height:35px;
+        line-height:30px;
+        @include mypage-sub-character-background-color;
+        @include brown-link-button;
+      }
+      .main-character-change{
+        height:35px;
+        line-height:30px;
+        color:rgba(255,249,214,1);
+        text-decoration:none;
+        font-weight:bold;
+        @include mypage-button-color;
+      }
+    }
+    .character-relations{
+      width:calc(100vw - 320px);
+      position:absolute;
+      right:0;
+      top:180px;
+
+      .character-relations-content{
+        width:700px;
+        text-align:center;
+        margin-left:30px;
+        margin-top:40px;
+        // title
+        p{
+          position: relative;
+          .left-border,.right-border{
+            position: absolute;
+            top:50%;
+            border:2px solid rgb(67,27,0);
+            display:block;
+            width:25%;
+          }
+          .left-border{
+            left:0px;
+          }
+          .right-border{
+            right:0px;
+          }
+          .border-in-content{
+            font-size:36px;
+          }
+        }
+        // title-end
+        .character-box{
+          margin-top:40px;
+          margin-bottom:20px;
+          .character-content{
+            border:2px solid rgb(67,27,0);
+            height:150px;
+            width:700px;
+            background-color:white;
+            text-align:left;
+            margin-bottom:20px;
+            .left-content{
+              float:left;
+              margin-top:10px;
+              margin-left:10px;
+              text-align:center;
+              img{
+                @include real-world-black;
+                height:100px;
+                width:100px;
+                display: inline-block;
+              }
+              p{
+
+              }
+            }
+            .right-content{
+              height:100%;
+              margin-top:10px;
+              margin-right:10px;
+              width:570px;
+              float:right;
+              position:relative;
+              .sakuzyo{
+// いつもはsakujoってうつがsakuzyoさん思い出して・・・それだけですごめんなさい。
+                  position: absolute;
+                  bottom:20px;
+                  right:10px;
+                  display:block;
+                  padding:5px 5px;
+                  @include real-world-black;
+                  color:white;
+                  border-radius:3px;
+              }
+            }
+          }
+          .character-append{
+            @include real-world-black;
+            color:white;
+            display:block;
+            padding:5px 10px;
+            text-decoration: none;
+            border-radius:3px;
+            width:100px;
+            margin:0 auto;
+            font-weight: bold;
+            font-size:20px;
+          }
+          .save-changes{
+            font-weight:bold;
+            font-size:24px;
+            margin:40px auto 60px;
+            display:block;
+            text-decoration: none;
+            @include mypage-button-color;
+            color:white;
+            border-radius:5px;
+            padding:10px 8px;
+            width:100px;
           }
         }
       }

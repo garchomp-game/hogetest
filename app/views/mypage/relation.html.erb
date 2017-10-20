@@ -1,26 +1,56 @@
 <div class="relation-wrapper">
   <div class="container">
     <div class="relation-content">
-      <div class="character-bord">
 
-        <div class="sub-character">
-          <span class="button-left"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
-          <span class="button-right"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
-          <%count=0%>
-          <div class="sub-character-content">
-            <%for i in 1..7 do%>
-            <%if i == 1%>
-            <span class="character-list-big"></span>
-            <%else%>
-            <span class="character-list"></span>
+      <div class="character-bord">
+        <div class="sub-characters">
+          <div class="sub-character">
+            <%count=0%>
+            <div class="sub-character-content">
+              <%for i in 1..4 do%>
+              <%if i == 1%>
+              <span class="character-list-big"></span>
+              <%else%>
+              <span class="character-list"></span>
+              <%end%>
+              <%count+=1%>
+              <%end%>
+              <style media="screen">
+                .sub-character-content{
+                  width:calc(60px * <%=$count%> + 5px)
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+        <div class="link-group">
+          <a class="profile-editing" href="#">プロフィール<br>編集</a>
+          <a class="character-new-create" href="#">キャラクター新規作成</a>
+          <a class="main-character-change" href="#">メインキャラ変更</a>
+        </div>
+      </div>
+      <!-- character-bordここまで -->
+      <div class="character-relations">
+        <div class="character-relations-content">
+          <p><span class="left-border"></span>
+            <span class="border-in-content">キャラクター関係図</span>
+            <span class="right-border"></span>
+          </p>
+          <div class="character-box">
+            <%for i in 1..4 do%>
+            <div class="character-content">
+              <span class="left-content">
+                <img src="" alt="">
+                <p>hoge</p>
+              </span>
+              <span class="right-content">
+                <p><%=User.find_by(id: 1).description%></p>
+                <a class="sakuzyo">削除</a>
+              </span>
+            </div>
             <%end%>
-            <%count+=1%>
-            <%end%>
-            <style media="screen">
-              .sub-character-content{
-                width:calc(60px * <%=$count%> + 5px)
-              }
-            </style>
+            <a class="character-append" href="#">キャラ追加</a>
+            <a class="save-changes" href="#">変更保存</a>
           </div>
         </div>
       </div>
