@@ -2,7 +2,10 @@
   <div class="container">
     <div class="relation-content">
       <div class="character-bord">
+
         <div class="sub-character">
+          <span class="button-left"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
+          <span class="button-right"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
           <%count=0%>
           <div class="sub-character-content">
             <%for i in 1..7 do%>
@@ -15,7 +18,7 @@
             <%end%>
             <style media="screen">
               .sub-character-content{
-                width:calc(60px * <%=count%> + 5px)
+                width:calc(60px * <%=$count%> + 5px)
               }
             </style>
           </div>

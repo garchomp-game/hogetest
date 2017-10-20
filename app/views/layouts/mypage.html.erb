@@ -10,9 +10,6 @@
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
     crossorigin="anonymous"></script>
-    <style media="screen">
-
-    </style>
     </head>
   <body>
     <header>
@@ -94,7 +91,11 @@
                   <span class="character-list"></span>
                   <%$count+=1%>
                   <%end%>
-
+                  <style media="screen">
+                    .sub-character-content{
+                      width:calc(60px * <%=$count%> + 5px)
+                    }
+                  </style>
                 </div>
 
               </div>

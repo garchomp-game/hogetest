@@ -87,10 +87,11 @@ following_user
         font-weight:bold;
         overflow: hidden;
         .sub-character-content{
-          width:550px;
+
           .character-list{
             margin-top:10px;
             margin-left:5px;
+
             height:50px;
             width:50px;
             @include real-world-black;
@@ -274,26 +275,50 @@ following_user
 }
 .relation-wrapper{
   .relation-content{
-    .sub-character{
-
+    .character-bord{
+      height:180px;
+      width:calc(100vw - 300px);
+      position:absolute;
+      right:0;
+      top:0;
+      @include mypage-list-wrapper;
       box-sizing: border-box;
-      height:100px;
-      padding:10px 15px 0;
-      @include mypage-sub-character-background-color;
-      text-align:left;
-      font-weight:bold;
-      overflow: hidden;
-      .sub-character-content{
-        .character-list{
-          margin-top:10px;
-          margin-left:5px;
-          height:50px;
-          width:50px;
-          @include real-world-black;
-          display:inline-block;
+      padding-top:20px;
+      padding-left:20px;
+      .sub-character{
+        display:inline-block;
+        box-sizing: border-box;
+        height:140px;
+        position:relative;
+        @include mypage-sub-character-background-color;
+        text-align:left;
+        font-weight:bold;
+        overflow: hidden;
+        text-align:center;
+        padding-top:10px;
+        width:350px;
+        .button-left,.button-right{
+          position:absolute;
+          top:50px;
+          transform:translateY(-50%);
+          z-index:9;
+          font-size:90px;
+          cursor: pointer;
         }
-        .character-list-big{
-
+        .button-left{
+          left:-25px;
+        }
+        .button-right{
+          right:-25px;
+        }
+        .sub-character-content{
+          margin-left:-20px;
+          .character-list{
+            @include character-lists(50px,50px);
+          }
+          .character-list-big{
+            @include character-lists(100px,100px);
+          }
         }
       }
     }
