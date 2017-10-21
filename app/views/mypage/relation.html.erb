@@ -1,3 +1,11 @@
+<script type="text/javascript">
+  $(function(){
+    $(".sakuzyo").click(function(){
+      window.location = "/mypage/sakuzyo";
+    })
+  })
+</script>
+
 <div class="relation-wrapper">
   <div class="container">
     <div class="relation-content">
@@ -33,25 +41,26 @@
             <span class="border-in-content">キャラクター関係図</span>
             <span class="right-border"></span>
           </p>
-          <div class="character-box">
+          <ul class="character-box">
             <%for i in 0..@frend.size-1 do%>
-            <a href="#">
               <%@frend_user=User.find_by(id: @frend[i].frend_user)%>
-              <div class="character-content">
-                <span class="left-content">
-                  <img src="/<%=@frend_user.image%>" alt="<%=@frend_user.name%>">
-                  <p>hoge</p>
-                </span>
-                <span class="right-content">
-                  <p><%=@frend_user.description%></p>
-                  <a class="sakuzyo">削除</a>
-                </span>
-              </div>
-            </a>
+              <li class="character-content">
+                <a class="character-box-links" href="#">
+                  <span class="left-content">
+                    <img src="/<%=@frend_user.image%>" alt="<%=@frend_user.name%>">
+                    <p>hoge</p>
+                  </span>
+                  <span class="right-content">
+                    <p><%=@frend_user.description%></p>
+                    <span class="sakuzyo">削除</span>
+                  </span>
+
+                </a>
+              </li>
             <%end%>
             <a class="character-append" href="#">キャラ追加</a>
             <a class="save-changes" href="#">変更保存</a>
-          </div>
+          </ul>
         </div>
       </div>
     </div>

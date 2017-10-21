@@ -87,10 +87,10 @@
                 <p>サブキャラクター</p>
                 <%$count=0%>
                 <div class="sub-character-content">
-                  <img class="character-list" src="/<%=@user.image%>" alt="">
+                  <a href="/mypage/<%=@user.id%>/relation"><img class="character-list" src="/<%=@user.image%>" alt=""></a>
                   <%for i in 0..@character.size-1 do%>
                   <%@character_user=User.find_by(id: @character[i].character_id)%>
-                  <img class="character-list" src="/<%=@character_user.image%>" alt="">
+                  <a href="/mypage/<%=@character_user.id%>/relation"><img class="character-list" src="/<%=@character_user.image%>" alt=""></a>
                   <%$count+=1%>
                   <%end%>
                   <style media="all">

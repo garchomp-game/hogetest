@@ -379,9 +379,16 @@ following_user
           }
         }
         // title-end
+        .character-box-links{
+          display:block;
+          height:100%;
+          width:100%;
+          @include brown-color;
+        }
         .character-box{
           margin-top:40px;
           margin-bottom:20px;
+
           .character-content{
             border:2px solid rgb(67,27,0);
             height:150px;
@@ -405,12 +412,13 @@ following_user
               }
             }
             .right-content{
+              position:relative;
               height:100%;
               margin-top:10px;
               margin-right:10px;
               width:570px;
               float:right;
-              position:relative;
+
               .sakuzyo{
 // いつもはsakujoってうつがsakuzyoさん思い出して・・・それだけですごめんなさい。
                   position: absolute;
@@ -421,6 +429,8 @@ following_user
                   @include real-world-black;
                   color:white;
                   border-radius:3px;
+                  height:30px;
+                  line-height:30px;
               }
             }
           }
