@@ -304,10 +304,12 @@ following_user
           text-align:left;
           margin-left:10px;
           .character-list{
-            @include character-lists(50px,50px);
+            height:50px;
+            width:50px;
           }
           .character-list-big{
-            height:100px;
+            height:130px;
+            width:130px;
           }
         }
       }

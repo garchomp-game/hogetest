@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def set_mypage_setting
     @user=User.find_by(id: session["login_user_id"])
-    @frend=Frend.where(user_id: session["login_user_id"])
+    @frend=Frend.where(user_id: params[:id])
     @rd=RelationDetail.where(user_id: session["login_user_id"])
     @character=Character.where(host_id: session["login_user_id"])
   end

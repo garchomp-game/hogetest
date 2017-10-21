@@ -6,19 +6,15 @@
           <div class="sub-character">
             <%$counts=0%>
             <div class="sub-character-content">
+              <a href="/mypage/<%=@user.id%>/relation"><img class="character-list-big" src="/<%=@user.image%>" alt="<%=@user.name%>"></a>
               <%for i in 0..@character.size-1 do%>
-                <%if i == 0%>
-                  <%@character_user=User.find_by(id: @character[i].character_id)%>
-                  <a href="#"><img class="character-list-big" src="/<%=@character_user.image%>" alt="<%=@character_user.name%>"></a>
-                <%else%>
-                  <%@character_user=User.find_by(id: @character[i].character_id)%>
-                  <a href="#"><img class="character-list" src="/<%=@character_user.image%>" alt="<%=@character_user.name%>"></a>
-                <%end%>
+                <%@character_user=User.find_by(id: @character[i].character_id)%>
+                <a href="/mypage/<%=@character_user.id%>/relation"><img class="character-list" src="/<%=@character_user.image%>" alt="<%=@character_user.name%>"></a>
                 <%$counts+=1%>
               <%end%>
               <style media="screen">
                 .sub-character-content{
-                  width:calc(70px * (<%=$counts%> + 1) + 10px)
+                  width:calc(70px * (<%=$counts%> + 1) + 100px)
                 }
               </style>
             </div>
@@ -39,17 +35,19 @@
           </p>
           <div class="character-box">
             <%for i in 0..@frend.size-1 do%>
-            <%@frend_user=User.find_by(id: @frend[i].frend_user)%>
-            <div class="character-content">
-              <span class="left-content">
-                <img src="/<%=@frend_user.image%>" alt="<%=@frend_user.name%>">
-                <p>hoge</p>
-              </span>
-              <span class="right-content">
-                <p><%=@frend_user.description%></p>
-                <a class="sakuzyo">削除</a>
-              </span>
-            </div>
+            <a href="#">
+              <%@frend_user=User.find_by(id: @frend[i].frend_user)%>
+              <div class="character-content">
+                <span class="left-content">
+                  <img src="/<%=@frend_user.image%>" alt="<%=@frend_user.name%>">
+                  <p>hoge</p>
+                </span>
+                <span class="right-content">
+                  <p><%=@frend_user.description%></p>
+                  <a class="sakuzyo">削除</a>
+                </span>
+              </div>
+            </a>
             <%end%>
             <a class="character-append" href="#">キャラ追加</a>
             <a class="save-changes" href="#">変更保存</a>
