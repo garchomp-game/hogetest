@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20171015135252) do
   end
 
   create_table "characters", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
+    # t.integer "user_id"  user_id=host_idと同じ
     t.integer "character_id"
     t.integer "host_id"
     t.integer "active_count"

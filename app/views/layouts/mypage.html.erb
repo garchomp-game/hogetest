@@ -25,7 +25,7 @@
           <a class="small-link" href="/logout">ヘルプ</a>
         </div>
         <%else%>
-        <a class="link" href="/mypage/myroom">マイページ</a>
+        <a class="link" href="/mypage/<%=@user.id%>/myroom">マイページ</a>
         <div class="small-box">
           <a class="small-link" href="/logout">ログアウト</a>
           <a class="small-link" href="/logout">ヘルプ</a>
@@ -87,8 +87,9 @@
                 <p>サブキャラクター</p>
                 <%$count=0%>
                 <div class="sub-character-content">
-                  <%for i in 1..9 do%>
+                  <%for i in 0..@frend.size-1 do%>
                   <span class="character-list"></span>
+                  <!-- <img class="character-list" src="" alt=""> -->
                   <%$count+=1%>
                   <%end%>
                   <style media="all">

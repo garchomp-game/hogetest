@@ -1,23 +1,24 @@
 <div class="relation-wrapper">
   <div class="container">
     <div class="relation-content">
-
       <div class="character-bord">
         <div class="sub-characters">
           <div class="sub-character">
-            <%count=0%>
+            <%$counts=0%>
             <div class="sub-character-content">
-              <%for i in 1..4 do%>
-              <%if i == 1%>
-              <span class="character-list-big"></span>
-              <%else%>
-              <span class="character-list"></span>
-              <%end%>
-              <%count+=1%>
+              <%for i in 0..@character.size-1 do%>
+                <%if i == 0%>
+                  <%@character_user=User.find_by(id: @character[i].character_id)%>
+                  <a href="#"><img class="character-list-big" src="/<%=@character_user.image%>" alt="<%=@character_user.name%>"></a>
+                <%else%>
+                  <%@character_user=User.find_by(id: @character[i].character_id)%>
+                  <a href="#"><img class="character-list" src="/<%=@character_user.image%>" alt="<%=@character_user.name%>"></a>
+                <%end%>
+                <%$counts+=1%>
               <%end%>
               <style media="screen">
                 .sub-character-content{
-                  width:calc(60px * <%=$count%> + 5px)
+                  width:calc(70px * (<%=$counts%> + 1) + 10px)
                 }
               </style>
             </div>
@@ -37,14 +38,15 @@
             <span class="right-border"></span>
           </p>
           <div class="character-box">
-            <%for i in 1..4 do%>
+            <%for i in 0..@frend.size-1 do%>
+            <%@frend_user=User.find_by(id: @frend[i].frend_user)%>
             <div class="character-content">
               <span class="left-content">
-                <img src="" alt="">
+                <img src="/<%=@frend_user.image%>" alt="<%=@frend_user.name%>">
                 <p>hoge</p>
               </span>
               <span class="right-content">
-                <p><%=User.find_by(id: 1).description%></p>
+                <p><%=@frend_user.description%></p>
                 <a class="sakuzyo">削除</a>
               </span>
             </div>

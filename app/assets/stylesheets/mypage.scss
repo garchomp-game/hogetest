@@ -80,7 +80,6 @@ following_user
         }
       }
       .sub-character{
-
         box-sizing: border-box;
         height:100px;
         padding:10px 15px 0;
@@ -89,11 +88,9 @@ following_user
         font-weight:bold;
         overflow: hidden;
         .sub-character-content{
-
           .character-list{
             margin-top:10px;
             margin-left:5px;
-
             height:50px;
             width:50px;
             @include real-world-black;
@@ -310,7 +307,7 @@ following_user
             @include character-lists(50px,50px);
           }
           .character-list-big{
-            @include character-lists(100px,100px);
+            height:100px;
           }
         }
       }

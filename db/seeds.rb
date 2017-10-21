@@ -5,6 +5,9 @@ Borad.create!([
   {name: "piyo", description: "hogera", active: nil, icon: nil, borad_id: nil},
   {name: "マイティーベース", description: "メイン基地です", active: nil, icon: nil, borad_id: nil}
 ])
+Character.create!([
+  {character_id: 4, host_id: 1}
+])
 Frend.create!([
   {user_id: 1, frend_user: 2, comments: nil},
   {user_id: 1, frend_user: 3, comments: nil}
