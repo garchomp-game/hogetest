@@ -25,7 +25,7 @@
           <a class="small-link" href="/logout">ヘルプ</a>
         </div>
         <%else%>
-        <a class="link" href="/mypage/<%=@user.id%>/myroom">マイページ</a>
+        <a class="link" href="/mypage/index">マイページ</a>
         <div class="small-box">
           <a class="small-link" href="/logout">ログアウト</a>
           <a class="small-link" href="/logout">ヘルプ</a>
@@ -111,9 +111,9 @@
             </div>
             <a class="follow-user" href="#">フォローユーザー</a>
             <ul>
-              <li><span>_</span><a href="#">お気に入り部屋</a></li>
+              <li><span>_</span><a href="/mypage/<%=@user.id%>/favorite">お気に入り部屋</a></li>
               <li><span>_</span><a href="#">自分で立てた部屋</a></li>
-              <li><span>_</span><a href="#">使用履歴</a></li>
+              <li><span>_</span><a href="/mypage/<%=@user.id%>/history">使用履歴</a></li>
             </ul>
           </div>
         </div>

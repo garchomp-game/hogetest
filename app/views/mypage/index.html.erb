@@ -1,0 +1,157 @@
+<!-- スクリプトをここから -->
+<script type="text/javascript">
+$(function() {
+  $(".profile-link").click(function(){
+    var classVal=$(this).attr('class');
+    // console.log(classVal);
+    var classVals=classVal.split(' ');
+    // console.log(classVals[1]);
+    $("."+classVals[1]+" .modal-wrapper").fadeIn();
+  });
+  $(".x-button").click(function(){
+    $(".modal-wrapper").fadeOut();
+  });
+  $(document).click(function(event) {
+    if(!$(event.target).closest(".modal-content,.profile-link").length) {
+        $(".modal-wrapper").fadeOut();
+    }
+  });
+});
+</script>
+<!-- ここまで -->
+
+<!-- モーダル用 -->
+<div class="frend">
+  <div class="modal-wrapper off-modal">
+    <div class="modal-content">
+      <div class="frend-content">
+        <span class="x-button"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <h1>キャラクター関係図（仮）</h1>
+        <%for i in 0..@rd.size-1 do%>
+        <%@r_user=User.find_by(id:@rd[i].frend_id)%>
+        <div class="frend-message">
+          <span class="left">
+            <img src="/<%=@r_user.image%>" alt="<%=@r_user.name%>">
+            <p><%=@r_user.name%></p>
+          </span>
+          <span class="right">  <%=@rd[i].comment%></span>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="story">
+  <div class="modal-wrapper off-modal">
+    <div class="modal-content">
+      <div class="story-content">
+        <span class="x-button"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <h1>経歴（仮）（ストーリー）</h1>
+        <p class="arasuji"><span>あらす</span>じ</p>
+        <table>
+          <tr>
+            <th class="first-th">年月</th>
+            <th class="last-th"><span>事</span>柄</th>
+          </tr>
+          <tr>
+            <td>hoge</td>
+            <td>hoge</td>
+          </tr>
+          <tr>
+            <td>hoge</td>
+            <td>hoge</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ここまで -->
+
+<div class="show-wrapper">
+  <div class="container">
+    <div class="show-content">
+
+      <div class="show_tag">
+        <span class="tag-top">タグ：</span>
+        <div class="show_tags">
+          <%for i in 0...@tag.size do%>
+            <span class="tag-name"><%=@tag[i].tag%></span>
+          <%end%>
+        </div>
+        <%=link_to "編集","/user/update",class:"update-link"%>
+      </div>
+
+
+      <div class="show-middle">
+        <!-- アイコンとプロフィールを横並べを -->
+        <div class="profile-image">
+          <img src="/<%=@user.image%>" alt="<%=@user.name%>">
+        </div>
+        <div class="profile">
+          <div class="profile-border height-60">
+            <p style="margin-left:25px;">name</p>
+            <span class="profile-name">　<%=@user.name%></span>
+          </div>
+          <div class="profile-border height-40">
+            <%sex_check=@user.sex==0?"♂" : "♀"%>
+            <p class="profile-item">　<%=sex_check%>　　<%=@user.age%>歳</p>
+          </div>
+          <div class="profile-border height-40">
+            <p class="profile-item">birthday</p>
+          </div>
+          <div class="profile-border height-40">
+            <%i=@user.birthday%>
+            <%begin%>
+            <p class="profile-item"><%=i.year%>年<%=i.month%>月<%=i.day%>日</p>
+            <%rescue%>
+            <p class="profile-itme">未記入</p>
+            <%end%>
+          </div>
+          <div class="profile-border height-40">
+            <p class="profile-item">身長：<%=@user.height%>cm  体重：<%=@user.width%>cm</p>
+          </div>
+          <div class="profile-border height-40">
+            <p class="profile-item">original data</p>
+          </div>
+          <div class="profile-border height-40">
+            <p class="profile-item">原作：<%=@user.original_work%></p>
+          </div>
+          <div class="profile-border height-40">
+            <p class="profile-item">種族：<%=@user.race%></p>
+          </div>
+          <div class="profile-border height-60">
+            <span class="profile-link story">story</span><span class="profile-link frend">friend</span>
+          </div>
+        </div>
+        <!-- ここまで -->
+        <!--
+
+       -->
+
+      </div>
+
+      <div class="free-space">
+        <span class="description">自己紹介文：<%=@user.description%></span>
+        <div class="link-box">
+          <span>twitter:<%=@user.twitter%></span><br>
+          <span class="overflows">home-page:<a href="http://<%=@user.homepage%>" target="_blank"><%=@user.homepage%></a></span>
+        </div>
+      </div>
+      <div class="characters-box">
+        <div class="frends">
+          <span class="left"><span>この人の他の</span><br><span>持ちキャラ</span></span><span class="right">
+            <%@frend.each do|i|%>
+              <%j=User.find_by(id:i.frend_user)%>
+              <a href="/user/<%=j.id%>/show" class="frend-user"><img src="/<%=j.image%>" alt=""></a>
+            <%end%>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 詳細：上からタグ、（アイコン画像（名前、年齢、誕生日、（身長、体重）原作、種族）フリースペース、（ツイッター、ホームページ）たのなりキャラ、関連キャラ -->

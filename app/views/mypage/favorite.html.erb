@@ -1,7 +1,51 @@
-<div class="favorite-wrapper">
+<div class="history-wrapper">
   <div class="container">
-    <div class="favorite-content">
-
+    <div class="history-content">
+      <div class="history-title">
+        <h1 class="midashi-top">お気に入り部屋</h1>
+        <div class="roop-content">
+          <!-- roop do -->
+            <div class="build-room-wrapper">
+            <a class="history-list-link" href="#">
+              <div class="build-room-content">
+                <div class="left-content">
+                  <img src="" alt="">
+                  <p>hogeステージ</p>
+                </div>
+                <div class="right-content">
+                  <span class="title">部屋タイトル</span>
+                  <div class="build-room-description">
+                    <p class="build-room-setting">許可ルール</p>
+                    <div class="room-description">
+                      <span>description</span>
+                      <object>
+                        <a class="description-all" href="#">全文表示</a>
+                      </object>
+                      <span class="bottom-right">
+                        <span class="room-active-user">x/100人</span>
+                        <span class="room-date">yyyy年mm月dd日　開設</span>
+                        <object>
+                          <a class="room-repote" href="#">通報</a>
+                        </object>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="favo-release" href="#">お気に入り<br>解除</a>
+            </div>
+          <!-- end -->
+          <div class="page-changes">
+            <a class="page-prev"><i class="fa fa-caret-left" aria-hidden="true"></i> 前のページ</a>
+            <!-- roop -->
+            <%for i in 1..4 do%>
+            <a class="page-content<%if i==1%> active-color<%end%>" href="#"><%=i%></a>
+            <%end%>
+            <a class="page-next">次のページ <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

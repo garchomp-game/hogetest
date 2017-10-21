@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   post "borad/:id/update"=>"borad#update_result"
   #id
   get 'borad/:id/chat_index'=>"borad#chat_index"
-
+  get 'mypage/index' => 'mypage#index'
   get 'mypage/:id/myroom' => 'mypage#myroom'
   get 'mypage/:id/relation' => 'mypage#relation'
   get 'mypage/:id/history' => 'mypage#history'

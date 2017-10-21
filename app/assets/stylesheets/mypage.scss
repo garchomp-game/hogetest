@@ -34,7 +34,7 @@ following_user
   }
 
   .mypage-list{
-    border-right:10px solid rgb(67,27,0);;
+    border-right:15px solid rgb(67,27,0);;
     overflow: scroll;
     height:800px;
     width:300px;
@@ -465,13 +465,192 @@ following_user
 }
 
 .history-wrapper{
-  .history-content{
-
+  .history-list-link{
+    text-decoration: none;
+    color:rgb(67,27,0);
+    display:block;
   }
-}
-.direct_mail-wrapper{
-  .direct_mail-content{
 
+  .history-content{
+    .history-title{
+      .midashi-top{
+        margin:30px 50px;
+        display:inline-block;
+      }
+      .tyuuouzoroe{
+        width:250px;
+        display:inline-block;
+        position:relative;
+        text-align:center;
+        .left-border,.right-border{
+          position:absolute;
+          top:50%;
+          transform: translateY(-50%);
+          width:50px;
+          border:1px solid rgb(67,27,0);
+          display:inline-block;
+        }
+        .left-border{
+          left:20px;
+        }
+        .right-border{
+          right:20px;
+        }
+        .border-in-content{
+          display: block;
+          margin:0 auto;
+        }
+      }
+      .date{
+        margin-left:60px;
+      }
+      .build-room-wrapper{
+
+        @include mypage-list-wrapper;
+        height:200px;
+        margin:5px 60px 100px;
+        width:80%;
+        border:3px solid rgb(67,27,0);
+        .favo-release{
+          display:block;
+          float:right;
+          margin:20px 0 50px;
+          padding:3px 10px;
+          text-align:center;
+          @include brown-color;
+          @include mypage-list-wrapper;
+          text-decoration: none;
+          font-weight:bold;
+          border-radius:3px;
+          font-size:24px;
+        }
+        .build-room-content{
+          .left-content{
+            float:left;
+            text-align: center;
+            box-sizing: border-box;
+            width:170px;
+            height:200px;
+            display:inline-block;
+            @include mypage-change-chracter-background;
+            img{
+              margin-top:10px;
+              height:150px;
+              width:150px;
+              border-radius:50%;
+              @include real-world-black;
+              display: inline-block;
+            }
+            p{
+              text-align:center;
+              margin:10px;
+            }
+          }
+          .right-content{
+
+            box-sizing: border-box;
+            margin:0 auto;
+            width:calc(100% - 180px);
+            display:inline-block;
+            vertical-align: top;float:left;
+            .title{
+              text-align:center;
+              box-sizing: border-box;
+              margin:5px auto;
+              height:40px;
+              line-height:40px;
+              font-size:24px;
+              font-weight:bold;
+              @include mypage-sub-character-background-color;
+              display:inline-block;
+              width:100%;
+            }
+            .build-room-description{
+              box-sizing: border-box;
+              height:140px;
+              margin-top:5px;
+              position:relative;
+              @include mypage-sub-character-background-color;
+              .build-room-setting{
+                border-bottom:3px solid rgb(67,27,0);
+                height:30px;
+                line-height:30px;
+                width:95%;
+                margin:0 auto;
+              }
+              .room-description{
+                width:95%;
+                margin:0 auto;
+                box-sizing: border-box;
+                margin-top:5px;
+                span{
+
+                }
+                .description-all{
+                  color:rgb(67,27,0);
+                }
+                .description-all{
+
+                }
+                .bottom-right{
+                  position:absolute;
+                  bottom:5px;
+                  right:10px;
+                  .room-active-user{
+
+                  }
+                  .room-date{
+
+                  }
+                  .room-repote{
+                    background-color:red;
+                    color:white;
+                    display:inline-block;
+                    padding:5px 10px;
+                    text-decoration: none;
+                    border-radius:50%;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+      .page-changes{
+        display:block;
+        text-align:center;
+        width:800px;
+        margin:0px auto;
+        .page-prev,.page-next{
+          width:100px;
+          @include mypage-button-color;
+          color:white;
+          padding:10px 5px;
+          display:inline-block;
+        }
+        .page-prev{
+
+        }
+        .page-next{
+
+        }
+        .page-content{
+          color:rgb(67,27,0);
+          text-decoration: none;
+          margin:0 20px;
+          display:inline-block;
+          line-height:30px;
+        }
+        .active-color{
+          height:30px;
+          width:30px;
+          border-radius:50%;
+          background-color:rgba(214,106,0,0.6);
+        }
+      }
+    }
   }
 }
 .favorite-wrapper{
@@ -489,7 +668,11 @@ following_user
 
   }
 }
+.direct_mail-wrapper{
+  .direct_mail-content{
 
+  }
+}
 .create_new-wrapper{
   .create_new-content{
 
