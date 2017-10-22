@@ -653,14 +653,117 @@ following_user
     }
   }
 }
-.favorite-wrapper{
-  .favorite-content{
 
-  }
-}
 .character_name_history-wrapper{
-  .character_name_history-container{
+  .character_name_history-content{
+    .link-group{
+      float:left;
+      a{
+        display:block;
+        width:200px;
+        margin:0 10px 10px;
+        text-align:center;
+        box-sizing: border-box;
+      }
+      .profile-editing{
+        height:70px;
+        font-size:28px;
+        font-weight: bold;
+        box-sizing: border-box;
+        padding-top:5px;
+        @include brown-link-button;
+        @include mypage-sub-character-background-color;
+      }
+      .character-new-create{
+        height:35px;
+        line-height:30px;
+        @include mypage-sub-character-background-color;
+        @include brown-link-button;
+      }
+      .main-character-change{
+        height:35px;
+        line-height:30px;
+        color:rgba(255,249,214,1);
+        text-decoration:none;
+        font-weight:bold;
+        @include mypage-button-color;
+      }
+    }
+    .character-bord{
+      height:180px;
+      width:calc(100vw - 300px);
+      position:absolute;
+      right:0;
+      top:0;
+      @include mypage-list-wrapper;
+      box-sizing: border-box;
+      padding-top:10px;
+      padding-left:50px;
+      .sub-characters{
+        float:left;
+        position: relative;
+      }
+      .sub-character{
+        overflow: hidden;
+        display:inline-block;
+        box-sizing: border-box;
+        width:310px;
+        height:160px;
+        position:relative;
+        @include mypage-sub-character-background-color;
+        text-align:left;
+        font-weight:bold;
+        text-align:center;
+        padding-top:10px;
+        .sub-character-content{
+          text-align:left;
+          margin-left:10px;
+          .character-list{
+            height:50px;
+            width:50px;
+          }
+          .character-list-big{
+            height:130px;
+            width:130px;
+          }
+        }
+      }
+    }
 
+    // キャラクターボードはここまで
+
+    .character_name_history-box{
+      margin-top:200px;
+      width:700px;
+      margin-left:30px; 
+      @include brown-color;
+      h1{
+        text-align:center;
+        width:700px;
+        border-bottom:2px solid rgb(67,27,0);
+        padding:10px 0;
+      }
+      p{
+
+      }
+      .time_series{
+
+      }
+      .event{
+
+      }
+      form{
+        .left,.right{
+
+        }
+        .left{
+
+        }
+        .right{
+
+        }
+      }
+    }
   }
 }
 .hide_setting-wrapper{

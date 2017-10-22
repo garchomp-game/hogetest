@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   get 'mypage/:id/myroom' => 'mypage#myroom'
   get 'mypage/:id/relation' => 'mypage#relation'
   get 'mypage/:id/history' => 'mypage#history'
+  get 'mypage/:id/character_name_history' => 'mypage#character_name_history'
+  post 'mypage/:id/character_name_history' => 'mypage#character_name_history'
   get 'mypage/:id/message' => 'mypage#message'
   get 'mypage/:id/favorite' => 'mypage#favorite'
   get 'mypage/:id/career' => 'mypage#career'
