@@ -1,7 +1,29 @@
+<script type="text/javascript">
+$(function(){
+        var text = $('textarea').text();
+        // 1行の高さ取得
+        $('textarea').text('a');
+        var rowHeight = $('textarea').height();
+        var rowCount = 1;
+        // 一旦空にする
+        $('textarea').text('');
+        for (var i = 0; i < text.length; i++) {
+            // 一文字取得して追加
+            var s = text.substring(i, i + 1);
+            $('textarea').text($('textarea').text() + s);
+            // 現在の高さ取得
+            height = $('textarea').height();
+            if (height != rowHeight) {
+                // 高さが変わったら行数インクリメント
+                rowHeight = height;
+                rowCount++;
+            }
+        }
+});
+</script>
 <div class="character_name_history-wrapper">
   <div class="container">
     <div class="character_name_history-content">
-
       <div class="character-bord">
         <div class="sub-characters">
           <div class="sub-character">
@@ -31,16 +53,22 @@
       <div class="character_name_history-box">
         <h1>「キャラの名前」の経歴</h1>
         <p>あらすじ</p>
-        <span class="time_series">時系列</span>
-        <span class="event">事象</span>
+        <span class="time_series">時　系　列</span>
+        <span class="event">事　　象</span>
 
         <%=form_tag "/mypage/character_name_history" do%>
           <%for i in 1..4 do%>
-          <input class="left" type="text" name="" value="">
-          <input class="right" type="text" name="" value="">
+          <span class="mypage-form-content">
+            <textarea class="left" name="name"></textarea>
+            <textarea class="right" name="name"></textarea>
+            <a href="#">消　去</a>
+          </span>
           <%end%>
         <%end%>
         <a class="add_a_row" href="#">行の追加</a>
+        <div class="clear">
+
+        </div>
         <a class="save-changes" href="#">変更保存</a>
       </div>
 

@@ -735,7 +735,7 @@ following_user
     .character_name_history-box{
       margin-top:200px;
       width:700px;
-      margin-left:30px; 
+      margin-left:30px;
       @include brown-color;
       h1{
         text-align:center;
@@ -744,13 +744,59 @@ following_user
         padding:10px 0;
       }
       p{
+        width:500px;
+        border:1px solid rgb(67,27,0);
+        background-color:white;
+        margin:60px 0 10px;
+        box-sizing:border-box;
+        padding:3px 10px;
+        font-size:18px;
+      }
+      .time_series,.event,.left,.right{
+        box-sizing:border-box;
+        display:block;
+        margin:-1px 0;
+        padding:10px;
+      }
+      .time_series,.event{
+        @include real-world-black;
+        color:white;
+        text-align:center;
+      }
 
+      .time_series,.left{
+        float:left;
+        width:300px;
+      }
+      .event,.right{
+        float:right;
+        width:400px;
       }
       .time_series{
-
+        width:300px;
       }
       .event{
-
+        width:400px;
+      }
+      .mypage-form-content{
+        position:relative;
+        display:inline-block;
+        a{
+          position:absolute;
+          display:inline-block;
+          padding:3px 5px;
+          @include real-world-black;
+          color:white;
+          width:50px;
+          right:10px;
+          top:5px;
+          height:20px;
+          line-height:20px;
+          text-align:center;
+          text-decoration: none;
+          border-radius:3px;
+          font-weight: bold;
+        }
       }
       form{
         .left,.right{
@@ -760,8 +806,33 @@ following_user
 
         }
         .right{
-
         }
+      }
+      .add_a_row{
+        padding:5px 0;
+        width:120px;
+        display:inline-block;
+        vertical-align: middle;
+        text-align:center;
+        color:white;
+        text-decoration: none;
+        font-weight:bold;
+        border-radius:5px;
+        float:right;
+        @include real-world-black;
+      }
+      .save-changes{
+        margin:0 auto;
+        text-align:center;
+        text-decoration: none;
+        width:80px;
+        font-size:18px;
+        display:block;
+        padding:7px 5px;
+        font-weight:bold;
+        color:white;
+        border-radius:3px;
+        @include mypage-button-color;
       }
     }
   }
