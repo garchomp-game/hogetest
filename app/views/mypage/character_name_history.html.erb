@@ -1,26 +1,4 @@
-<script type="text/javascript">
-$(function(){
-        var text = $('textarea').text();
-        // 1行の高さ取得
-        $('textarea').text('a');
-        var rowHeight = $('textarea').height();
-        var rowCount = 1;
-        // 一旦空にする
-        $('textarea').text('');
-        for (var i = 0; i < text.length; i++) {
-            // 一文字取得して追加
-            var s = text.substring(i, i + 1);
-            $('textarea').text($('textarea').text() + s);
-            // 現在の高さ取得
-            height = $('textarea').height();
-            if (height != rowHeight) {
-                // 高さが変わったら行数インクリメント
-                rowHeight = height;
-                rowCount++;
-            }
-        }
-});
-</script>
+
 <div class="character_name_history-wrapper">
   <div class="container">
     <div class="character_name_history-content">
@@ -55,12 +33,11 @@ $(function(){
         <p>あらすじ</p>
         <span class="time_series">時　系　列</span>
         <span class="event">事　　象</span>
-
         <%=form_tag "/mypage/character_name_history" do%>
           <%for i in 1..4 do%>
           <span class="mypage-form-content">
-            <textarea class="left" name="name"></textarea>
-            <textarea class="right" name="name"></textarea>
+            <textarea class="left" name="name" rows="10"></textarea>
+            <textarea class="right" name="name" rows="10"></textarea>
             <a href="#">消　去</a>
           </span>
           <%end%>

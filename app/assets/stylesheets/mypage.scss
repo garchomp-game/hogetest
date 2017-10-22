@@ -755,8 +755,7 @@ following_user
       .time_series,.event,.left,.right{
         box-sizing:border-box;
         display:block;
-        margin:-1px 0;
-        padding:10px;
+        padding:10px ;
       }
       .time_series,.event{
         @include real-world-black;
@@ -789,7 +788,7 @@ following_user
           color:white;
           width:50px;
           right:10px;
-          top:5px;
+          bottom:5px;
           height:20px;
           line-height:20px;
           text-align:center;
@@ -798,16 +797,16 @@ following_user
           font-weight: bold;
         }
       }
-      form{
         .left,.right{
-
+          background-color:white;
+          border:1px solid brown;
+          margin:-1px 0;
         }
         .left{
 
         }
         .right{
         }
-      }
       .add_a_row{
         padding:5px 0;
         width:120px;
@@ -819,6 +818,7 @@ following_user
         font-weight:bold;
         border-radius:5px;
         float:right;
+        margin:30px 0 10px;
         @include real-world-black;
       }
       .save-changes{
@@ -833,6 +833,7 @@ following_user
         color:white;
         border-radius:3px;
         @include mypage-button-color;
+        margin-bottom:60px;
       }
     }
   }
