@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hogehoge</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>響風のブログ</h1>
+        <ul>
+          <li>ホーム</li>
+          <li>コラム</li>
+          <li>お問い合わせ</li>
+        </ul>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      <div class="container">
+        <h1>響風のブログ</h1>
+        <ul>
+          <li>ホーム</li>
+          <li>コラム</li>
+          <li>お問い合わせ</li>
+        </ul>
+        <small>	&copy; 響風プロジェクトチーム</small>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.home-wrapper{
+  .home-top-wrapper{
+    background-image:url("/home_back.jpg");
+    background-size:cover;
+    .home-top-content{
+      padding:200px 0 200px;
+      background-color:rgba(255,255,255,.4);
+    }
+  }
+  h1{
+    text-align:center;
+  }
+  .home-middle-wrapper{
+    background-color:#e4f0fc;
+    text-align: center;
+    padding:100px 0;
+    .middle-wrapper{
+      vertical-align: top;
+      margin:0 5px;
+      display:inline-block;
+      box-sizing: border-box;
+      width:24%;
+      box-sizing: border-box;
+      height:200px;
+      h2{
+        border-bottom:2px solid black;
+        padding-bottom:15px;
+        width:80%;
+        margin:0 auto;
+      }
+      p{
+        width:80%;
+        margin:30px auto;
+        letter-spacing:2px;
+        text-align:left;
+      }
+    }
+  }
+  .bottom-wrapper{
+    background-image: url('/mirai.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    .bottom-content{
+      background-color: rgba(255,255,255,.6);
+      padding:150px 0 200px;
+    }
+    h1{
+      margin-bottom:30px;
+    }
+  }
+}
