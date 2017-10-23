@@ -1,49 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyT</title>
+    <title>Hogehoge</title>
     <%= csrf_meta_tags %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.js"
-    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-    crossorigin="anonymous"></script>
-    </head>
+  </head>
+
   <body>
     <header>
       <div class="container">
-        <a id="top-link" href="/">myTbase</a>
+        <h1>響風のブログ</h1>
+        <ul>
+          <li>ホーム</li>
+          <li>コラム</li>
+          <li>お問い合わせ</li>
+        </ul>
       </div>
-      <div class="links">
-        <a class="link" href="/borad/index">なりきり掲示板</a>
-        <a class="link" href="/user/0/index">キャラ一データ</a>
-        <%if session["login_check"]==nil%>
-        <div class="small-box">
-          <a class="small-link" href="/login">ログイン</a>
-          <a class="small-link" href="/logout">ヘルプ</a>
-        </div>
-        <%else%>
-        <a class="link" href="/mypage/relation">マイページ</a>
-        <div class="small-box">
-          <a class="small-link" href="/logout">ログアウト</a>
-          <a class="small-link" href="/logout">ヘルプ</a>
-        </div>
-        <%end%>
-      </div>
-
     </header>
-    <div class="height-90">
-
-    </div>
     <%= yield %>
-    <div style="clear:both;">
-
-    </div>
-    <footer id="help-footer-bottom">
+    <footer>
       <div class="container">
-
+        <h1>響風のブログ</h1>
+        <ul>
+          <li>ホーム</li>
+          <li>コラム</li>
+          <li>お問い合わせ</li>
+        </ul>
+        <small>	&copy; 響風プロジェクトチーム</small>
       </div>
     </footer>
   </body>

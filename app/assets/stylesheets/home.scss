@@ -1,99 +1,55 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.top-wrapper{
-  background-image:url("/forest.png");
-  background-position:center;
-  background-size: 100%;
-  background-attachment: fixed;
-  padding:30px 0;
-  .sliders{ 
-    height:300px;
-    width:100%;
-    background-image:url("/back1.jpg");
-    background-size: cover;
-    padding-top:15px;
-    .slider{
-      height:280px;
-      width:95%;
-      margin:0 auto;
-      background-color:rgba(255,255,255,.5);
-      border:5px solid lightgreen;
-      span{
-        height:280px;
-        i{
-          font-size:200px;
-          color:brown;
-          line-height:280px;
-        }
+.home-wrapper{
+  .home-top-wrapper{
+    background-image:url("/home_back.jpg");
+    background-size:cover;
+    .home-top-content{
+      padding:200px 0 200px;
+      background-color:rgba(255,255,255,.4);
+    }
+  }
+  h1{
+    text-align:center;
+  }
+  .home-middle-wrapper{
+    background-color:#e4f0fc;
+    text-align: center;
+    padding:100px 0;
+    .middle-wrapper{
+      vertical-align: top;
+      margin:0 5px;
+      display:inline-block;
+      box-sizing: border-box;
+      width:24%;
+      box-sizing: border-box;
+      height:200px;
+      h2{
+        border-bottom:2px solid black;
+        padding-bottom:15px;
+        width:80%;
+        margin:0 auto;
       }
-      .button-left{
-        float:left;
-        margin-left:-45px;
-      }
-      .button-right{
-        float:right;
-        margin-right:-45px;
+      p{
+        width:80%;
+        margin:30px auto;
+        letter-spacing:2px;
+        text-align:left;
       }
     }
   }
-  .all-news{
-    height:800px;
-    text-align:center;
-    .twitters,.updates,.news{
-      background-color:white;
-      display:inline-block;
-      box-sizing: border-box;
-      margin:0 5px;
-      margin-top:5%;
-      float:left;
-      position:relative;
-      h1{
-        padding:5px 15px 15px;
-        font-size:24px;
-        text-align:left;
-      }
-      .another-screen{
-        text-decoration:none;
-        position:absolute;
-        bottom:3px;
-        right:3px;
-      }
+  .bottom-wrapper{
+    background-image: url('/mirai.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    .bottom-content{
+      background-color: rgba(255,255,255,.6);
+      padding:150px 0 200px;
     }
-    .twitters{
-      width:25%;
-      height:500px;
-      overflow: scroll;
-      h1{
-        font-weight:normal;
-        color:white;
-        background-color:rgba(60,60,255,1);
-      }
-      a{
-      }
-    }
-    .updates{
-      width:45%;
-      height:300px;
-      h1{
-        background-color:#BF4D06;
-        color:#4F2104;
-      }
-      a{
-        color:#BF4D06;
-      }
-    }
-    .news{
-      width:25%;
-      height:500px;
-      h1{
-        color:white;
-        background-color:gray;
-        font-weight:normal;
-      }
-      a{
-        color:black;
-      }
+    h1{
+      margin-bottom:30px;
     }
   }
 }
