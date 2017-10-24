@@ -52,3 +52,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'coffee-script-source', '1.8.0'
 gem 'seed_dump'
 gem 'jquery-ui-rails'
+gem 'nested_form_fields'

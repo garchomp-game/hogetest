@@ -199,38 +199,6 @@ follow(users id) => follow_user_id
 変数宣言＝$変数名
 
 
-.box-wrapper{
-  height:200px;
-  width:200px;
-  position:relative;
-  background-color:green;
-  .box-content{
-    height:100px;
-    width:100px;
-    position:absolute;
-    top:0;
-    left:0;
-    background-color:orange;
-  }
-}
-※オレンジの箱を右下に寄せる方法は何でしょうか。
-また、同じように右上、左下に寄せてみてください
-EXステージ：オレンジの箱を真ん中に寄せてみてください（超難問）
-
-.box-1{
-  height:50px;
-  margin:30px;
-}
-.box-2{
-  height:50px;
-  margin:30px;
-}
-※border:1px solid gray;を入れた時の入れてない時の違いを確かめてください。
-また、ボーダーを入れずに意図したとおりに配置するにはどうしたらいいでしょうか？
-※marginの特性はどのようなものと言えるでしょうか？
-EXステージ：ひとつの箱をmarginを使ってどまんなかに寄せてみましょう（progaten中級にも出てきます）
-また、h1飲みだしの後に、divを立てに4つ並べ、縦横400pxの箱を作り、すべての箱を画面の真ん中に寄せつつ、h1の下に30px。箱とはこの間を50ｐｘの余白を開けてください。
-
 
 
 git add .

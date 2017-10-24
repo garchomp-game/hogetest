@@ -34,21 +34,22 @@
         <span class="time_series">時　系　列</span>
         <span class="event">事　　象</span>
         <%=form_tag "/mypage/character_name_history" do%>
-          <%for i in 1..4 do%>
+          <%@history.each do|i|%>
           <span class="mypage-form-content">
-            <textarea class="left" name="name" rows="10"></textarea>
-            <textarea class="right" name="name" rows="10"></textarea>
-            <a href="#">消　去</a>
+            <textarea class="left" name="time_series<%=i.id%>" rows="5"><%begin%><%=i.time_series%><%rescue%><%end%></textarea>
+            <input type="hidden" name="times_series_id" value="<%=i.id%>">
+            <textarea class="right" name="event<%=i.id%>" rows="5"><%begin%><%=i.event%><%rescue%><%end%></textarea>
+            <%=link_to "削除", "/mypage/#{i.id}/character_history_destroy", class: "mypage-delete-button", method: :post%>
           </span>
           <%end%>
-        <%end%>
-        <a class="add_a_row" href="#">行の追加</a>
+          <%=link_to "行の追加","/mypage/insert_box", class: 'add_a_row', method: :post%>
         <div class="clear">
 
         </div>
-        <a class="save-changes" href="#">変更保存</a>
+        <input type="submit" class="save-changes" value="変更保存">
+        <%end%>
       </div>
-
     </div>
   </div>
 </div>
+<div class="DMComposer-editor tweet-box rich-editor js-initial-focus is-showPlaceholder" data-default-placeholder="新しいメッセージをはじめる" data-attachment-placeholder="引用ツイート（コメントを追加）" data-from-message-me-card-placeholder="メッセージで返信" id="tweet-box-dm-conversation" contenteditable="true" spellcheck="true" role="textbox" aria-multiline="false" dir="ltr" aria-label="メッセージの送信先: カキイカダさん"><div><br></div></div>

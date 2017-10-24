@@ -14,3 +14,4 @@
 //= require turbolinks
 //= require_tree .
 //= require_self
+//= require nested_form_fields

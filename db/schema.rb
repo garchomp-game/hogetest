@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171015135252) do
+ActiveRecord::Schema.define(version: 20171023161204) do
 
   create_table "block_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20171015135252) do
   end
 
   create_table "characters", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    # t.integer "user_id"  user_id=host_idと同じ
     t.integer "character_id"
     t.integer "host_id"
     t.integer "active_count"
@@ -83,13 +82,19 @@ ActiveRecord::Schema.define(version: 20171015135252) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
- #              hoges = story
+
+  create_table "history_name_characters", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text "time_series"
+    t.text "event"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "hoges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
     t.datetime "thing"
     t.text "history"
   end
-  # hoges => storyではうまく通らなかったため
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "character_id"

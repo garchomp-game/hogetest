@@ -11,8 +11,28 @@ class MypageController < ApplicationController
   end
 
   def character_name_history
+    @history=HistoryNameCharacter.all
   end
-
+  def character_history_change
+    # left 時系列　right 事象
+    @history_save=HistoryNameCharacter.all
+    @history_save.each do|i|
+      i.time_series=params["time_series#{i.id}"]
+      i.event=params["event#{i.id}"]
+      i.save
+    end
+    redirect_to "/mypage/#{@user.id}/character_name_history"
+  end
+  def character_history_destroy
+    @history=HistoryNameCharacter.find_by(id: params[:id])
+    @history.destroy
+    redirect_to "/mypage/#{@user.id}/character_name_history"
+  end
+  def insert_box
+    @history=HistoryNameCharacter.new()
+    @history.save
+    redirect_to "/mypage/#{@user.id}/character_name_history"
+  end
   def message
   end
 

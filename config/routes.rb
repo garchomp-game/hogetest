@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   get 'mypage/:id/relation' => 'mypage#relation'
   get 'mypage/:id/history' => 'mypage#history'
   get 'mypage/:id/character_name_history' => 'mypage#character_name_history'
-  post 'mypage/:id/character_name_history' => 'mypage#character_name_history'
+  post 'mypage/character_name_history' => 'mypage#character_history_change'
   get 'mypage/:id/message' => 'mypage#message'
   get 'mypage/:id/favorite' => 'mypage#favorite'
   get 'mypage/:id/career' => 'mypage#career'
@@ -46,5 +46,7 @@ Rails.application.routes.draw do
   get 'mypage/:id/other_changes' => 'mypage#other_changes'
   get 'mypage/:id/block_user' => 'mypage#block_user'
   get 'mypage/:id/following_user' => 'mypage#following_user'
+  post 'mypage/:id/character_history_destroy'=>'mypage#character_history_destroy'
+  post '/mypage/insert_box' => 'mypage#insert_box'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

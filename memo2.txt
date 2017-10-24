@@ -1,14 +1,7 @@
-新規データベース作成前メモ
+課題メモ：
 
-mypage
-myroom
-relation
-history
-message
-favorite
-career
-hide_setting
-Mycharacter_create
-other_changes
-block_user
-following_user
+まずヘルパーの使い方がわからなすぎる→ヘルパーの基礎学習へ
+form_forがどうしてもなれない→同じくヘルパーの基礎学習へ
+railsの仕組みが理解しきれていない可能性がある→udemyでrails学習へ
+jqueryを使ったドム操作があまりうまくできてない→udemyのjquery学習へ
+ヘルパーの知識の充実を図りたい→udemyでrails編終了後公式リファレンスでまんべんなく知識をつける

@@ -780,7 +780,7 @@ following_user
       .mypage-form-content{
         position:relative;
         display:inline-block;
-        a{
+        .mypage-delete-button{
           position:absolute;
           display:inline-block;
           padding:3px 5px;
@@ -818,26 +818,29 @@ following_user
         font-weight:bold;
         border-radius:5px;
         float:right;
-        margin:30px 0 10px;
+        margin:15px 0 10px;
         @include real-world-black;
       }
       .save-changes{
-        margin:0 auto;
+        margin:0 auto 60px;
         text-align:center;
         text-decoration: none;
-        width:80px;
-        font-size:18px;
+        width:120px;
+        font-size:24px;
         display:block;
-        padding:7px 5px;
+        padding:10px 7px;
         font-weight:bold;
         color:white;
         border-radius:3px;
         @include mypage-button-color;
-        margin-bottom:60px;
+        display:block;
+        border:none;
       }
     }
   }
 }
+
+
 .hide_setting-wrapper{
   .hide_setting-content{
 
