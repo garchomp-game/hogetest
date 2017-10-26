@@ -48,5 +48,6 @@ Rails.application.routes.draw do
   get 'mypage/:id/following_user' => 'mypage#following_user'
   post 'mypage/:id/character_history_destroy'=>'mypage#character_history_destroy'
   post '/mypage/insert_box' => 'mypage#insert_box'
+  post '/mypage/hide_setting_form'=>'mypage#hide_setting_form'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

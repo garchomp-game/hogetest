@@ -44,7 +44,9 @@ class MypageController < ApplicationController
 
   def hide_setting
   end
+  def hide_setting_form
 
+  end
   def create_new
   end
 

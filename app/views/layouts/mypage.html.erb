@@ -6,6 +6,47 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(function() {
+      $(".sakuzyo").click(function(){
+        window.location = "/mypage/sakuzyo";
+      })
+      $(".button-right").click(function(){
+        var sl=$(".sub-character").scrollLeft();
+        $(".sub-character").animate({scrollLeft:sl + 50},300,"swing");
+        setTimeout(function(){
+          $(".button-left").show();
+        },300);
+        setTimeout(function(){
+          var countSpan=$(".character-list").length;
+          countTotal=countSpan*55
+          if($(".sub-character").scrollLeft()==countTotal){
+            $(".button-right").hide();
+          }
+        },300);
+      });
+      $(".button-left").click(function(){
+        var sl=$(".sub-character").scrollLeft();
+        $(".sub-character").animate({scrollLeft:sl - 50},300,"swing");
+        setTimeout(function(){
+          $(".button-right").show();
+        },300);
+        setTimeout(function(){
+          if($(".sub-character").scrollLeft()==0){
+            $(".button-left").hide();
+          }
+        },300);
+
+      });
+      if($(".sub-character").scrollLeft()==0){
+        $(".button-left").hide();
+      }
+    });
+    </script>
     </head>
   <body>
     <header>
@@ -33,40 +74,7 @@
     <div class="height-90">
     </div>
     <!-- ここからmypageレイアウト -->
-    <script type="text/javascript">
-      $(function(){
-        $(".button-right").click(function(){
-          var sl=$(".sub-character").scrollLeft();
-          $(".sub-character").animate({scrollLeft:sl + 50},300,"swing");
-          setTimeout(function(){
-            $(".button-left").show();
-          },300);
-          setTimeout(function(){
-            var countSpan=$(".character-list").length;
-            countTotal=countSpan*55
-            if($(".sub-character").scrollLeft()==countTotal){
-              $(".button-right").hide();
-            }
-          },300);
-        });
-        $(".button-left").click(function(){
-          var sl=$(".sub-character").scrollLeft();
-          $(".sub-character").animate({scrollLeft:sl - 50},300,"swing");
-          setTimeout(function(){
-            $(".button-right").show();
-          },300);
-          setTimeout(function(){
-            if($(".sub-character").scrollLeft()==0){
-              $(".button-left").hide();
-            }
-          },300);
 
-        });
-        if($(".sub-character").scrollLeft()==0){
-          $(".button-left").hide();
-        }
-      });
-    </script>
     <div class="mypage-wrapper">
       <span class="mypage-icon"></span>
 
