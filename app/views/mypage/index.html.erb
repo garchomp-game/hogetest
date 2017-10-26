@@ -1,73 +1,12 @@
 <!-- スクリプトをここから -->
-<script type="text/javascript">
-$(function() {
-  $(".profile-link").click(function(){
-    var classVal=$(this).attr('class');
-    // console.log(classVal);
-    var classVals=classVal.split(' ');
-    // console.log(classVals[1]);
-    $("."+classVals[1]+" .modal-wrapper").fadeIn();
-  });
-  $(".x-button").click(function(){
-    $(".modal-wrapper").fadeOut();
-  });
-  $(document).click(function(event) {
-    if(!$(event.target).closest(".modal-content,.profile-link").length) {
-        $(".modal-wrapper").fadeOut();
-    }
-  });
-});
-</script>
+
 <!-- ここまで -->
 
 <!-- モーダル用 -->
-<div class="frend">
-  <div class="modal-wrapper off-modal">
-    <div class="modal-content">
-      <div class="frend-content">
-        <span class="x-button"><i class="fa fa-times" aria-hidden="true"></i></span>
-        <h1>キャラクター関係図（仮）</h1>
-        <%for i in 0..@rd.size-1 do%>
-        <%@r_user=User.find_by(id:@rd[i].frend_id)%>
-        <div class="frend-message">
-          <span class="left">
-            <img src="/<%=@r_user.image%>" alt="<%=@r_user.name%>">
-            <p><%=@r_user.name%></p>
-          </span>
-          <span class="right">  <%=@rd[i].comment%></span>
-        </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="story">
-  <div class="modal-wrapper off-modal">
-    <div class="modal-content">
-      <div class="story-content">
-        <span class="x-button"><i class="fa fa-times" aria-hidden="true"></i></span>
-        <h1>経歴（仮）（ストーリー）</h1>
-        <p class="arasuji"><span>あらす</span>じ</p>
-        <table>
-          <tr>
-            <th class="first-th">年月</th>
-            <th class="last-th"><span>事</span>柄</th>
-          </tr>
-          <tr>
-            <td>hoge</td>
-            <td>hoge</td>
-          </tr>
-          <tr>
-            <td>hoge</td>
-            <td>hoge</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- ここまで -->
+
+
+<!-- ここまで ※　モーダルとスクリプト消しました。 -->
 
 <div class="show-wrapper">
   <div class="container">
@@ -122,7 +61,7 @@ $(function() {
             <p class="profile-item">種族：<%=@user.race%></p>
           </div>
           <div class="profile-border height-60">
-            <span class="profile-link story">お気に入りの部屋</span><span class="profile-link frend">キャラ関係図</span>
+            <a class="profile-link story" href="/mypage/<%=@user.id%>/character_name_history">経歴</a><a class="profile-link frend" href="/mypage/<%=@user.id%>/favorite">キャラ関係図</a>
           </div>
         </div>
         <!-- ここまで -->

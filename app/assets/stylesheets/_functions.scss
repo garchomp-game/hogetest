@@ -4,6 +4,9 @@
   color:rgb(67,27,0);
   text-decoration: none;
 }
+@mixin brown-color {
+  color:rgb(67,27,0);
+}
 @mixin mypage-font-color{
   color:rgb(67,27,0);
 
@@ -35,4 +38,7 @@
   width:#{$width};
   @include real-world-black;
   display:inline-block;
+}
+@mixin character-relations-contents {
+
 }

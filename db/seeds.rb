@@ -5,6 +5,9 @@ Borad.create!([
   {name: "piyo", description: "hogera", active: nil, icon: nil, borad_id: nil},
   {name: "マイティーベース", description: "メイン基地です", active: nil, icon: nil, borad_id: nil}
 ])
+Character.create!([
+  {character_id: 4, host_id: 1}
+])
 Frend.create!([
   {user_id: 1, frend_user: 2, comments: nil},
   {user_id: 1, frend_user: 3, comments: nil}
@@ -30,7 +33,8 @@ Taguser.create!([
 User.create!([
   {name: "garchomp", email: "otoka.japanesedrum@gmail.com", description: "おっす！俺はガブリアスのおとかだ。現在妻のさやのん（@punichan_Denpa）と一緒に生活しているぞ！ アイコンはカキイカダさんからだ。 ＞ちなみに（たく（人間））もなり参加しているからよろしくねー♪＜", image: "otoka.png", password: "matutani9613", user_id: "1", integer: nil, sex: 0, original_work: "ポケモン", race: "ガブリアス", height: 198, width: 94, street_address: "ワイワイタウン",twitter: "@matutaqnitakumi", facebook: "https://www.facebook.com/profile.php?id=100012109625554", link_icon: "0", tag: nil, age: 19, birthday: "1997-10-17", story: "おっす！俺はガブリアスのおとかだ。現在妻のさやのん（@punichan_Denpa）と一緒に生活しているぞ！ アイコンはカキイカダさんからだ。 ＞ちなみに（たく（人間））もなり参加しているからよろしくねー♪＜", homepage: "garchomp.com"},
   {name: "sayanon", email: "sayanon@gmail.com", description: "aro-ra", image: "gaburiza3.png", password: "sayanons", user_id: "2", integer: nil, sex: 1, original_work: "ポケモン", race: "リザードン", height: 177, width: 90, street_address: "アローラ地方", twitter: "@sayanon", facebook: nil, link_icon: "2451", tag: nil, age: 21, birthday: "2000-01-01", story: "さやのんの家系図など", homepage: "sayanon.com"},
-  {name: "yowamushi", email: "yowamushi@gmail.com", description: "ボクの自己紹介ページだよ。詳しくは後でね", image: "sayanon.png", password: "yowamushis", user_id: "3", integer: nil, sex: 1, original_work: "ポケモン", race: "ルガルガン（真夜中の姿）", height: 110, width: 25, street_address: "アローラ地方", twitter: "@yowamushi", facebook: nil, link_icon: "3524", tag: nil, age: 15, birthday: nil, story: nil, homepage: "yowamushi.com"}
+  {name: "yowamushi", email: "yowamushi@gmail.com", description: "ボクの自己紹介ページだよ。詳しくは後でね", image: "sayanon.png", password: "yowamushis", user_id: "3", integer: nil, sex: 1, original_work: "ポケモン", race: "ルガルガン（真夜中の姿）", height: 110, width: 25, street_address: "アローラ地方", twitter: "@yowamushi", facebook: nil, link_icon: "3524", tag: nil, age: 15, birthday: nil, story: nil, homepage: "yowamushi.com"},
+  {name: "taku", email: "otoka.japanesedrum@gmail.com", description: "hogehoge", image: "rubyrails.jpg",password: "matutani9613", sex: 0, height: 173, width: 60}
 ])
 UserCharacter.create!([
   {name: "松谷拓海", email: "otoka.japanesedrum@gmail.com", password: "matutani9613", age:"19", sex: "0"},

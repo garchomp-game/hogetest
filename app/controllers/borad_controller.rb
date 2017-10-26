@@ -1,11 +1,13 @@
 class BoradController < ApplicationController
+  before_action :login_users
+  before_action :set_mypage_setting
   def change_borad
 
   end
 
   def chat_index
     @user= User.find_by(id: params[:id])
-    
+
   end
 
   def create

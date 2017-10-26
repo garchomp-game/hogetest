@@ -28,11 +28,13 @@ following_user
     border-radius:50%;
     background-color:orange;
   }
+
   .mypage-list,.mypage-content{
     box-sizing:border-box;
   }
 
   .mypage-list{
+    border-right:15px solid rgb(67,27,0);;
     overflow: scroll;
     height:800px;
     width:300px;
@@ -78,7 +80,6 @@ following_user
         }
       }
       .sub-character{
-
         box-sizing: border-box;
         height:100px;
         padding:10px 15px 0;
@@ -87,7 +88,6 @@ following_user
         font-weight:bold;
         overflow: hidden;
         .sub-character-content{
-          width:550px;
           .character-list{
             margin-top:10px;
             margin-left:5px;
@@ -274,26 +274,190 @@ following_user
 }
 .relation-wrapper{
   .relation-content{
-    .sub-character{
-
+    .character-bord{
+      height:180px;
+      width:calc(100vw - 300px);
+      position:absolute;
+      right:0;
+      top:0;
+      @include mypage-list-wrapper;
       box-sizing: border-box;
-      height:100px;
-      padding:10px 15px 0;
-      @include mypage-sub-character-background-color;
-      text-align:left;
-      font-weight:bold;
-      overflow: hidden;
-      .sub-character-content{
-        .character-list{
-          margin-top:10px;
-          margin-left:5px;
-          height:50px;
-          width:50px;
-          @include real-world-black;
-          display:inline-block;
+      padding-top:10px;
+      padding-left:50px;
+      .sub-characters{
+        float:left;
+        position: relative;
+      }
+      .sub-character{
+        overflow: hidden;
+        display:inline-block;
+        box-sizing: border-box;
+        width:310px;
+        height:160px;
+        position:relative;
+        @include mypage-sub-character-background-color;
+        text-align:left;
+        font-weight:bold;
+        text-align:center;
+        padding-top:10px;
+        .sub-character-content{
+          text-align:left;
+          margin-left:10px;
+          .character-list{
+            height:50px;
+            width:50px;
+          }
+          .character-list-big{
+            height:130px;
+            width:130px;
+          }
         }
-        .character-list-big{
+      }
+    }
+    .link-group{
+      float:left;
+      a{
+        display:block;
+        width:200px;
+        margin:0 10px 10px;
+        text-align:center;
+        box-sizing: border-box;
+      }
+      .profile-editing{
+        height:70px;
+        font-size:28px;
+        font-weight: bold;
+        box-sizing: border-box;
+        padding-top:5px;
+        @include brown-link-button;
+        @include mypage-sub-character-background-color;
+      }
+      .character-new-create{
+        height:35px;
+        line-height:30px;
+        @include mypage-sub-character-background-color;
+        @include brown-link-button;
+      }
+      .main-character-change{
+        height:35px;
+        line-height:30px;
+        color:rgba(255,249,214,1);
+        text-decoration:none;
+        font-weight:bold;
+        @include mypage-button-color;
+      }
+    }
+    .character-relations{
+      width:calc(100vw - 320px);
+      position:absolute;
+      right:0;
+      top:180px;
 
+      .character-relations-content{
+        width:700px;
+        text-align:center;
+        margin-left:30px;
+        margin-top:40px;
+        // title
+        p{
+          position: relative;
+          .left-border,.right-border{
+            position: absolute;
+            top:50%;
+            border:2px solid rgb(67,27,0);
+            display:block;
+            width:25%;
+          }
+          .left-border{
+            left:0px;
+          }
+          .right-border{
+            right:0px;
+          }
+          .border-in-content{
+            font-size:36px;
+          }
+        }
+        // title-end
+        .character-box-links{
+          display:block;
+          height:100%;
+          width:100%;
+          @include brown-color;
+        }
+        .character-box{
+          margin-top:40px;
+          margin-bottom:20px;
+
+          .character-content{
+            border:2px solid rgb(67,27,0);
+            height:150px;
+            width:700px;
+            background-color:white;
+            text-align:left;
+            margin-bottom:20px;
+            .left-content{
+              float:left;
+              margin-top:10px;
+              margin-left:10px;
+              text-align:center;
+              img{
+                @include real-world-black;
+                height:100px;
+                width:100px;
+                display: inline-block;
+              }
+              p{
+
+              }
+            }
+            .right-content{
+              position:relative;
+              height:100%;
+              margin-top:10px;
+              margin-right:10px;
+              width:570px;
+              float:right;
+
+              .sakuzyo{
+// いつもはsakujoってうつがsakuzyoさん思い出して・・・それだけですごめんなさい。
+                  position: absolute;
+                  bottom:20px;
+                  right:10px;
+                  display:block;
+                  padding:5px 5px;
+                  @include real-world-black;
+                  color:white;
+                  border-radius:3px;
+                  height:30px;
+                  line-height:30px;
+              }
+            }
+          }
+          .character-append{
+            @include real-world-black;
+            color:white;
+            display:block;
+            padding:5px 10px;
+            text-decoration: none;
+            border-radius:3px;
+            width:100px;
+            margin:0 auto;
+            font-weight: bold;
+            font-size:20px;
+          }
+          .save-changes{
+            font-weight:bold;
+            font-size:24px;
+            margin:40px auto 60px;
+            display:block;
+            text-decoration: none;
+            @include mypage-button-color;
+            color:white;
+            border-radius:5px;
+            padding:10px 8px;
+            width:100px;
+          }
         }
       }
     }
@@ -301,8 +465,458 @@ following_user
 }
 
 .history-wrapper{
-  .history-content{
+  .history-list-link{
+    text-decoration: none;
+    color:rgb(67,27,0);
+    display:block;
+  }
 
+  .history-content{
+    .history-title{
+      .midashi-top{
+        margin:30px 50px;
+        display:inline-block;
+      }
+      .tyuuouzoroe{
+        width:250px;
+        display:inline-block;
+        position:relative;
+        text-align:center;
+        .left-border,.right-border{
+          position:absolute;
+          top:50%;
+          transform: translateY(-50%);
+          width:50px;
+          border:1px solid rgb(67,27,0);
+          display:inline-block;
+        }
+        .left-border{
+          left:20px;
+        }
+        .right-border{
+          right:20px;
+        }
+        .border-in-content{
+          display: block;
+          margin:0 auto;
+        }
+      }
+      .date{
+        margin-left:60px;
+      }
+      .build-room-wrapper{
+
+        @include mypage-list-wrapper;
+        height:200px;
+        margin:5px 60px 100px;
+        width:80%;
+        border:3px solid rgb(67,27,0);
+        .favo-release{
+          display:block;
+          float:right;
+          margin:20px 0 50px;
+          padding:3px 10px;
+          text-align:center;
+          @include brown-color;
+          @include mypage-list-wrapper;
+          text-decoration: none;
+          font-weight:bold;
+          border-radius:3px;
+          font-size:24px;
+        }
+        .build-room-content{
+          .left-content{
+            float:left;
+            text-align: center;
+            box-sizing: border-box;
+            width:170px;
+            height:200px;
+            display:inline-block;
+            @include mypage-change-chracter-background;
+            img{
+              margin-top:10px;
+              height:150px;
+              width:150px;
+              border-radius:50%;
+              @include real-world-black;
+              display: inline-block;
+            }
+            p{
+              text-align:center;
+              margin:10px;
+            }
+          }
+          .right-content{
+
+            box-sizing: border-box;
+            margin:0 auto;
+            width:calc(100% - 180px);
+            display:inline-block;
+            vertical-align: top;float:left;
+            .title{
+              text-align:center;
+              box-sizing: border-box;
+              margin:5px auto;
+              height:40px;
+              line-height:40px;
+              font-size:24px;
+              font-weight:bold;
+              @include mypage-sub-character-background-color;
+              display:inline-block;
+              width:100%;
+            }
+            .build-room-description{
+              box-sizing: border-box;
+              height:140px;
+              margin-top:5px;
+              position:relative;
+              @include mypage-sub-character-background-color;
+              .build-room-setting{
+                border-bottom:3px solid rgb(67,27,0);
+                height:30px;
+                line-height:30px;
+                width:95%;
+                margin:0 auto;
+              }
+              .room-description{
+                width:95%;
+                margin:0 auto;
+                box-sizing: border-box;
+                margin-top:5px;
+                span{
+
+                }
+                .description-all{
+                  color:rgb(67,27,0);
+                }
+                .description-all{
+
+                }
+                .bottom-right{
+                  position:absolute;
+                  bottom:5px;
+                  right:10px;
+                  .room-active-user{
+
+                  }
+                  .room-date{
+
+                  }
+                  .room-repote{
+                    background-color:red;
+                    color:white;
+                    display:inline-block;
+                    padding:5px 10px;
+                    text-decoration: none;
+                    border-radius:50%;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+      .page-changes{
+        display:block;
+        text-align:center;
+        width:800px;
+        margin:0px auto;
+        .page-prev,.page-next{
+          width:100px;
+          @include mypage-button-color;
+          color:white;
+          padding:10px 5px;
+          display:inline-block;
+        }
+        .page-prev{
+
+        }
+        .page-next{
+
+        }
+        .page-content{
+          color:rgb(67,27,0);
+          text-decoration: none;
+          margin:0 20px;
+          display:inline-block;
+          line-height:30px;
+        }
+        .active-color{
+          height:30px;
+          width:30px;
+          border-radius:50%;
+          background-color:rgba(214,106,0,0.6);
+        }
+      }
+    }
+  }
+}
+
+.character_name_history-wrapper{
+  .character_name_history-content{
+    .link-group{
+      float:left;
+      a{
+        display:block;
+        width:200px;
+        margin:0 10px 10px;
+        text-align:center;
+        box-sizing: border-box;
+      }
+      .profile-editing{
+        height:70px;
+        font-size:28px;
+        font-weight: bold;
+        box-sizing: border-box;
+        padding-top:5px;
+        @include brown-link-button;
+        @include mypage-sub-character-background-color;
+      }
+      .character-new-create{
+        height:35px;
+        line-height:30px;
+        @include mypage-sub-character-background-color;
+        @include brown-link-button;
+      }
+      .main-character-change{
+        height:35px;
+        line-height:30px;
+        color:rgba(255,249,214,1);
+        text-decoration:none;
+        font-weight:bold;
+        @include mypage-button-color;
+      }
+    }
+    .character-bord{
+      height:180px;
+      width:calc(100vw - 300px);
+      position:absolute;
+      right:0;
+      top:0;
+      @include mypage-list-wrapper;
+      box-sizing: border-box;
+      padding-top:10px;
+      padding-left:50px;
+      .sub-characters{
+        float:left;
+        position: relative;
+      }
+      .sub-character{
+        overflow: hidden;
+        display:inline-block;
+        box-sizing: border-box;
+        width:310px;
+        height:160px;
+        position:relative;
+        @include mypage-sub-character-background-color;
+        text-align:left;
+        font-weight:bold;
+        text-align:center;
+        padding-top:10px;
+        .sub-character-content{
+          text-align:left;
+          margin-left:10px;
+          .character-list{
+            height:50px;
+            width:50px;
+          }
+          .character-list-big{
+            height:130px;
+            width:130px;
+          }
+        }
+      }
+    }
+
+    // キャラクターボードはここまで
+
+    .character_name_history-box{
+      margin-top:200px;
+      width:700px;
+      margin-left:30px;
+      @include brown-color;
+      h1{
+        text-align:center;
+        width:700px;
+        border-bottom:2px solid rgb(67,27,0);
+        padding:10px 0;
+      }
+      p{
+        width:500px;
+        border:1px solid rgb(67,27,0);
+        background-color:white;
+        margin:60px 0 10px;
+        box-sizing:border-box;
+        padding:3px 10px;
+        font-size:18px;
+      }
+      .time_series,.event,.left,.right{
+        box-sizing:border-box;
+        display:block;
+        padding:10px ;
+      }
+      .time_series,.event{
+        @include real-world-black;
+        color:white;
+        text-align:center;
+      }
+
+      .time_series,.left{
+        float:left;
+        width:300px;
+      }
+      .event,.right{
+        float:right;
+        width:400px;
+      }
+      .time_series{
+        width:300px;
+      }
+      .event{
+        width:400px;
+      }
+      .mypage-form-content{
+        position:relative;
+        display:inline-block;
+        .mypage-delete-button{
+          position:absolute;
+          display:inline-block;
+          padding:3px 5px;
+          @include real-world-black;
+          color:white;
+          width:50px;
+          right:10px;
+          bottom:5px;
+          height:20px;
+          line-height:20px;
+          text-align:center;
+          text-decoration: none;
+          border-radius:3px;
+          font-weight: bold;
+        }
+      }
+        .left,.right{
+          background-color:white;
+          border:1px solid brown;
+          margin:-1px 0;
+        }
+        .left{
+
+        }
+        .right{
+        }
+      .add_a_row{
+        padding:5px 0;
+        width:120px;
+        display:inline-block;
+        vertical-align: middle;
+        text-align:center;
+        color:white;
+        text-decoration: none;
+        font-weight:bold;
+        border-radius:5px;
+        float:right;
+        margin:15px 0 10px;
+        @include real-world-black;
+      }
+      .save-changes{
+        margin:0 auto 60px;
+        text-align:center;
+        text-decoration: none;
+        width:120px;
+        font-size:24px;
+        display:block;
+        padding:10px 7px;
+        font-weight:bold;
+        color:white;
+        border-radius:3px;
+        @include mypage-button-color;
+        display:block;
+        border:none;
+      }
+    }
+  }
+}
+
+
+.hide_setting-wrapper{
+  .hide_setting-content{
+    padding-left:30px;
+    padding-top:30px;
+    h1{
+      margin:0 0 60px;
+    }
+    .form-radio-style{
+      margin:30px 0;
+      .form-radio-title{
+        float:left;
+        width:200px;
+      }
+      .form-radio{
+        width:120px;
+        float:left;
+        input + label{
+          margin-left:-14px;
+        }
+        input[type="radio"] + label:before{
+          content:"○";
+        }
+        input[type="radio"]:checked + label:before{
+          content:"⦿";
+        }
+        input{
+          opacity:0;
+          display:block;
+          float:left;
+          margin-top:2px;
+        }
+      }
+    }
+    .ng_word_title{
+      margin:40px 0;
+      float:left;
+      width:200px;
+    }
+    .small-input{
+      float:left;
+      margin-top:30px;
+      display: block;
+      small{
+        display:block;
+        font-size:12px;
+      }
+      .ng_word_box{
+        width:200px;
+        height:20px;
+        border:2px solid rgb(67,27,0);
+        background-color:white;
+        float:left;
+      }
+      .append-link{
+        cursor: pointer;
+        float:left;
+        height:20px;
+        @include mypage-button-color;
+        display:block;
+        text-decoration: none;
+        color:white;
+        padding:0 5px;
+        line-height:20px;
+        border:2px solid rgb(67,27,0);
+        margin-left:-1px;
+      }
+    }
+    .submit{
+      border:none;
+      font-size:24px;
+      padding:5px;
+      @include mypage-button-color;
+      color:white;
+      font-weight:bold;
+      border-radius:3px;
+    }
   }
 }
 .direct_mail-wrapper{
@@ -310,22 +924,6 @@ following_user
 
   }
 }
-.favorite-wrapper{
-  .favorite-content{
-
-  }
-}
-.character_name_history-wrapper{
-  .character_name_history-container{
-
-  }
-}
-.hide_setting-wrapper{
-  .hide_setting-content{
-
-  }
-}
-
 .create_new-wrapper{
   .create_new-content{
 

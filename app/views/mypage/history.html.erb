@@ -1,7 +1,56 @@
 <div class="history-wrapper">
   <div class="container">
     <div class="history-content">
-
+      <div class="history-title">
+        <h1 class="midashi-top">使用履歴</h1>
+        <p class="tyuuouzoroe"><span class="left-border"></span>
+          <span class="border-in-content">過去30件表示</span>
+          <span class="right-border"></span>
+        </p>
+        <div class="roop-content">
+          <!-- roop do -->
+            <span class="date">date</span>
+            <span class="last-work">最終使用</span>
+            <div class="build-room-wrapper">
+            <a class="history-list-link" href="#">
+              <div class="build-room-content">
+                <div class="left-content">
+                  <img src="" alt="">
+                  <p>hogeステージ</p>
+                </div>
+                <div class="right-content">
+                  <span class="title">部屋タイトル</span>
+                  <div class="build-room-description">
+                    <p class="build-room-setting">許可ルール</p>
+                    <div class="room-description">
+                      <span>description</span>
+                      <object>
+                        <a class="description-all" href="#">全文表示</a>
+                      </object>
+                      <span class="bottom-right">
+                        <span class="room-active-user">x/100人</span>
+                        <span class="room-date">yyyy年mm月dd日　開設</span>
+                        <object>
+                          <a class="room-repote" href="#">通報</a>
+                        </object>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+          <!-- end -->
+          <div class="page-changes">
+            <a class="page-prev"><i class="fa fa-caret-left" aria-hidden="true"></i> 前のページ</a>
+            <!-- roop -->
+            <%for i in 1..4 do%>
+            <a class="page-content<%if i==1%> active-color<%end%>" href="#"><%=i%></a>
+            <%end%>
+            <a class="page-next">次のページ <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -32,17 +32,22 @@ Rails.application.routes.draw do
   post "borad/:id/update"=>"borad#update_result"
   #id
   get 'borad/:id/chat_index'=>"borad#chat_index"
-
-  get 'mypage/myroom'
-  get 'mypage/relation'
-  get 'mypage/history'
-  get 'mypage/message'
-  get 'mypage/favorite'
-  get 'mypage/career'
-  get 'mypage/hide_setting'
-  get 'mypage/create_new'
-  get 'mypage/other_changes'
-  get 'mypage/block_user'
-  get 'mypage/following_user'
+  get 'mypage/index' => 'mypage#index'
+  get 'mypage/:id/myroom' => 'mypage#myroom'
+  get 'mypage/:id/relation' => 'mypage#relation'
+  get 'mypage/:id/history' => 'mypage#history'
+  get 'mypage/:id/character_name_history' => 'mypage#character_name_history'
+  post 'mypage/character_name_history' => 'mypage#character_history_change'
+  get 'mypage/:id/message' => 'mypage#message'
+  get 'mypage/:id/favorite' => 'mypage#favorite'
+  get 'mypage/:id/career' => 'mypage#career'
+  get 'mypage/:id/hide_setting' => 'mypage#hide_setting'
+  get 'mypage/:id/create_new' => 'mypage#create_new'
+  get 'mypage/:id/other_changes' => 'mypage#other_changes'
+  get 'mypage/:id/block_user' => 'mypage#block_user'
+  get 'mypage/:id/following_user' => 'mypage#following_user'
+  post 'mypage/:id/character_history_destroy'=>'mypage#character_history_destroy'
+  post '/mypage/insert_box' => 'mypage#insert_box'
+  post '/mypage/hide_setting_form'=>'mypage#hide_setting_form'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,4 +1,6 @@
 class UserController < ApplicationController
+  before_action :login_users
+  before_action :set_mypage_setting
   def index
     @id=params[:id]
     @user=User.all
@@ -69,7 +71,7 @@ class UserController < ApplicationController
     @email=params[:email]
     @password=params[:password]
     if @user
-      login_check="#{@user.email}#{@user.password}"
+      login_check="#{@user.email}"
       session["login_check"]=login_check
       session["login_user_id"]=@user.id
       redirect_to "/"

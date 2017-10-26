@@ -47,7 +47,6 @@ idなどは自動追加
 
 
 
-
 それぞれ下線を入れる
 
 //name
@@ -182,8 +181,6 @@ follow(users id) => follow_user_id
 〜〜ここまで
 
 
-
-
 @mixinの使い方
 
 @mixin 関数名{
@@ -200,10 +197,6 @@ follow(users id) => follow_user_id
 ~~
 
 変数宣言＝$変数名
-
-
-
-
 
 
 
