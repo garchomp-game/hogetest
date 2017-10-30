@@ -5,7 +5,7 @@
     <div class="container">
       <div class="hide_setting-content">
         <h1>非表示項目の設定</h1>
-        <%=form_tag "/mypage/hide_setting_form" do%>
+        <%=form_for "/mypage/hide_setting_form" do%>
           <div class="form-radio-style">
             <p class="form-radio-title">R-18項目の設定:</p>
             <p class="form-radio"><input type="radio" name="r_18" value="0" id="radio_form_yes" checked><label for="radio_form_yes">表示する</label></p>
@@ -34,8 +34,8 @@
             <script type="text/javascript">
             $(document).on('click', '#hide_setting_append_link', function(){
               var ng_word_box=$(".ng_word_box").text()
-              $(".append-input-box").append('<input type="text" name="input_id" value="'+ng_word_box+'">');
-              
+              $(".append-input-box").append('<input type="hidden" name="input_id" value="'+ng_word_box+'"><span class="ng_word_box_list">'+ng_word_box+'</span><br>');
+
             });
             </script>
           </div>

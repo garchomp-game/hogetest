@@ -1,0 +1,2 @@
+class NgWordSetting < ApplicationRecord
+end
