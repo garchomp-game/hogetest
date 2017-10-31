@@ -43,11 +43,27 @@ class MypageController < ApplicationController
   end
 
   def hide_setting
+    @hide_setting=HideSetting.find_by(user_id: params[:id])
+    @hide_word=HideWord.where(user_id: params[:id])
   end
   def hide_setting_form_radio
-
+    @hide_setting=HideSetting.find_by(user_id: params[:id])
+    @hide_setting.r_18_content=params[:r_18]
+    @hide_setting.r_18g_content=params[:r_18g]
+    @hide_setting.save
   end
   def hide_setting_form_ng_word
+    params[:hide_word].each do|k,v|
+      ids=k.to_i
+      begin
+        @hide_word=HideWord.find_by(user_id:params[:id], hide_id: ids)
+        @hide_word.hide_word=v
+      rescue
+        @hide_word=HideWord.new(user_id: params[:id], hide_word: v, hide_id: ids)
+      end
+      @hide_word.save
+    end
+    redirect_to "/mypage/#{params[:id]}/hide_setting"
   end
   def create_new
   end

@@ -50,5 +50,6 @@ Rails.application.routes.draw do
   post 'mypage/insert_box' => 'mypage#insert_box'
   post 'mypage/hide_setting_form_radio'=>'mypage#hide_setting_form_radio'
   post 'mypage/hide_setting_form_ng_word'=>'mypage#hide_setting_form_ng_word'
+  post "/mypage/user_id/hide_id/destroy"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
