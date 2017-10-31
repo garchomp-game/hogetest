@@ -4,11 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def set_mypage_setting
-    @user=User.find_by(id: session["login_user_id"])
-    @frend=Frend.where(user_id: params[:id])
-    @tag=Tagname.where(name: @user.name)
-    @rd=RelationDetail.where(user_id: session["login_user_id"])
-    @character=Character.where(host_id: session["login_user_id"])
+    if session["login_user_id"]
+      @user=User.find_by(id: session["login_user_id"])
+      @frend=Frend.where(user_id: params[:id])
+      @tag=Tagname.where(name: @user.name)
+      @rd=RelationDetail.where(user_id: session["login_user_id"])
+      @character=Character.where(host_id: session["login_user_id"])
+    end
   end
   def login_users
     @login_user_id=session["login_user_id"]

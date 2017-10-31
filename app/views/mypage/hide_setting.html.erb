@@ -5,21 +5,28 @@
     <div class="container">
       <div class="hide_setting-content">
         <h1>非表示項目の設定</h1>
-        <%=form_tag "/mypage/hide_setting_form" do%>
+        <!-- ラジオボタンフォーム（R18設定） -->
+        <%=form_tag "/mypage/hide_setting_form_radio" do%>
           <div class="form-radio-style">
-            <p class="form-radio-title">R-18項目の設定:</p>
-            <p class="form-radio"><input type="radio" name="r_18" value="0" id="radio_form_yes" checked><label for="radio_form_yes">表示する</label></p>
-            <p class="form-radio"><input type="radio" name="r_18" value="1" id="radio_form_no"><label for="radio_form_no">表示しない</label></p>
+            <div class="ng_word_submit_box">
+              <h2 class="ng_word_title">R-18項目の閲覧</h2>
+              <input class="submit" type="submit" name="submit" value="変更保存">
+            </div>
+            <p class="form-radio"><input type="radio" name="r_18" value="0" id="radio_form_yes"><label for="radio_form_yes">表示する</label></p>
+            <p class="form-radio"><input type="radio" name="r_18" value="1" id="radio_form_no" checked><label for="radio_form_no">表示しない</label></p>
           </div>
-          <br>
           <div class="form-radio-style">
-            <p class="form-radio-title">R-18G項目の設定:</p>
-            <p class="form-radio"><input type="radio" name="r_18g" value="0" id="radio_form_yes2" checked><label for="radio_form_yes2">表示する</label></p>
-            <p class="form-radio"><input type="radio" name="r_18g" value="1" id="radio_form_no2"><label for="radio_form_no2">表示する</label></p>
+            <p class="form-radio"><input type="radio" name="r_18g" value="0" id="radio_form_yes2"><label for="radio_form_yes2">表示する</label></p>
+            <p class="form-radio"><input type="radio" name="r_18g" value="1" id="radio_form_no2" checked><label for="radio_form_no2">表示しない</label></p>
           </div>
-          <br>
-          <p class="ng_word_title">非表示ワード</p>
-
+          <%end%>
+          <div class="hide_setting_border"></div>
+          <!-- NGワードフォーム -->
+          <%=form_tag '/mypage/hide_setting_form_ng_word' do%>
+          <div class="ng_word_submit_box">
+            <h2 class="ng_word_title">非表示ワード</h2>
+            <input class="submit" type="submit" name="submit" value="変更保存">
+          </div>
           <div class="small-input">
             <small>追加</small>
             <div class="ng_word_box" contenteditable="true">
@@ -27,22 +34,21 @@
             <script type="text/javascript">
             </script>
             <span class="append-link" id="hide_setting_append_link">追加</span>
+            <div class="clear"></div>
             <div class="append-input-box">
 
             </div>
-
             <script type="text/javascript">
             $(document).on('click', '#hide_setting_append_link', function(){
               var ng_word_box=$(".ng_word_box").text()
-              $(".append-input-box").append('<input type="text" name="input_id" value="'+ng_word_box+'">');
-              
+              $(".append-input-box").append('<input type="text" name="input_id" value="'+ng_word_box+'"><span class="delete_input">削除</span>');
+
             });
             </script>
           </div>
           <div class="clear">
 
           </div>
-          <input class="submit" type="submit" name="submit" value="変更保存">
         <%end%>
       </div>
     </div>

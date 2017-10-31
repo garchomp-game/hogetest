@@ -44,8 +44,10 @@ class MypageController < ApplicationController
 
   def hide_setting
   end
-  def hide_setting_form
+  def hide_setting_form_radio
 
+  end
+  def hide_setting_form_ng_word
   end
   def create_new
   end
