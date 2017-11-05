@@ -45,6 +45,7 @@ class MypageController < ApplicationController
   def hide_setting
     @hide_setting=HideSetting.find_by(user_id: params[:id])
     @hide_word=HideWord.where(user_id: params[:id])
+    @user_id = params[:id]
   end
   def hide_setting_form_radio
     @hide_setting=HideSetting.find_by(user_id: params[:id])
@@ -56,14 +57,17 @@ class MypageController < ApplicationController
     params[:hide_word].each do|k,v|
       ids=k.to_i
       begin
-        @hide_word=HideWord.find_by(user_id:params[:id], hide_id: ids)
-        @hide_word.hide_word=v
+        logger.debug 'yes'
       rescue
-        @hide_word=HideWord.new(user_id: params[:id], hide_word: v, hide_id: ids)
+        logger.debug 'no'
       end
-      @hide_word.save
     end
     redirect_to "/mypage/#{params[:id]}/hide_setting"
+  end
+  def destroy
+    delete_word=HideWord.find_by(user_id: params[:user_id],hide_id: params[:hide_id])
+    delete_word.destroy
+    redirect_to "/mypage/#{@user.id}/hide_setting"
   end
   def create_new
   end

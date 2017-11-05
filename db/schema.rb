@@ -72,12 +72,14 @@ ActiveRecord::Schema.define(version: 20171023161204) do
   create_table "hide_settings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "r_18_content"
     t.integer "r_18g_content"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "hide_words", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
+    t.integer "hide_id"
     t.string "hide_word"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

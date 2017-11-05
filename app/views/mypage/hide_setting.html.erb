@@ -53,30 +53,33 @@
             <small>追加</small>
             <div class="ng_word_box" contenteditable="true">
             </div>
-            <script type="text/javascript">
-            </script>
             <span class="append-link" id="hide_setting_append_link">追加</span>
+            <!-- 追加 -->
+            <%end%>
+
             <div class="clear"></div>
             <div class="append-input-box">
               <%@hide_word.each do|i|%>
-                <input type="text" name="hide_word[<%=i.hide_id%>]" value="<%=i.hide_word%>">
-                <%=link_to "削除", "/mypage/#{i.user_id}/#{i.hide_id}/destroy", class: "delete_input", method: :post%>
+                  <div class="span-box"><%=i.hide_word%>
+                  <a class="delete_input" href="/mypage/<%=i.user_id%>/<%=i.hide_id%>/destroy">削除</a>
+                </div>
+
               <%end%>
               <%$count=@hide_word.size%>
             </div>
             <script type="text/javascript">
-            var i=1
-            $(document).on('click', '#hide_setting_append_link', function(){
-              var ng_word_box=$(".ng_word_box").text()
-              $(".append-input-box").append('<input type="text" name="hide_word['+(<%=$count%>+i)+']" value="'+ng_word_box+'"><span class="delete_input">削除</span>');
-              i+=1
-            });
+            // var i=1
+            // $(document).on('click', '#hide_setting_append_link', function(){
+            //   var ng_word_box=$(".ng_word_box").text()
+            //   var set_num=$("append-input-box input").length+i
+            //   $(".append-input-box").append('<input type="text" name="hide_word['+set_num+']" value="'+ng_word_box+'"><a class="delete_input" href="/mypage/<%=@user_id%>/'+(<%=@hide_word.size%>+i)+'/destroy">削除</a>');
+            //   i+=1
+            // });
             </script>
           </div>
           <div class="clear">
 
           </div>
-        <%end%>
       </div>
     </div>
   </div>

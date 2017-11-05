@@ -41,7 +41,13 @@ idなどは自動追加
 
 
 
-
+  begin
+    @hide_word=HideWord.find_by(user_id:params[:id], hide_id: ids)
+    @hide_word.hide_word=v
+  rescue
+    @hide_word=HideWord.new(user_id: params[:id], hide_word: v, hide_id: ids)
+  end
+  @hide_word.save
 
 
 

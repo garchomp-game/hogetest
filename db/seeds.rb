@@ -30,6 +30,19 @@ Taguser.create!([
   {name: "カキイカダ", tag: "ケモノ", user_id: 0},
   {name: "garchomp", tag: "ドラゴン", user_id: 0}
 ])
+HideSetting.create!([
+  {user_id: 1, r_18_content: 0, r_18g_content: 0},
+  {user_id: 2, r_18_content: 0, r_18g_content: 0}
+])
+HideWord.create!([
+  {user_id: 1, hide_word: "ddddd", hide_id:1},
+  {user_id: 1, hide_word: "kkkkk", hide_id:2},
+  {user_id: 1, hide_word: "jjjjj", hide_id:3},
+  {user_id: 1, hide_word: "fffff", hide_id:4},
+  {user_id: 2, hide_word: "or@ejugk", hide_id:1},
+  {user_id: 2, hide_word: "njsg", hide_id:2},
+  {user_id: 2, hide_word: "agfjqesf", hide_id:3}
+])
 User.create!([
   {name: "garchomp", email: "otoka.japanesedrum@gmail.com", description: "おっす！俺はガブリアスのおとかだ。現在妻のさやのん（@punichan_Denpa）と一緒に生活しているぞ！ アイコンはカキイカダさんからだ。 ＞ちなみに（たく（人間））もなり参加しているからよろしくねー♪＜", image: "otoka.png", password: "matutani9613", user_id: "1", integer: nil, sex: 0, original_work: "ポケモン", race: "ガブリアス", height: 198, width: 94, street_address: "ワイワイタウン",twitter: "@matutaqnitakumi", facebook: "https://www.facebook.com/profile.php?id=100012109625554", link_icon: "0", tag: nil, age: 19, birthday: "1997-10-17", story: "おっす！俺はガブリアスのおとかだ。現在妻のさやのん（@punichan_Denpa）と一緒に生活しているぞ！ アイコンはカキイカダさんからだ。 ＞ちなみに（たく（人間））もなり参加しているからよろしくねー♪＜", homepage: "garchomp.com"},
   {name: "sayanon", email: "sayanon@gmail.com", description: "aro-ra", image: "gaburiza3.png", password: "sayanons", user_id: "2", integer: nil, sex: 1, original_work: "ポケモン", race: "リザードン", height: 177, width: 90, street_address: "アローラ地方", twitter: "@sayanon", facebook: nil, link_icon: "2451", tag: nil, age: 21, birthday: "2000-01-01", story: "さやのんの家系図など", homepage: "sayanon.com"},

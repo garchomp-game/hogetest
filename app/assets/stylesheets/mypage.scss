@@ -929,9 +929,7 @@ following_user
         width:350px;
         background-color:white;
         border:2px solid rgb(67,27,0);
-        position:relative;
-        input{
-          width:70%;
+        .span-box{
           border:none;
           margin:10px;
         }
@@ -940,9 +938,8 @@ following_user
           color:white;
           padding:3px 5px;
           border-radius:3px;
-          position:absolute;
-          right:10px;
-
+          float:right;
+          text-decoration: none;
         }
       }
     }
