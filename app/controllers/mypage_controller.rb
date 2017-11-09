@@ -54,15 +54,12 @@ class MypageController < ApplicationController
     @hide_setting.save
   end
   def hide_setting_form_ng_word
-    params[:hide_word].each do|k,v|
-      ids=k.to_i
-      begin
-        logger.debug 'yes'
-      rescue
-        logger.debug 'no'
-      end
+    @hide_word = HideWord.new(user_id: params[:id],hide_word: params[:ng_word_name])
+    respond_to do |format|
+      @hide_word.save
+      format.html
+      format.js
     end
-    redirect_to "/mypage/#{params[:id]}/hide_setting"
   end
   def destroy
     delete_word=HideWord.find_by(user_id: params[:user_id],hide_id: params[:hide_id])

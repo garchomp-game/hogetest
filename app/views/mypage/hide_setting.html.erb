@@ -40,27 +40,26 @@
             <%end%>
           </div>
           <%end%>
+
           <div class="hide_setting_border"></div>
           <!-- NGワードフォーム
               form = hide_word-->
-          <%=form_tag '/mypage/hide_setting_form_ng_word' do%>
+          <%=form_tag '/mypage/hide_setting_form_ng_word', id: :ng_word_form ,:remote => true do%>
           <input type="hidden" name="id" value="<%=@hide_setting.user_id%>">
           <div class="ng_word_submit_box">
             <h2 class="ng_word_title">非表示ワード</h2>
-            <input class="submit" type="submit" name="submit" value="変更保存">
+
           </div>
           <div class="small-input">
             <small>追加</small>
-            <div class="ng_word_box" contenteditable="true">
-            </div>
-            <span class="append-link" id="hide_setting_append_link">追加</span>
+            <input class="ng_word_box" type="text" name="ng_word_name" value="">
+            <input class="append-link" id="hide_setting_append_link" type="submit" name="submit" value="変更保存">
             <!-- 追加 -->
             <%end%>
-
             <div class="clear"></div>
             <div class="append-input-box">
               <%@hide_word.each do|i|%>
-                  <div class="span-box"><%=i.hide_word%>
+                <div class="span-box"><%=i.hide_word%>
                   <a class="delete_input" href="/mypage/<%=i.user_id%>/<%=i.hide_id%>/destroy">削除</a>
                 </div>
 
@@ -68,13 +67,6 @@
               <%$count=@hide_word.size%>
             </div>
             <script type="text/javascript">
-            // var i=1
-            // $(document).on('click', '#hide_setting_append_link', function(){
-            //   var ng_word_box=$(".ng_word_box").text()
-            //   var set_num=$("append-input-box input").length+i
-            //   $(".append-input-box").append('<input type="text" name="hide_word['+set_num+']" value="'+ng_word_box+'"><a class="delete_input" href="/mypage/<%=@user_id%>/'+(<%=@hide_word.size%>+i)+'/destroy">削除</a>');
-            //   i+=1
-            // });
             </script>
           </div>
           <div class="clear">
